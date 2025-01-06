@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Simple Serverless App
+
+Parameters:
+  Email:
+    Type: String
+    Default: "x.y@z.com"
+
+Resources:
+  # ----------------------------------------------------------------------------
+  # Landing Page Function
+  # ----------------------------------------------------------------------------
+  LandingPageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: landing-page-function/
+      Handler: landing_page_function.lambda_handler
+      Runtime: python3.8
+      Events:
+        GetLandingPage:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: get
+
+  # ----------------------------------------------------------------------------
+  # Send Feedback Function
+  # ----------------------------------------------------------------------------
+  SendFeedbackFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: record-and-confirm-feedback-function/
+      Handler: record_and_confirm_feedback_function.lambda_handler
+      Runtime: python3.8
+      Events:
+        HelloWorld:
+          Type: HttpApi
+          Properties:
+            Path: /feedbacks
+            Method: post
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref FeedbackTable            
+          TOPIC_ARN:  !Ref SNSTopic            
+      Policies:
+      - AmazonDynamoDBFullAccess
+      - AmazonSNSFullAccess
+ 
+  FeedbackTable:
+    Type: AWS::Serverless::SimpleTable    
+
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription:
+        - Endpoint: 
+            Ref: Email
+          Protocol: "email"

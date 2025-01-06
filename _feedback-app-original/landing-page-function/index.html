@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+    <script>
+      let total_clicks = 0
+      function postDynamoDB() {
+        name = document.getElementById("name").value;
+        feedback = document.getElementById("feedback").value;
+        if (name == '') {
+          alert("Please fill in 'Name' field");
+          return
+        }
+        axios.post('/feedbacks', { "id": "1", "name": name, "feedback": feedback }).then(response => {
+            console.log('Feedback recorded !');
+        })
+        .catch(error => console.error(error));
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      Name: <input id="name"/>
+      </br></br>
+      Feedback: <input id="feedback"/>
+    </div>
+    </br>
+    <button onclick="postDynamoDB()">SEND</button>
+  </body>
+</html>
