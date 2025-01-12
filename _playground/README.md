@@ -101,16 +101,28 @@ E
 F  
 end**
 
+Accept changes, and try to deploy the application with the CK
 
-Deploy the application
+#### CDK installation
+```bash
+$> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+$> . ~/.bashrc 
+$> nvm install --lts
+$> npm install -g aws-cdk
+```
+
+#### CDK packages installation
+```bash
+$> sudo apt install python3-pip # if pip not installed yet
+$> pip install -r requirements.txt
+```
+
+#### Deploy the application (N.B. The AWS CLI must be configured with credentials)
 ```bash
 cdk deploy --app "python3 app.py"
 ```
 
-Fix the generated result using inline chat (Ctrl-I):
-
-
-| **I want my feedback data to be sent as a json document to the '/prod/feebacks' endpoint with a field called "feedback" containing the feedback value typed into the html form**
+### Test & fix the generated result
 
 # 3 - From Diagram to Code with Draw.io
 
@@ -127,14 +139,16 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 3
 ```
 
-You can open draw.io diagram in VSCode
-
 Q Prompt:
 
 | **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
 
+#### Deploy the application (N.B. The AWS CLI must be configured with credentials)
+```bash
+cdk deploy --app "python3 app.py"
+```
 
-# Generate drawio diagram from application
+# 4 - Generate drawio diagram from application
 
 ### Initialize tutorial:
 

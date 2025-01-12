@@ -50,6 +50,9 @@ fi
 if [ $tutorial_choice == '4' ]; then
 echo "preparing playground for tutorial $tutorial_choice..."
 cp -r ../../tutorials-starting-points/feedback-app-code/* .
+cat << 'EOF' > app.drawio.xml
+<PUT GENERATED DIAGRAM HERE>
+EOF
 echo "Done."
 echo "Created files:"
 ls
