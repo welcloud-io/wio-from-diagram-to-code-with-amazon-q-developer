@@ -1,6 +1,2 @@
 cdk.out
-_playground/*
-
-!_playground/clear-playground.sh
-!README.md
-
+_playground/vscode-app-folder/*
