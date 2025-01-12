@@ -1,5 +1,11 @@
 **!!! Each tutorial must be initialized for them to work !!!**
 
+If something does not work in a tutorial, that commands can help:
+
+ ```$> rm ~/.aws/amazonq/cache/cache/*```
+ 
+ ```Ctrl / Shift / P / Developer: Reload Window```
+
 ## Start turorial playground in anew VSCode window
 
 ```bash
@@ -7,31 +13,19 @@
 $> ./start-vscode-tutorial-window.sh
 ```
 
-## Initialize a tutorial from the new VS Code window
+# 1 - From Code to Diagram with Mermaid
+
+### Initialize tutorial:
 
 ```bash
+# You should be in the VS Code tutorial window from here
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
 2. From diagram to code with Mermaid
 3. From diagram to code with draw.io
 4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): ...
-```
-
-If something does not work in a tutorial, that commands can help:
-
- ```$> rm ~/.aws/amazonq/cache/cache/*```
- 
- ```Ctrl / Shift / P / Developer: Reload Window```
-
-# 1 - From Code to Diagram with Mermaid
-
-### Initialize playgorund:
-
-```bash
-$> ../init-playground.sh
----choose corresponding tutorial---
+Which tutorial would you like to view? (1-4): 1
 ```
 
 ## 1 - 1 - Generate Application diagram
@@ -72,11 +66,17 @@ Click on preview, to preview .md file
 
 # 2 - From Diagram to Code with Mermaid
 
-### Initialize playgorund:
+### Initialize tutorial:
 
 ```bash
-$> ../init-playground.sh
----choose corresponding tutorial---
+# You should be in the VS Code tutorial window from here
+$../init-playground.sh
+Available tutorials:
+1. From code to diagram with Mermaid
+2. From diagram to code with Mermaid
+3. From diagram to code with draw.io
+4. From code to diagram with draw.io
+Which tutorial would you like to view? (1-4): 3
 ```
 
 Q Prompt
@@ -115,11 +115,17 @@ Fix the generated result using inline chat (Ctrl-I):
 
 # 3 - From Diagram to Code with Draw.io
 
-### Initialize playgorund:
+### Initialize tutorial:
 
 ```bash
-$>../init-playground.sh
----choose corresponding tutorial---
+# You should be in the VS Code tutorial window from here
+$../init-playground.sh
+Available tutorials:
+1. From code to diagram with Mermaid
+2. From diagram to code with Mermaid
+3. From diagram to code with draw.io
+4. From code to diagram with draw.io
+Which tutorial would you like to view? (1-4): 4
 ```
 
 You can open draw.io diagram in VSCode
@@ -131,11 +137,17 @@ Q Prompt:
 
 # Generate drawio diagram from application
 
-### Initialize playgorund:
+### Initialize tutorial:
 
 ```bash
-$> ../init-playground.sh
----choose corresponding tutorial---
+# You should be in the VS Code tutorial window from here
+$../init-playground.sh
+Available tutorials:
+1. From code to diagram with Mermaid
+2. From diagram to code with Mermaid
+3. From diagram to code with draw.io
+4. From code to diagram with draw.io
+Which tutorial would you like to view? (1-4): 4
 ```
 
 | **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
