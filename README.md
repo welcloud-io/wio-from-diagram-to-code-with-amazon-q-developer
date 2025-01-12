@@ -9,7 +9,7 @@ It demonstrates how you can generate diagrams from an application code, but also
 
 # Prerequisites
 
-I assume that you are running on Ubuntu 22-04 linux
+I assume that you are running on Ubuntu 22-04 linux, but the instructions below can be adapted to you environment.
 
 ## Install & start VS Code
 
@@ -66,6 +66,9 @@ Be aware that this may not work if you environment has some settings already
 ```bash
 $> ./setup-vscode.sh
 ```
+
+Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
+
 # Start tutorials
 
 ## Follow tutorial instructions in the tutorial readme

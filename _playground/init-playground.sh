@@ -21,7 +21,7 @@ fi
 
 if [ $tutorial_choice == '1' ]; then
 echo "preparing playground for tutorial $tutorial_choice..."
-cp -r ../../tutorial-starting-point/feedback-app-code/* .
+cp -r ../../tutorials-starting-point/feedback-app-code/* .
 cat << 'EOF' > MERMAID-DIAGRAMS.md
 ```mermaid
 <PUT MERMAID CODE HERE>
@@ -41,7 +41,7 @@ fi
 
 if [ $tutorial_choice == '3' ]; then
 echo "preparing playground for tutorial $tutorial_choice..."
-cp -r ../../tutorial-starting-point/feedback-app-diagram/* .
+cp -r ../../tutorials-starting-point/feedback-app-diagram/* .
 echo "Done."
 echo "Created files:"
 ls
@@ -49,7 +49,7 @@ fi
 
 if [ $tutorial_choice == '4' ]; then
 echo "preparing playground for tutorial $tutorial_choice..."
-cp -r ../../tutorial-starting-point/feedback-app-code/* .
+cp -r ../../tutorials-starting-point/feedback-app-code/* .
 echo "Done."
 echo "Created files:"
 ls
