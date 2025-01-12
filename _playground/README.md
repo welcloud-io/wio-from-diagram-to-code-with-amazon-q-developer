@@ -76,7 +76,7 @@ Available tutorials:
 2. From diagram to code with Mermaid
 3. From diagram to code with draw.io
 4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 3
+Which tutorial would you like to view? (1-4): 2
 ```
 
 Q Prompt
@@ -125,7 +125,7 @@ Available tutorials:
 2. From diagram to code with Mermaid
 3. From diagram to code with draw.io
 4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 4
+Which tutorial would you like to view? (1-4): 3
 ```
 
 You can open draw.io diagram in VSCode
