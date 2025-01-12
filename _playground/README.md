@@ -15,7 +15,7 @@ $> ./start-vscode-tutorial-window.sh
 
 # 1 - From Code to Diagram with Mermaid
 
-### Initialize tutorial:
+### Initialize tutorial
 
 ```bash
 # You should be in the VS Code tutorial window from here
@@ -66,7 +66,7 @@ Click on preview, to preview .md file
 
 # 2 - From Diagram to Code with Mermaid
 
-### Initialize tutorial:
+### Initialize tutorial
 
 ```bash
 # You should be in the VS Code tutorial window from here
@@ -126,7 +126,7 @@ cdk deploy --app "python3 app.py"
 
 # 3 - From Diagram to Code with Draw.io
 
-### Initialize tutorial:
+### Initialize tutorial
 
 ```bash
 # You should be in the VS Code tutorial window from here
@@ -150,7 +150,7 @@ cdk deploy --app "python3 app.py"
 
 # 4 - Generate drawio diagram from application
 
-### Initialize tutorial:
+### Initialize tutorial
 
 ```bash
 # You should be in the VS Code tutorial window from here
@@ -163,9 +163,20 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 4
 ```
 
+Q Prompt:
+
 | **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
 
-In case of an error when opening the diagram, add this to your prompt, that can slve the issue:
+### Update app.drawio.xml file & display the content
 
-| **I got an error when I want to open diagram**
+Select 'app.drawio.xml' file, right click, choose 'Open with...' and select 'Text Editor'
 
+Copy & Paste generated XML document
+
+Save the file, and double click on it to open it with the Drawio Integration extension
+
+### Fix / Troubleshoot
+
+In case of an error when opening the diagram, add this to your prompt, that can solve the issue:
+
+| **I got an error when I want to open the diagram**
