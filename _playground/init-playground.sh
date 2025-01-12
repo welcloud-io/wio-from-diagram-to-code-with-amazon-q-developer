@@ -1,6 +1,8 @@
 cd "$(dirname "$0")"
 cd vscode-app-folder
 
+../clear-playground.sh $1
+
 # Display available tutorials
 echo "Available tutorials:"
 echo "1. From code to diagram with Mermaid"
@@ -25,6 +27,9 @@ cat << 'EOF' > MERMAID-DIAGRAMS.md
 <PUT MERMAID CODE HERE>
 ```
 EOF
+echo "Done."
+echo "Created files:"
+ls
 fi
 
 if [ $tutorial_choice == '2' ]; then
