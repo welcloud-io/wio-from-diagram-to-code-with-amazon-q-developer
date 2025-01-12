@@ -1,0 +1,6 @@
+cdk.out
+_playground/*
+
+!_playground/clear-playground.sh
+!README.md
+
