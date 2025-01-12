@@ -5,11 +5,13 @@ https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer
 
 It demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
 
+![test](screenshots/vscode-bigpicture.png)
+
 ---
 
 # Prerequisites
 
-I assume that you are running on Ubuntu 22-04 linux, but the instructions below can be adapted to you environment.
+I assume that you are running on Ubuntu 22-04 linux, but the instructions below can be adapted to your environment.
 
 ## Install & start VS Code
 
