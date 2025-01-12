@@ -40,7 +40,9 @@ Q prompt:
 
 | **@workspace can you generate a mermaid diagram of my application**
 
-Open .md file and add generated response
+Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+
+Save the file and click on Preview on the right hand corner.
 
 Click on preview, to preview .md file
 
@@ -50,7 +52,9 @@ Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
 
-Open .md file and add generated response
+Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+
+Save the file and click on Preview on the right hand corner.
 
 Click on preview, to preview .md file
 
@@ -60,7 +64,9 @@ Q prompt:
 
 | **@workspace can you generate a mermaid class diagram of the application**
 
-Open .md file and add generated response
+Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+
+Save the file and click on Preview on the right hand corner.
 
 Click on preview, to preview .md file
 
