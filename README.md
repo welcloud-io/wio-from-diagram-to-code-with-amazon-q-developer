@@ -6,10 +6,10 @@ I assume that you are on an unbuntu 22-04 linux machine
 
 https://code.visualstudio.com/docs/setup/linux
 
-This works for me:
+From the terminal, this works for me:
 
 ```
-sudo snap install --classic code # or code-insiders
+$> sudo snap install --classic code # or code-insiders
 ```
 
 ## Install Amazon Q Developer extension & Enable @workspace
@@ -19,6 +19,8 @@ https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-in-IDE-setup.html#set
 
 Q Developer settings option to tick: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/workspace-context.html
 
+Then connect to Amazon Q with your builder ID
+
 ## Install Mermaid extension
 
 https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
@@ -26,6 +28,11 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
 ## Install Draw.io Integration extension
 
 https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio
+
+Then:
+- Go to 'File > Preferences > Settings' 
+- Search for 'editorasso' setting 
+- Add the following association item: *.drawio.xml => hediet.vscode-drawio-text)
 
 # Clone repo
 
