@@ -79,29 +79,28 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 2
 ```
 
-Q Prompt
+Q Prompt:
 
-| **/dev can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
 
-```
-graph TD
-A[User] -->|HTTP GET /| B[API Gateway]
-B -->|Invoke| C[Landing Page Function]
-C -->|Return HTML| B
-B -->|Return HTML| A
-A -->|HTTP POST /feedbacks| B
-B -->|Invoke| D[Send Feedback Function]
-D -->|Write| E[(DynamoDB Table)]
-D -->|Publish| F[SNS Topic]
-F -->|Send Email| G[User Email]
-subgraph AWS Cloud
-B
-C
-D
-E
-F
-end
-```
+| **/dev can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+graph TD  
+A[User] -->|HTTP GET /| B[API Gateway]  
+B -->|Invoke| C[Landing Page Function]  
+C -->|Return HTML| B  
+B -->|Return HTML| A  
+A -->|HTTP POST /feedbacks| B  
+B -->|Invoke| D[Send Feedback Function]  
+D -->|Write| E[(DynamoDB Table)]  
+D -->|Publish| F[SNS Topic]  
+F -->|Send Email| G[User Email]  
+subgraph AWS Cloud  
+B  
+C  
+D  
+E  
+F  
+end**
+
 
 Deploy the application
 ```bash
