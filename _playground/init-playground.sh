@@ -33,13 +33,24 @@ ls
 fi
 
 if [ $tutorial_choice == '2' ]; then
-    echo "preparing playground for tutorial $tutorial_choice..."
+echo "preparing playground for tutorial $tutorial_choice..."
+echo "Done."
+echo "Folder should be empty"
+ls
 fi
 
 if [ $tutorial_choice == '3' ]; then
-    echo "preparing playground for tutorial $tutorial_choice..."
+echo "preparing playground for tutorial $tutorial_choice..."
+cp -r ../../_feedback-app-diagram-original/* .
+echo "Done."
+echo "Created files:"
+ls
 fi
 
 if [ $tutorial_choice == '4' ]; then
-    echo "preparing playground for tutorial $tutorial_choice..."
+echo "preparing playground for tutorial $tutorial_choice..."
+cp -r ../../_feedback-app-original/* .
+echo "Done."
+echo "Created files:"
+ls
 fi
