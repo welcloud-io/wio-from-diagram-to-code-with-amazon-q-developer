@@ -24,7 +24,7 @@ echo "preparing playground for tutorial $tutorial_choice..."
 cp -r ../../tutorials-starting-points/feedback-app-code/* .
 cat << 'EOF' > MERMAID-DIAGRAMS.md
 ```mermaid
-<PUT MERMAID CODE HERE>
+<PUT MERMAID CODE HERE AND CLICK ON PREVIEW AT THE RIGHT HAND CORNER>
 ```
 EOF
 echo "Done."
