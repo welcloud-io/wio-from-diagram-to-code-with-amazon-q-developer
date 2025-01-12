@@ -1,9 +1,16 @@
-!!! Each tutorial must be initialized in VSCode to work !!!
+**!!! Each tutorial must be initialized for them to work !!!**
 
-In the terminal type '../init-playground.sh' in the 'vscode-app-folder'
+## Start turorial playground in anew VSCode window
 
 ```bash
-$.../vscode-app-folder> ../init-playground.sh
+# You should be in the wio-from-diagram-to-code-with-amazon-q-developer/ folder from here
+$> ./start-vscode-tutorial-window.sh
+```
+
+## Initialize a tutorial from the new VS Code window
+
+```bash
+$../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
 2. From diagram to code with Mermaid
@@ -12,9 +19,9 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): ...
 ```
 
-If something does not work, that can help:
+If something does not work in a tutorial, that commands can help:
 
- ```rm ~/.aws/amazonq/cache/cache/*```
+ ```$> rm ~/.aws/amazonq/cache/cache/*```
  
  ```Ctrl / Shift / P / Developer: Reload Window```
 
@@ -23,7 +30,7 @@ If something does not work, that can help:
 ### Initialize playgorund:
 
 ```bash
-$.../vscode-app-folder> ../init-playground.sh
+$> ../init-playground.sh
 ---choose corresponding tutorial---
 ```
 
@@ -62,7 +69,7 @@ Click on preview, to preview .md file
 ### Initialize playgorund:
 
 ```bash
-$.../vscode-app-folder> ../init-playground.sh
+$> ../init-playground.sh
 ---choose corresponding tutorial---
 ```
 
@@ -105,7 +112,7 @@ Fix the generated result using inline chat (Ctrl-I):
 ### Initialize playgorund:
 
 ```bash
-$.../vscode-app-folder> ../init-playground.sh
+$>../init-playground.sh
 ---choose corresponding tutorial---
 ```
 
@@ -121,7 +128,7 @@ Q Prompt:
 ### Initialize playgorund:
 
 ```bash
-$.../vscode-app-folder> ../init-playground.sh
+$> ../init-playground.sh
 ---choose corresponding tutorial---
 ```
 

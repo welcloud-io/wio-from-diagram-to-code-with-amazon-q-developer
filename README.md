@@ -1,18 +1,43 @@
+# **From Diagram to Code with Amazon Q Developer**
+
+This repo is a list of tutorials based on this blog post:
+https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer
+
+It demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
+
+---
+
 # Prerequisites
 
-I assume that you are on an unbuntu 22-04 linux machine
+I assume that you are running on Ubuntu 22-04 linux
 
-## Install VSCODE
+## Install & start VS Code
 
-https://code.visualstudio.com/docs/setup/linux
+The official procedure:
 
-From the terminal, this works for me:
+https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
+
+From the terminal, this also works for me:
 
 ```
-$> sudo snap install --classic code # or code-insiders
+$> sudo snap install --classic code
+$> code
 ```
 
-## Install Amazon Q Developer extension & Enable @workspace
+## Clone the repo & go to the tutorial folder
+
+Open a terminal in VS Code and execute the following commands
+
+```
+$> git clone https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer.git
+$> cd wio-from-diagram-to-code-with-amazon-q-developer/
+```
+
+## Configure VS Code Manually (Option 1)
+
+N.B. You can try to configure VS Code Automatically if you start from a blank VS Code environement (see Option 2)
+
+### Install Amazon Q Developer extension & Enable @workspace
 
 Q Developer plugin installation:
 https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-in-IDE-setup.html#setup-vscode
@@ -21,11 +46,11 @@ Q Developer settings option to tick: https://docs.aws.amazon.com/amazonq/latest/
 
 Then connect to Amazon Q with your builder ID
 
-## Install Mermaid extension
+### Install Mermaid extension
 
 https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
 
-## Install Draw.io Integration extension
+### Install Draw.io Integration extension
 
 https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio
 
@@ -34,45 +59,15 @@ Then:
 - Search for 'editorasso' setting 
 - Add the following association item: *.drawio.xml => hediet.vscode-drawio-text)
 
-# Clone repo
+## Configure VS Code Automatically (Option 2)
 
+Be aware that this may not work if you environment has some settings already
+
+```bash
+$> ./setup-vscode.sh
 ```
-git clone https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer.git
-```
+# Start tutorials
 
-# Go to the _playground folder
-
-```
-cd wio-from-diagram-to-code-with-amazon-q-developer/_playground/
-```
-
-# Initiate the application folder
-
-```
-mkdir vscode-app-folder
-```
-
-# Open the application folder with vscode
-
-Open vscode menu : File / Open Folder... 
-
-Chose 'wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder' folder
-
-# Choose a tutorial to initialize
-
-```
-../init-playground.sh 
-Available tutorials:
-1. From code to diagram with Mermaid
-2. From diagram to code with Mermaid
-3. From diagram to code with draw.io
-4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4):
-```
-
-# Follow tutorial instructions in the readme
+## Follow tutorial instructions in the tutorial readme
 
 [TUTORIAL INSTRUCTIONS](_playground/README.md)
-
-
-
