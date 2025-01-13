@@ -1,4 +1,4 @@
-## Start turorial playground ( i.e. new VS Code Window)
+# 0 - Start tutorials playground ( i.e. new VS Code Window)
 
 ```bash
 # From wio-from-diagram-to-code-with-amazon-q-developer/
