@@ -15,7 +15,7 @@ I assume that you are running on Ubuntu 22-04 linux, but the instructions below 
 
 ## Install & start VS Code
 
-The official procedure:
+The official procedures:
 
 https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
 
@@ -37,7 +37,9 @@ $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 
 ## Configure VS Code Manually (Option 1)
 
-N.B. You can try to configure VS Code Automatically if you start from a blank VS Code environement (see Option 2)
+N.B. You can
+[try to configure VS Code automatically](https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer?tab=readme-ov-file#configure-vs-code-automatically-option-2)
+if you start from a blank VS Code environement (see Option 2)
 
 ### Install Amazon Q Developer extension & Enable @workspace
 
