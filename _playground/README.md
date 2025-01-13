@@ -1,5 +1,7 @@
 # 0 - Start tutorials playground ( i.e. new VS Code Window)
 
+The next command will open a new VS Code window. So, you will have blank playground where you will execute the tutorials.
+
 ```bash
 # From wio-from-diagram-to-code-with-amazon-q-developer/
 $> ./start-vscode-tutorial-window.sh
@@ -16,7 +18,7 @@ If something does not work in a tutorial, these commands can help:
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window
+# From VS Code tutorial window terminal
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -67,7 +69,7 @@ Click on preview, to preview .md file
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window
+# From VS Code tutorial window terminal
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -127,7 +129,7 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window
+# From VS Code tutorial window terminal
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -151,7 +153,7 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window
+# From VS Code tutorial window terminal
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
