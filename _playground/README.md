@@ -1,24 +1,22 @@
-**!!! Each tutorial must be initialized for them to work !!!**
+## Start turorial playground ( i.e. new VS Code Window)
 
-If something does not work in a tutorial, that commands can help:
+```bash
+# From wio-from-diagram-to-code-with-amazon-q-developer/
+$> ./start-vscode-tutorial-window.sh
+```
+
+If something does not work in a tutorial, these commands can help:
 
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
  ```Ctrl / Shift / P / Developer: Reload Window```
-
-## Start turorial playground in anew VSCode window
-
-```bash
-# You should be in the wio-from-diagram-to-code-with-amazon-q-developer/ folder from here
-$> ./start-vscode-tutorial-window.sh
-```
 
 # 1 - From Code to Diagram with Mermaid
 
 ### Initialize tutorial
 
 ```bash
-# You should be in the VS Code tutorial window from here
+# From VS Code tutorial window
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -69,7 +67,7 @@ Click on preview, to preview .md file
 ### Initialize tutorial
 
 ```bash
-# You should be in the VS Code tutorial window from here
+# From VS Code tutorial window
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -129,7 +127,7 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# You should be in the VS Code tutorial window from here
+# From VS Code tutorial window
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
@@ -153,7 +151,7 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# You should be in the VS Code tutorial window from here
+# From VS Code tutorial window
 $../init-playground.sh
 Available tutorials:
 1. From code to diagram with Mermaid
