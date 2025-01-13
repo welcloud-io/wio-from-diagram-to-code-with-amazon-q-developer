@@ -37,9 +37,9 @@ $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 
 ## Configure VS Code Manually (Option 1)
 
-N.B. You can
-[try to configure VS Code automatically](https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon-q-developer?tab=readme-ov-file#configure-vs-code-automatically-option-2)
-if you start from a blank VS Code environement (see Option 2)
+N.B.
+__You can try to configure VS Code automatically__
+if you start from a blank VS Code environement (__see Option 2__)
 
 ### Install Amazon Q Developer extension & Enable @workspace
 
@@ -65,7 +65,7 @@ Then:
 
 ## Configure VS Code Automatically (Option 2)
 
-Be aware that this may not work if you environment has some settings already
+**Be aware that this may not work** if you environment has some settings already
 
 ```bash
 $> ./setup-vscode.sh
