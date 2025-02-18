@@ -9,9 +9,17 @@ $> ./start-vscode-tutorial-window.sh
 
 If something does not work in a tutorial, these commands can help:
 
+Remove amazonq cache content  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
+ Reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
+
+ OR
+ 
+ ``` ../init-playground.sh --hard ```
+
+which removes all files in the playground folder and amazonq cache content (that does not reload window)
 
 # 1 - From Code to Diagram with Mermaid
 
@@ -28,7 +36,7 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 1
 ```
 
-## 1 - 1 - Generate Application diagram
+## 1.1 - Generate Application diagram
 
 Q prompt:
 
@@ -40,7 +48,7 @@ Save the file and click on Preview on the right hand corner.
 
 Click on preview, to preview .md file
 
-## 1 - 2 - Generate Sequence diagram
+## 1.2 - Generate Sequence diagram
 
 Q prompt:
 
@@ -52,7 +60,7 @@ Save the file and click on Preview on the right hand corner.
 
 Click on preview, to preview .md file
 
-## 1 - 3 - Generate Class diagram
+## 1.3 - Generate Class diagram
 
 Q prompt:
 
@@ -148,7 +156,7 @@ Q Prompt:
 cdk deploy --app "python3 app.py"
 ```
 
-# 4 - Generate drawio diagram from application
+# 4 - From Code to Diagram with Draw.io
 
 ### Initialize tutorial
 
