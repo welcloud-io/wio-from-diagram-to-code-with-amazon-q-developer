@@ -11,22 +11,22 @@ It demonstrates how you can generate diagrams from an application code, but also
 
 # Prerequisites
 
-I assume that you are running on Ubuntu 22-04 linux, but the instructions below can be adapted to your environment.
+I assume that you are running on **Linux Ubuntu 22-04**, but instructions below can be adapted to your environment.
 
-## Install & start VS Code
+## 1) Install & start VS Code (If not done yet in your environment)
 
-The official procedures:
+The official procedures to install & start VS Code is there:
 
 https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
 
-From the terminal, this also works for me:
+N.B.: These simple commands below works for me to intsall & start VS Code on Linux Ubuntu 22-04:
 
 ```
 $> sudo snap install --classic code
 $> code
 ```
 
-## Clone the repo & go to the tutorial folder
+## 2) Clone the repo & go to the tutorial folder
 
 Open a terminal in VS Code and execute the following commands
 
@@ -35,7 +35,9 @@ $> git clone https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon
 $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 ```
 
-## Configure VS Code Manually (Option 1)
+## 3) Configure VS Code
+
+### 3.1) Configure VS Code Manually (Option 1)
 
 N.B.
 __You can try to configure VS Code automatically__
@@ -63,7 +65,7 @@ Then:
 - Search for 'editorasso' setting 
 - Add the following association item: *.drawio.xml => hediet.vscode-drawio-text)
 
-## Configure VS Code Automatically (Option 2)
+### 3.2) Configure VS Code Automatically (Option 2)
 
 **Be aware that this may not work** if you environment has some settings already
 
