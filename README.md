@@ -79,4 +79,6 @@ Once done, connect to Amazon Q Developer using your Builder ID (folow the proced
 
 ## Follow tutorial instructions in the tutorial readme
 
-[TUTORIAL INSTRUCTIONS](_playground/README.md)
+[CLASSIC TUTORIALS INSTRUCTIONS](_playground/README.md)
+
+[MORE TUTORIALS](_playground/README-More.md)

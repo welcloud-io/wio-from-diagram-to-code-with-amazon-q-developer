@@ -27,9 +27,17 @@ ls
 fi
 
 if [ $tutorial_choice == '2' ]; then
-echo
+echo "preparing playground for tutorial $tutorial_choice..."
+cp -r ../../tutorials-starting-points/data-pipeline-diagram/* .
+echo "Done."
+echo "Created files:"
+ls
 fi
 
 if [ $tutorial_choice == '3' ]; then
-echo
+echo "preparing playground for tutorial $tutorial_choice..."
+cp -r ../../tutorials-starting-points/deployment-pipeline/* .
+echo "Done."
+echo "Created files:"
+ls
 fi
