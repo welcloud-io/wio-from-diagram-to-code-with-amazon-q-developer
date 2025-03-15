@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+import os
+from aws_cdk import (
+    App,
+    Stack,
+    Duration,
+    RemovalPolicy,
+    aws_lambda as _lambda,
+    aws_apigateway as apigw,
+    aws_dynamodb as dynamodb,
+    aws_sns as sns,
+    aws_sns_subscriptions as sns_subs,
+    aws_iam as iam,
+)
+from constructs import Construct
+
+class FeedbackAppStack(Stack):
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+
+        # Create DynamoDB table for feedback
+        feedback_table = dynamodb.Table(
+            self, "FeedbackTable",
+            partition_key=dynamodb.Attribute(
+                name="id",
+                type=dynamodb.AttributeType.STRING
+            ),
+            removal_policy=RemovalPolicy.DESTROY,  # For demo purposes only
+            billing_mode=dynamodb.BillingMode.PAY_PER_REQUEST,
+        )
+
+        # Create SNS Topic for feedback notifications
+        feedback_topic = sns.Topic(
+            self, "FeedbackTopic",
+            display_name="Feedback Notifications"
+        )
+
+        # Add email subscription to the SNS topic
+        # Replace with your actual email address
+        feedback_topic.add_subscription(
+            sns_subs.EmailSubscription("your-email@example.com")
+        )
+
+        # Create Lambda function for landing page
+        landing_page_function = _lambda.Function(
+            self, "LandingPageFunction",
+            runtime=_lambda.Runtime.PYTHON_3_9,
+            handler="landing_page.handler",
+            code=_lambda.Code.from_asset("lambda_functions"),
+            timeout=Duration.seconds(30),
+        )
+
+        # Create Lambda function for recording and confirming feedback
+        record_feedback_function = _lambda.Function(
+            self, "RecordFeedbackFunction",
+            runtime=_lambda.Runtime.PYTHON_3_9,
+            handler="record_feedback.handler",
+            code=_lambda.Code.from_asset("lambda_functions"),
+            timeout=Duration.seconds(30),
+            environment={
+                "FEEDBACK_TABLE_NAME": feedback_table.table_name,
+                "FEEDBACK_TOPIC_ARN": feedback_topic.topic_arn,
+            }
+        )
+
+        # Grant permissions to Lambda functions
+        feedback_table.grant_read_write_data(record_feedback_function)
+        feedback_topic.grant_publish(record_feedback_function)
+
+        # Create API Gateway
+        api = apigw.RestApi(
+            self, "FeedbackApi",
+            rest_api_name="Feedback Service",
+            description="API for submitting and managing feedback"
+        )
+
+        # Create API resources and methods
+        landing_page_resource = api.root.add_resource("landing")
+        landing_page_integration = apigw.LambdaIntegration(landing_page_function)
+        landing_page_resource.add_method("GET", landing_page_integration)
+
+        feedback_resource = api.root.add_resource("feedback")
+        feedback_integration = apigw.LambdaIntegration(record_feedback_function)
+        feedback_resource.add_method("POST", feedback_integration)
+
+        # Output the API Gateway URL
+        from aws_cdk import CfnOutput
+        CfnOutput(
+            self, "ApiUrl",
+            value=f"{api.url}landing",
+            description="URL for the landing page"
+        )
+
+
+app = App()
+FeedbackAppStack(app, "FeedbackAppStack")
+app.synth()
