@@ -42,6 +42,8 @@ Q prompt:
 
 | **@workspace can you generate a mermaid diagram of my application**
 
+![application](../screenshots/mermaid-application-diagram.png)
+
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
 Save the file and click on Preview on the right hand corner.
@@ -54,7 +56,7 @@ Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
 
-![test](../screenshots/mermaid-sequencce-diagram.png)
+![sequence](../screenshots/mermaid-sequencce-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
@@ -67,6 +69,8 @@ Click on preview, to preview .md file
 Q prompt:
 
 | **@workspace can you generate a mermaid class diagram of the application**
+
+![class](../screenshots/mermaid-class-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
@@ -111,7 +115,9 @@ E
 F  
 end**
 
-Accept changes, and try to deploy the application with the CK
+Accept changes, and try to deploy the application with the CDK
+
+![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
 #### CDK installation
 ```bash
@@ -153,6 +159,8 @@ Q Prompt:
 
 | **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
 
+![app_and_infra](../screenshots/app+infra-from-mermaid.png)
+
 #### Deploy the application (N.B. The AWS CLI must be configured with credentials)
 ```bash
 cdk deploy --app "python3 app.py"
@@ -176,6 +184,9 @@ Which tutorial would you like to view? (1-4): 4
 Q Prompt:
 
 | **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
+
+![drawio](../screenshots/drawio-diagram-from-code.png)
+
 
 ### Update app.drawio.xml file & display the content
 
