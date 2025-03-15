@@ -54,6 +54,8 @@ Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
 
+![test](../screenshots/mermaid-sequencce-diagram.png)
+
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
 Save the file and click on Preview on the right hand corner.
