@@ -9,9 +9,10 @@ echo "1. From code to diagram with Mermaid"
 echo "2. From diagram to code with Mermaid"
 echo "3. From diagram to code with draw.io"
 echo "4. From code to diagram with draw.io"
+echo "5. More..."
 
 # Prompt user to select tutorial
-read -p "Which tutorial would you like to view? (1-4): " tutorial_choice
+read -p "Which tutorial would you like to view? (1-5): " tutorial_choice
 
 # Validate input
 if [[ ! $tutorial_choice =~ ^[1-5]$ ]]; then
@@ -56,4 +57,10 @@ EOF
 echo "Done."
 echo "Created files:"
 ls
+fi
+
+if [ $tutorial_choice == '5' ]; then
+echo
+echo "More..."
+../init-playground-more.sh
 fi

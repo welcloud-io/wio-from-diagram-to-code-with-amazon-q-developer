@@ -9,9 +9,17 @@ $> ./start-vscode-tutorial-window.sh
 
 If something does not work in a tutorial, these commands can help:
 
+Remove amazonq cache content  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
+ Reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
+
+ OR
+ 
+ ``` ../init-playground.sh --hard ```
+
+which removes all files in the playground folder and amazonq cache content (that does not reload window)
 
 # 1 - From Code to Diagram with Mermaid
 
@@ -34,6 +42,9 @@ Q prompt:
 
 | **@workspace can you generate a mermaid diagram of my application**
 
+Example result:
+![application](../screenshots/mermaid-application-diagram.png)
+
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
 Save the file and click on Preview on the right hand corner.
@@ -46,6 +57,9 @@ Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
 
+Example result:
+![sequence](../screenshots/mermaid-sequencce-diagram.png)
+
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
 Save the file and click on Preview on the right hand corner.
@@ -57,6 +71,9 @@ Click on preview, to preview .md file
 Q prompt:
 
 | **@workspace can you generate a mermaid class diagram of the application**
+
+Example result:
+![class](../screenshots/mermaid-class-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
@@ -101,7 +118,10 @@ E
 F  
 end**
 
-Accept changes, and try to deploy the application with the CK
+Accept changes, and try to deploy the application with the CDK
+
+Example Result:
+![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
 #### CDK installation
 ```bash
@@ -139,9 +159,17 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 3
 ```
 
+Drawio source diagram:
+
+![app_and_infra](../screenshots/feedbackapp-drawio.png)
+
 Q Prompt:
 
 | **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
+
+Example result:
+
+![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
 #### Deploy the application (N.B. The AWS CLI must be configured with credentials)
 ```bash
@@ -166,6 +194,10 @@ Which tutorial would you like to view? (1-4): 4
 Q Prompt:
 
 | **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
+
+Example result:
+![drawio](../screenshots/drawio-diagram-from-code.png)
+
 
 ### Update app.drawio.xml file & display the content
 
