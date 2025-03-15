@@ -155,6 +155,10 @@ Available tutorials:
 Which tutorial would you like to view? (1-4): 3
 ```
 
+Drawio source diagram:
+
+![app_and_infra](../screenshots/feedbackapp-drawio.png)
+
 Q Prompt:
 
 | **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
