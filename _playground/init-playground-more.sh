@@ -1,8 +1,6 @@
 cd "$(dirname "$0")"
 cd vscode-app-folder
 
-../clear-playground.sh $1
-
 # Display available tutorials
 echo "Available tutorials:"
 echo "1. S3 notification (from diagram to code)"
@@ -11,6 +9,8 @@ echo "3. Deployment pipeline (from diagram to code)"
 
 # Prompt user to select tutorial
 read -p "Which tutorial would you like to view? (1-3): " tutorial_choice
+
+../clear-playground.sh $1
 
 # Validate input
 if [[ ! $tutorial_choice =~ ^[1-3]$ ]]; then
