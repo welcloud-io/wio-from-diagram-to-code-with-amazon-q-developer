@@ -75,6 +75,20 @@ $> ./setup-vscode.sh
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
 
+## 4) Install Q CLI (Optional)
+
+Amazon Q Developer CLI (Command Line Interface) is used for some tutorials, but not for all.
+
+To install it either you follow this link:
+
+https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html
+
+OR you try this script on Linux Ubuntu 22-04:
+
+```bash
+$> ./install-q-cli.sh
+```
+
 # Start tutorials
 
 ## Follow tutorial instructions in the tutorial readme

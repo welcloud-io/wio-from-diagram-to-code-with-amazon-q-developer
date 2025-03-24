@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install plugins
 code --install-extension bierner.markdown-mermaid
 code --install-extension amazonwebservices.amazon-q-vscode
