@@ -41,7 +41,7 @@ echo "Created files:"
 ls -1
 echo """
 -------------------------------------------------------------------------------
-$(tput bold)$(tput setaf 1)[From Code to Mermaid Diagram with Q Desktop] PROMPTS:$(tput sgr0)
+$(tput bold)$(tput setaf 2)[From Code to Mermaid Diagram with Q Desktop] PROMPTS:$(tput sgr0)
 
 ...Go to Q Desktop en enter
 
@@ -58,7 +58,7 @@ $(tput bold)> @workspace can you generate a mermaid class diagram of the applica
 ...Copy/Paste prompt results in MERMAID-DIAGRAMS.md
 
 -------------------------------------------------------------------------------
-$(tput bold)$(tput setaf 1)[From Code to Drawio Diagram with Q Desktop] PROMPTS:$(tput sgr0)
+$(tput bold)$(tput setaf 2)[From Code to Drawio Diagram with Q Desktop] PROMPTS:$(tput sgr0)
 
 ...Go to Q Desktop and enter
 
@@ -80,7 +80,7 @@ echo "Folder should be empty"
 ls -l
 echo """
 -------------------------------------------------------------------------------
-$(tput bold)$(tput setaf 1)[From Mermaid Diagram to Code with Q Desktop] PROMPTS:$(tput sgr0)
+$(tput bold)$(tput setaf 2)[From Mermaid Diagram to Code with Q Desktop] PROMPTS:$(tput sgr0)
 
 ...Go to Q Desktop and enter
 
@@ -119,7 +119,7 @@ echo "Created files:"
 ls -1
 echo """
 -------------------------------------------------------------------------------
-$(tput bold)$(tput setaf 1)[From Drawio Diagram to Code with Q Desktop] PROMPTS:$(tput sgr0)
+$(tput bold)$(tput setaf 2)[From Drawio Diagram to Code with Q Desktop] PROMPTS:$(tput sgr0)
 
 ...Open drawio diagram in folder
 
@@ -130,7 +130,7 @@ $(tput bold)> /dev can you generate application from the drawio diagram (I want 
 ...Deploy generated code in your folder with 'cdk deploy'
 
 -------------------------------------------------------------------------------
-$(tput bold)$(tput setaf 1)[From Drawio Diagram to Code with Q CLI] PROMPTS:$(tput sgr0)
+$(tput bold)$(tput setaf 2)[From Drawio Diagram to Code with Q CLI] PROMPTS:$(tput sgr0)
 
 ...Open terminal and type:
 $> q chat
@@ -159,8 +159,6 @@ echo "Done."
 echo "Created files:"
 ls -l
 echo """
-- Tutorial 1 (From Code to Diagram with Drawio + Q Desktop) 
-> 
 
 """
 fi

@@ -11,7 +11,7 @@ It demonstrates how you can generate diagrams from an application code, but also
 
 # Prerequisites
 
-I assume that you are running on **Linux Ubuntu 22-04**, but instructions below can be adapted to your environment.
+I assume that you are using a **Linux Ubuntu 22-04** distribution, but the instructions below can be adapted to your environment.
 
 ## 1) Install & start VS Code (If not done yet in your environment)
 
@@ -19,7 +19,7 @@ The official procedures to install & start VS Code is there:
 
 https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
 
-N.B.: These simple commands below works for me to intsall & start VS Code on Linux Ubuntu 22-04:
+N.B.: These simple commands below work for me to intsall & start VS Code on Linux Ubuntu 22-04:
 
 ```
 $> sudo snap install --classic code
@@ -40,15 +40,15 @@ $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 ### 3.1) Configure VS Code Manually (Option 1)
 
 N.B.
-__You can try to configure VS Code automatically__
-if you start from a blank VS Code environement (__see Option 2__)
+__You can atempt to configure VS Code automatically__
+if it is a fresh installation (__see Option 2__)
 
 ### Install Amazon Q Developer extension & Enable @workspace
 
 Q Developer plugin installation:
 https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-in-IDE-setup.html#setup-vscode
 
-Q Developer settings option to tick: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/workspace-context.html
+Q Developer setting options to tick: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/workspace-context.html
 
 Then connect to Amazon Q with your builder ID
 
@@ -79,11 +79,11 @@ Once done, connect to Amazon Q Developer using your Builder ID (folow the proced
 
 Amazon Q Developer CLI (Command Line Interface) is used for some tutorials, but not for all.
 
-To install it either you follow this link:
+To install it, you either you follow this link:
 
 https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html
 
-OR you try this script on Linux Ubuntu 22-04:
+OR you can attempt using this script in you terminal (n.b. it's only been tested on Linux Ubuntu 22-04):
 
 ```bash
 $> ./install-q-cli.sh
