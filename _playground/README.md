@@ -1,13 +1,14 @@
 # 0 - Start tutorials playground ( i.e. new VS Code Window)
 
-The next command will open a new VS Code window. So, you will have blank playground where you will execute the tutorials.
+The command below will open a new VS Code window. 
+That means you will have a blank playground where you will import a tutorial starting point.
 
 ```bash
 # From wio-from-diagram-to-code-with-amazon-q-developer/
 $> ./start-vscode-tutorial-window.sh
 ```
 
-If something does not work in a tutorial, these commands can help:
+If something doesn't work in this tutorial, these commands can help:
 
 Remove amazonq cache content  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
@@ -26,14 +27,19 @@ which removes all files in the playground folder and amazonq cache content (that
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window terminal
-$../init-playground.sh
-Available tutorials:
-1. From code to diagram with Mermaid
-2. From diagram to code with Mermaid
-3. From diagram to code with draw.io
-4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 1
+# In VS Code tutorial window terminal:
+$ ../init-playground.sh 
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification (from Diagram to Code)
+4. Data pipeline (from Diagram to Code)
+5. Deployment pipeline (from Diagram to Code)
+
+Where do you want to start from (0-5)?: 1
 ```
 
 ## 1.1 - Generate Application diagram
@@ -86,14 +92,19 @@ Click on preview, to preview .md file
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window terminal
-$../init-playground.sh
-Available tutorials:
-1. From code to diagram with Mermaid
-2. From diagram to code with Mermaid
-3. From diagram to code with draw.io
-4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 2
+# In VS Code tutorial window terminal:
+$ ../init-playground.sh 
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification (from Diagram to Code)
+4. Data pipeline (from Diagram to Code)
+5. Deployment pipeline (from Diagram to Code)
+
+Where do you want to start from (0-5)?: 0
 ```
 
 Q Prompt:
@@ -149,14 +160,19 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window terminal
-$../init-playground.sh
-Available tutorials:
-1. From code to diagram with Mermaid
-2. From diagram to code with Mermaid
-3. From diagram to code with draw.io
-4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 3
+# In VS Code tutorial window terminal:
+$ ../init-playground.sh 
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification (from Diagram to Code)
+4. Data pipeline (from Diagram to Code)
+5. Deployment pipeline (from Diagram to Code)
+
+Where do you want to start from (0-5)?: 2
 ```
 
 Drawio source diagram:
@@ -181,14 +197,19 @@ cdk deploy --app "python3 app.py"
 ### Initialize tutorial
 
 ```bash
-# From VS Code tutorial window terminal
-$../init-playground.sh
-Available tutorials:
-1. From code to diagram with Mermaid
-2. From diagram to code with Mermaid
-3. From diagram to code with draw.io
-4. From code to diagram with draw.io
-Which tutorial would you like to view? (1-4): 4
+# In VS Code tutorial window terminal:
+$ ../init-playground.sh 
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification (from Diagram to Code)
+4. Data pipeline (from Diagram to Code)
+5. Deployment pipeline (from Diagram to Code)
+
+Where do you want to start from (0-5)?: 2
 ```
 
 Q Prompt:
@@ -212,3 +233,6 @@ Save the file, and double click on it to open it with the Drawio Integration ext
 In case of an error when opening the diagram, add this to your prompt, that can solve the issue:
 
 | **I got an error when I want to open the diagram**
+
+---
+[MORE TUTORIALS](README-More.md)

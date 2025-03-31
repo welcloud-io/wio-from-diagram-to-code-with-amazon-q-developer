@@ -1,9 +1,16 @@
-# Empty application folder
+#!/bin/bash
+
 cd "$(dirname "$0")"
 cd vscode-app-folder
 
 find . -not -name '.gitignore' -delete
-echo "All files deleted in vscode-app-folder"
+
+clear_playground_log() {
+echo """
+All files deleted in vscode-app-folder
+-------------------------------------------------------------------------------
+"""
+}
 
 if [ "$1" == "--hard" ]; then
     # Empty @worksapce cache folder if not empty already
