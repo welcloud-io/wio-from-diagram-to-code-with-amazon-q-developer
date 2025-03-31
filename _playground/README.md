@@ -48,7 +48,8 @@ Q prompt:
 
 | **@workspace can you generate a mermaid diagram of my application**
 
-Example result:
+Result Example:
+
 ![application](../screenshots/mermaid-application-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
@@ -63,7 +64,8 @@ Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
 
-Example result:
+Result Example:
+
 ![sequence](../screenshots/mermaid-sequencce-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
@@ -78,7 +80,8 @@ Q prompt:
 
 | **@workspace can you generate a mermaid class diagram of the application**
 
-Example result:
+Result Example:
+
 ![class](../screenshots/mermaid-class-diagram.png)
 
 Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
@@ -131,7 +134,8 @@ end**
 
 Accept changes, and try to deploy the application with the CDK
 
-Example Result:
+Result Example:
+
 ![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
 #### CDK installation
@@ -179,11 +183,13 @@ Drawio source diagram:
 
 ![app_and_infra](../screenshots/feedbackapp-drawio.png)
 
+## 1.1 - From Diagram to Code with Draw.io (using Q Desktop)
+
 Q Prompt:
 
 | **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
 
-Example result:
+Result Example:
 
 ![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
@@ -191,6 +197,32 @@ Example result:
 ```bash
 cdk deploy --app "python3 app.py"
 ```
+
+## 1.2 - From Diagram to Code with Draw.io (using Q CLI)
+
+
+-> Open terminal and type:
+
+```
+$> q chat
+```
+
+then
+
+|> **can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
+
+-> Say yes (y) to all
+
+|> **modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)**
+
+-> Say yes (y) to all
+
+Result example:
+
+![cdk_construc_split](../screenshots/cdk-construct-split.png)
+
+-> Deploy generated code in your folder with 'cdk deploy'
+
 
 # 4 - From Code to Diagram with Draw.io
 
@@ -216,7 +248,8 @@ Q Prompt:
 
 | **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
 
-Example result:
+Result Example:
+
 ![drawio](../screenshots/drawio-diagram-from-code.png)
 
 
