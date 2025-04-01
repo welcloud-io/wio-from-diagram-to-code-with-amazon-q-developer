@@ -44,6 +44,9 @@ Where do you want to start from (0-5)?: 1
 
 ## 1.1 - Generate Application diagram
 
+**N.B.: When using @workspace, 
+you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
+
 Q prompt:
 
 | **@workspace can you generate a mermaid diagram of my application**
@@ -60,6 +63,9 @@ Click on preview, to preview .md file
 
 ## 1.2 - Generate Sequence diagram
 
+**N.B.: When using @workspace, 
+you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
+
 Q prompt:
 
 | **@workspace can you generate a mermaid sequence diagram of the application**
@@ -75,6 +81,9 @@ Save the file and click on Preview on the right hand corner.
 Click on preview, to preview .md file
 
 ## 1.3 - Generate Class diagram
+
+**N.B.: When using @workspace, 
+you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
 
 Q prompt:
 
@@ -243,6 +252,9 @@ Available starting points:
 
 Where do you want to start from (0-5)?: 2
 ```
+
+**N.B.: When using @workspace, 
+you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
 
 Q Prompt:
 
