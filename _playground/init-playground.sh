@@ -25,6 +25,11 @@ fi
 
 ../clear-playground.sh $1
 
+if [ "$1" == "--with-cdk-template" ]; then
+    cp -r ../../tutorials-starting-points/cdk-template/* .
+fi
+
+
 # -----------------------------------------------------------------------------
 # Starting points preparation
 # -----------------------------------------------------------------------------
