@@ -192,7 +192,7 @@ Drawio source diagram:
 
 ![app_and_infra](../screenshots/feedbackapp-drawio.png)
 
-## 1.1 - From Diagram to Code with Draw.io (using Q Desktop)
+## 3.1 - From Diagram to Code with Draw.io (using Q Desktop)
 
 Q Prompt:
 
@@ -207,7 +207,7 @@ Result Example:
 cdk deploy --app "python3 app.py"
 ```
 
-## 1.2 - From Diagram to Code with Draw.io (using Q CLI)
+## 3.2 - From Diagram to Code with Draw.io (using Q CLI)
 
 
 -> Open terminal and type:
