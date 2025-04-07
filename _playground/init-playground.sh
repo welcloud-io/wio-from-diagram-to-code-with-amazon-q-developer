@@ -12,23 +12,34 @@ echo "2. Feedback App Diagram (from Diagram to Code)"
 echo "3. S3 notification (from Diagram to Code)"
 echo "4. Data pipeline (from Diagram to Code)"
 echo "5. Deployment pipeline (from Diagram to Code)"
+echo "6. Api Gateway (from Diagram to Code)"
 echo
 
 # Prompt user to select tutorial
-read -p "Where do you want to start from (0-5)?: " tutorial_choice
+read -p "Where do you want to start from (0-6)?: " tutorial_choice
 
 # Validate input
-if [[ ! $tutorial_choice =~ ^[0-5]$ ]]; then
+if [[ ! $tutorial_choice =~ ^[0-6]$ ]]; then
     echo "Invalid selection. Please choose a number between 0 and 5."
     exit 1
 fi
 
-../clear-playground.sh $1
-
-if [ "$1" == "--with-cdk-template" ]; then
-    cp -r ../../tutorials-starting-points/cdk-template/* .
+if [[ "$@" =~ "--hard" ]]; then
+    ../clear-playground.sh --hard
+else
+    ../clear-playground.sh
 fi
 
+for arg in "$@"; do
+    case "$arg" in
+        --with-cdk-template)
+            cp -r ../../tutorials-starting-points/cdk-template/* .
+            ;;
+        --with-q-rules)
+            cp -r ../../tutorials-starting-points/q-rules/.amazonq .
+            ;;
+    esac
+done
 
 # -----------------------------------------------------------------------------
 # Starting points preparation
@@ -80,6 +91,12 @@ cp -r ../../tutorials-starting-points/deployment-pipeline/* .
    
 }
 
+prepare_playground_api_gateway() {
+
+cp -r ../../tutorials-starting-points/api-gateway-diagram/* .
+   
+}
+
 
 
 . ../tutorial_descriptions.sh
@@ -112,5 +129,10 @@ fi
 if [ $tutorial_choice == '5' ]; then
 prepare_playground_deployment_pipeline
 tutorial_description_5
+fi
+
+if [ $tutorial_choice == '6' ]; then
+prepare_playground_api_gateway
+tutorial_description_6
 fi
 

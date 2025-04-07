@@ -148,3 +148,11 @@ $(tput bold)$(tput setaf 2)TUTORIAL [From Drawio Diagram to Code with Q Desktop]
 $(tput bold)> @workspace can you generate the deployment pipeline with python cdk v2 from my diagram$(tput sgr0)
 """
 }
+
+tutorial_description_6() {
+echo """
+$(tput bold)$(tput setaf 2)TUTORIAL [From Drawio Diagram to Code with Q CLI]$(tput sgr0)
+-------------------------------------------------------------------------------
+
+"""
+}
