@@ -135,6 +135,8 @@ echo """
 $(tput bold)$(tput setaf 2)TUTORIAL [From Drawio Diagram to Code with Q Desktop]$(tput sgr0)
 -------------------------------------------------------------------------------
 
+$(tput bold)> @workspace generate lambda code in the drawio diagram (take notes into account)$(tput sgr0)
+
 $(tput bold)> @workspace generate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)$(tput sgr0)
 
 """

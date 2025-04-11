@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="DQWdOg8qeRIvR5lbRGK6" name="Page-1">
-        <mxGraphModel dx="1585" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1271" dy="1139" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -91,9 +91,6 @@
                 </mxCell>
                 <mxCell id="34" value="KMS CUSTOMER MANAGED KEY" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;" parent="1" vertex="1">
                     <mxGeometry x="155" y="390" width="78" height="78" as="geometry"/>
-                </mxCell>
-                <mxCell id="35" value="@workspace generate lambda code in the drawio diagram (take notes into account)" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="45" y="615" width="690" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
