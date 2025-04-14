@@ -27,7 +27,11 @@ fi
 if [[ "$@" =~ "--hard" ]]; then
     ../clear-playground.sh --hard
 else
-    ../clear-playground.sh
+    if [[ "$@" =~ "--no-clear" ]]; then
+        echo > /dev/null
+    else
+        ../clear-playground.sh
+    fi
 fi
 
 for arg in "$@"; do
