@@ -64,9 +64,13 @@
 
 ### IMPROVE DETERMINISM
 
+```/context show```
+
 ```../init-playground.sh --with-q-rules``` / 6
 
-```/context show```
+```> generate application```
+
+Replace rules with SAM and Ruby
 
 ```../init-playground.sh --hard --with-rules``` / 5 /  (Ctrl-Shift P)
 
