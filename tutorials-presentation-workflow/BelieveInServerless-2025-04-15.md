@@ -72,7 +72,7 @@
 
 Replace rules with SAM and Ruby
 
-```../init-playground.sh --hard --with-rules``` / 5 /  (Ctrl-Shift P)
+```../init-playground.sh --hard --with-q-rules``` / 5 /  (Ctrl-Shift P)
 
 ```@diagram.drawio.xml generate workflow with lambda functions only```
 
