@@ -3,6 +3,11 @@
 cd "$(dirname "$0")"
 cd vscode-app-folder
 
+if [[ "$@" =~ "--help" ]]; then
+    echo "usage: $0 [--hard] [--no-clear] [--with-cdk-template] [--with-q-rules] [--with-result]"
+    exit 0
+fi
+
 echo
 echo "Available starting points:"
 echo
@@ -79,7 +84,7 @@ echo
 prepare_playground_feedback_app_diagram() {
 
 cp -r ../../tutorials-starting-points/feedback-app-diagram/* .
-echo "xx" $WITH_RESULT
+
 if [ "$WITH_RESULT" = true ]; then
     cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app/* .
 fi
