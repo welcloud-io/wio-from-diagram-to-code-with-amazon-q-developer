@@ -100,6 +100,10 @@ cp -r ../../tutorials-starting-points/s3-notification-diagram/* .
 prepare_playground_data_pipeline() {
 
 cp -r ../../tutorials-starting-points/data-pipeline-diagram/* .
+
+if [ "$WITH_RESULT" = true ]; then
+    cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/data-pipeline/* .
+fi
    
 }
 
