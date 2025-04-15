@@ -7,11 +7,12 @@ from aws_cdk import (
     aws_stepfunctions_tasks as tasks,
     aws_events as events,
     aws_events_targets as targets,
-    RemovalPolicy,
+    Duration,
+    RemovalPolicy
 )
 from constructs import Construct
 
-class MainStack(Stack):
+class CdkStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
@@ -29,26 +30,29 @@ class MainStack(Stack):
             encryption_key=kms_key,
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
-            event_bridge_enabled=True,        
+            event_bridge_enabled=True
         )
 
         # Create Lambda functions
         lambda1 = lambda_.Function(self, "Lambda1",
             runtime=lambda_.Runtime.PYTHON_3_9,
-            handler="app.handler",
-            code=lambda_.Code.from_asset("../lambda/lambda1")
+            handler="index.handler",
+            code=lambda_.Code.from_asset("lambda/lambda1"),
+            timeout=Duration.seconds(30)
         )
 
         lambda2 = lambda_.Function(self, "Lambda2",
             runtime=lambda_.Runtime.PYTHON_3_9,
-            handler="app.handler",
-            code=lambda_.Code.from_asset("../lambda/lambda2")
+            handler="index.handler",
+            code=lambda_.Code.from_asset("lambda/lambda2"),
+            timeout=Duration.seconds(30)
         )
 
         lambda3 = lambda_.Function(self, "Lambda3",
             runtime=lambda_.Runtime.PYTHON_3_9,
-            handler="app.handler",
-            code=lambda_.Code.from_asset("../lambda/lambda3")
+            handler="index.handler",
+            code=lambda_.Code.from_asset("lambda/lambda3"),
+            timeout=Duration.seconds(30)
         )
 
         # Create Step Functions tasks
@@ -76,7 +80,8 @@ class MainStack(Stack):
         definition = task1.next(parallel_state)
 
         state_machine = sfn.StateMachine(self, "StateMachine",
-            definition=definition
+            definition=definition,
+            timeout=Duration.minutes(5)
         )
 
         # Create EventBridge rule
@@ -90,7 +95,7 @@ class MainStack(Stack):
                     },
                     "object": {
                         "key": [{
-                            "prefix": ""  # Match any object key
+                            "prefix": ""  # Match all objects
                         }]
                     }
                 }
