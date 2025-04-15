@@ -91,6 +91,7 @@ cp -r ../../tutorials-starting-points/feedback-app-diagram/* .
 
 if [ "$WITH_RESULT" = true ]; then
     cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app/* .
+    cp -r ../../tutorials-generated-examples/rewritten-diagrams/* .
 fi
    
 }
