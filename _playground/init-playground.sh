@@ -73,6 +73,10 @@ cat << 'EOF' > APP.DRAWIO.XML
 <PUT GENERATED DIAGRAM HERE>
 EOF
 
+if [ "$WITH_RESULT" = true ]; then
+    cp -r ../../tutorials-generated-examples/drawio-diagram-generated-from-code/* .
+fi
+
 }
 
 prepare_playground_empty_folder() {
