@@ -30,12 +30,12 @@
 
 ```../init-playground.sh --hard``` / 3 / (Ctrl-Shift P)
 
-@diagram.drawio.xml can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```@diagram.drawio.xml can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)```
 
 ### Data Pipeline with @workspace
 ```../init-playground.sh``` / 4
 
-@diagram.drawio.xml generate python CDK V2 code and the lambda functions of the step functions workflow only
+```@diagram.drawio.xml generate python CDK V2 code and the lambda functions of the step functions workflow only```
 
 ### Data Pipeline with /dev
 
@@ -56,11 +56,11 @@
 
 ```../init-playground.sh``` / 6
 
-```bash
-$> q chat can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
-```
+```$> q chat```
 
-STOP HERE
+```> can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)```
+
+**DON'T GENERATE ALL, STOP HERE, GO TO NEXT SECTION**
 
 ### IMPROVE DETERMINISM
 
