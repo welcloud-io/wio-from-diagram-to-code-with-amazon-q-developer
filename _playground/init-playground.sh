@@ -34,6 +34,8 @@ else
     fi
 fi
 
+WITH_RESULT=false
+
 for arg in "$@"; do
     case "$arg" in
         --with-cdk-template)
@@ -41,6 +43,9 @@ for arg in "$@"; do
             ;;
         --with-q-rules)
             cp -r ../../tutorials-starting-points/q-rules/.amazonq .
+            ;;
+        --with-result)
+            WITH_RESULT=true
             ;;
     esac
 done
@@ -74,6 +79,10 @@ echo
 prepare_playground_feedback_app_diagram() {
 
 cp -r ../../tutorials-starting-points/feedback-app-diagram/* .
+echo "xx" $WITH_RESULT
+if [ "$WITH_RESULT" = true ]; then
+    cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app/* .
+fi
    
 }
 
