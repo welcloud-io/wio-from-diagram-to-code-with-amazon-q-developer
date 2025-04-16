@@ -1,6 +1,7 @@
 # **From Diagram to Code with Amazon Q Developer**
 
 This repo is a list of tutorials based on this blog post:
+
 https://dev.to/welcloud-io/from-diagram-to-code-with-amazon-q-developer-2da4
 
 You can also find some live demo videos here:
