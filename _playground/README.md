@@ -10,7 +10,8 @@ $> ./start-vscode-tutorial-window.sh
 
 ![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
 
-> **!!! IMPORTANT !!! Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
+
+**!!! IMPORTANT !!! Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
 
 Remove amazonq cache content manually  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
@@ -38,32 +39,34 @@ Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
-2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification Diagram (from Diagram to Code)
-4. Data pipeline Diagram (from Diagram to Code)
-5. Deployment pipeline Diagram (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 1
 ```
 
-## 1.1 - Generate Application diagram
+## 1.1 - Generate Application/Flow diagram
 
 **N.B.: When using @workspace, 
 you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
 
-Q prompt:
+### Q Prompt:
 
-| **@workspace can you generate a mermaid diagram of my application**
+> @workspace 
+```
+can you generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep simple formatting)**
+```
+
+- Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+
+- Save the file and click on Preview on the right hand corner.
+
+- Click on preview, to preview .md file
 
 Result Example:
 
-![application](../screenshots/mermaid-application-diagram.png)
+![application](../screenshots/mermaid-flow-diagram.png)
 
-Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
-Save the file and click on Preview on the right hand corner.
-
-Click on preview, to preview .md file
 
 ## 1.2 - Generate Sequence diagram
 
