@@ -97,15 +97,6 @@ can you generate a mermaid sequence diagram of the application
 
 ## 1.3 - Generate Class diagram
 
-**N.B.: When using @workspace, 
-you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
-
-Q prompt:
-
-| **@workspace **
-
-Result Example:
-
 ### Q Prompt >
 
 ---
