@@ -133,7 +133,7 @@ Available starting points:
 Where do you want to start from (0-5)?: 0
 ```
 
-## Generate application code
+## Generate application code from mermaid diagram
 
 ### Q Prompt >
 
@@ -184,7 +184,7 @@ $> pip install -r requirements.txt
 $> cdk deploy --app "python3 app.py"
 ```
 
-### Result Example (the diagram has been added to the generated Readme.md afterwards)
+### Result Example (n.b. the diagram has been added to the generated Readme.md afterwards)
 
 ![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
@@ -201,30 +201,44 @@ Available starting points:
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 2
 ```
 
-Drawio source diagram:
+## 3.1 - Generate Code from Draw.io Diagram (using Q Desktop)
 
-![app_and_infra](../screenshots/feedbackapp-drawio.png)
+### Q Prompt >
 
-## 3.1 - From Diagram to Code with Draw.io (using Q Desktop)
+---
+**`/dev`**
 
-Q Prompt:
+```
+can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```
+---
 
-| **/dev can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
+### Result Example
 
-Result Example:
 
-![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
-#### Deploy the application (N.B. The AWS CLI must be configured with credentials)
+### CDK installation
 ```bash
-cdk deploy --app "python3 app.py"
+$> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+$> . ~/.bashrc 
+$> nvm install --lts
+$> npm install -g aws-cdk
+```
+
+### CDK packages installation
+```bash
+$> sudo apt install python3-pip # if pip not installed yet
+$> pip install -r requirements.txt
+```
+
+### CDK Deploy (N.B. The AWS CLI must be configured with credentials)
+```bash
+$> cdk deploy --app "python3 app.py"
 ```
 
 ## 3.2 - From Diagram to Code with Draw.io (using Q CLI)
