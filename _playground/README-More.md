@@ -186,7 +186,7 @@ Where do you want to start from ?: 6
 
 ## Generate API Gateway **with Q rules**
 
-**!!! Make sure you have use --with-q-rules option during initialization**
+**!!! Make sure you have used --with-q-rules option during initialization**
 
 ```
 $ ../init-playground.sh --with-q-rules
