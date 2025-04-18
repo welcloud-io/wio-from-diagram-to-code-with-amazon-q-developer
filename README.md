@@ -4,7 +4,7 @@ This repo is a list of tutorials based on this blog post:
 
 https://dev.to/welcloud-io/from-diagram-to-code-with-amazon-q-developer-2da4
 
-You can also find some live demo videos here:
+You can also find some live demos in these videos:
 
 https://www.youtube.com/watch?v=D6cYFDoX1Es&list=PL7uUliWSzuvF0GS9jpaFGQxLKGC0CC2vq
 https://www.youtube.com/watch?v=QuAlzUVqi7I&t=4293s
