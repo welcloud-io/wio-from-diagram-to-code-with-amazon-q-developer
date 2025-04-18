@@ -217,10 +217,8 @@ Where do you want to start from (0-5)?: 2
 can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
 ---
-
-### Result Example
-
-
+- Accept changes, and try to deploy the application with the CDK
+- Test & fix the generated result
 
 ### CDK installation
 ```bash
@@ -240,6 +238,10 @@ $> pip install -r requirements.txt
 ```bash
 $> cdk deploy --app "python3 app.py"
 ```
+
+### Result Example
+
+![code-from-drawio-diagram](../screenshots/code-from-drawio-diagram.png)
 
 ## 3.2 - From Diagram to Code with Draw.io (using Q CLI)
 
