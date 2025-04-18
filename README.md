@@ -46,8 +46,8 @@ $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 ### 3.1) Configure VS Code Manually (Option 1)
 
 N.B.
-__You can atempt to configure VS Code automatically__
-if it is a fresh installation (__see Option 2__)
+**You can attempt to configure VS Code automatically**
+if it's a fresh installation (**see Option 2**)
 
 ### Install Amazon Q Developer extension & Enable @workspace
 
@@ -85,7 +85,7 @@ Once done, connect to Amazon Q Developer using your Builder ID (folow the proced
 
 Amazon Q Developer CLI (Command Line Interface) is used for some tutorials, but not for all.
 
-To install it, you either you follow this link:
+To install it, you either follow this link:
 
 https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html
 
