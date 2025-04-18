@@ -77,7 +77,7 @@ can you generate application from the drawio diagram (I want the code of the lam
 ![sequence](../screenshots/s3-notification.png)
 
 
-# 2 - Data pipeline
+# 2 - Data Pipeline
 
 ### Initialize tutorial
 
@@ -159,7 +159,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ![sequence](../screenshots/deployment-pipeline.png)
 
 
-# 4 - API gateway
+# 4 - API Gateway
 
 ```bash
 # From VS Code tutorial window terminal
