@@ -55,9 +55,7 @@ Where do you want to start from (0-5)?: 1
 
 ## 1.1 - Generate Application/Flow diagram
 
-
-
-### Q Prompt:
+### Q Prompt >
 
 ---
 **`@workspace`**
@@ -73,30 +71,29 @@ can you generate a mermaid flow diagram of my application (data flow from up to 
 
 - Click on preview, to preview .md file
 
-Result Example:
+### Result Example
 
 ![application](../screenshots/mermaid-flow-diagram.png)
 
-
-
 ## 1.2 - Generate Sequence diagram
 
-**N.B.: When using @workspace, 
-you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
+### Q Prompt >
 
-Q prompt:
+---
+**`@workspace`**
 
-| **@workspace can you generate a mermaid sequence diagram of the application**
+```
+can you generate a mermaid sequence diagram of the application
+```
+---
 
-Result Example:
+- Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
-![sequence](../screenshots/mermaid-sequencce-diagram.png)
+- Save the file and click on Preview on the right hand corner.
 
-Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+- Click on preview, to preview .md file
 
-Save the file and click on Preview on the right hand corner.
-
-Click on preview, to preview .md file
+![sequence](../screenshots/mermaid-sequence-diagram.png)
 
 ## 1.3 - Generate Class diagram
 
