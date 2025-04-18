@@ -11,7 +11,9 @@ $> ./start-vscode-tutorial-window.sh
 ![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
 
 
-**!!! IMPORTANT !!! Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
+### **!!! IMPORTANT !!!** 
+---
+**1) Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
 
 Remove amazonq cache content manually  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
@@ -26,6 +28,13 @@ Remove amazonq cache content while initiating the tutorial
 
 Then, reload VS Code window   
  ```Ctrl / Shift / P / Developer: Reload Window```
+
+**2) When using ```@workspace```, 
+you might need to**
+-  type ```@workspace``` in Q manually 
+- and then copy/paste the rest of the prompt
+
+---
 
 # 1 - From Code to Diagram with Mermaid
 
@@ -46,8 +55,7 @@ Where do you want to start from (0-5)?: 1
 
 ## 1.1 - Generate Application/Flow diagram
 
-**N.B.: When using @workspace, 
-you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
+
 
 ### Q Prompt:
 
