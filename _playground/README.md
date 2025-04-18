@@ -59,11 +59,13 @@ Where do you want to start from (0-5)?: 1
 
 ### Q Prompt:
 
-#### **`@workspace`**
+---
+**`@workspace`**
 
 ```
 can you generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 ```
+---
 
 - Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
 
