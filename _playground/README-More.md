@@ -1,4 +1,4 @@
-# 0 - Start tutorials (More) playground ( i.e. new VS Code Window)
+# 0 - Start tutorials playground ( i.e. new VS Code Window)
 
 The command below will open a new VS Code window. 
 That means you will have a blank playground where you will import a tutorial starting point.
@@ -8,19 +8,33 @@ That means you will have a blank playground where you will import a tutorial sta
 $> ./start-vscode-tutorial-window.sh
 ```
 
-If something doesn't work in this tutorial, these commands can help:
+![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
 
-Remove amazonq cache content  
+
+### **!!! IMPORTANT !!!** 
+---
+**1) Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
+
+Remove amazonq cache content manually  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
- Reload VS Code window  
+Then, reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
 
- OR
+**OR**
  
+Remove amazonq cache content automatically while initiating the tutorial   
  ``` ../init-playground.sh --hard ```
 
-which removes all files in the playground folder and amazonq cache content (that does not reload window)
+Then, reload VS Code window   
+ ```Ctrl / Shift / P / Developer: Reload Window```
+
+**2) When using ```@workspace```, 
+you might need to**
+-  type ```@workspace``` in Q manually 
+- and then copy/paste the rest of the prompt
+
+---
 
 # 1 - S3 Notification
 
@@ -36,19 +50,27 @@ Available starting points:
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
 3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 3
 ```
 
-## 1.1 - Generate lambda code only
+## Generate CDK templates + lambda
 
-| **@workspace generate lambda function code in python from diagram**
+### Q Prompt >
 
-## 1.2 - Generate infrastructure only
+---
+**`@diagram.drawio.xml`**
 
-| **@workspace generate python cdk V2 template from diagram**
+```
+can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```
+---
+
+### Result Example
+
+![sequence](../screenshots/s3-notification.png)
+
 
 # 2 - Data pipeline
 
@@ -65,12 +87,26 @@ Available starting points:
 2. Feedback App Diagram (from Diagram to Code)
 3. S3 notification (from Diagram to Code)
 4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 4
 ```
 
-| @workspace generate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
+## Generate StepFunctions Workflow only
+
+### Q Prompt >
+
+---
+**`@diagram.drawio.xml`**
+
+```
+generate python CDK V2 code and the lambda functions of the step functions workflow only
+```
+---
+
+### Result Example
+
+![sequence](../screenshots/data-pipeline.png)
 
 # 3 - Deployment Pipeline
 
@@ -86,9 +122,23 @@ Available starting points:
 3. S3 notification (from Diagram to Code)
 4. Data pipeline (from Diagram to Code)
 5. Deployment pipeline (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 5
 ```
 
-| @workspace can you generate the deployment pipeline with python cdk v2 from my diagram
+## Generate deployment pipeline
 
+### Q Prompt >
+
+---
+**`@diagram.drawio.xml`**
+
+```
+can you generate the deployment pipeline with python cdk v2 from my diagram
+```
+---
+
+### Result Example
+
+![sequence](../screenshots/deployment-pipeline.png)

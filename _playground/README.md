@@ -21,9 +21,9 @@ Remove amazonq cache content manually
 Then, reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
 
-OR
+**OR**
  
-Remove amazonq cache content while initiating the tutorial   
+Remove amazonq cache content automatically while initiating the tutorial   
  ``` ../init-playground.sh --hard ```
 
 Then, reload VS Code window   
@@ -92,6 +92,8 @@ can you generate a mermaid sequence diagram of the application
 - Save the file and click on Preview on the right hand corner.
 
 - Click on preview, to preview .md file
+
+### Result Example
 
 ![sequence](../screenshots/mermaid-sequence-diagram.png)
 
