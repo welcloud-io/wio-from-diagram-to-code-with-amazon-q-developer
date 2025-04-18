@@ -26,8 +26,6 @@ Remove amazonq cache content while initiating the tutorial
 Then, reload VS Code window   
  ```Ctrl / Shift / P / Developer: Reload Window```
 
-which removes all files in the playground folder and amazonq cache content (that does not reload window)
-
 # 1 - From Code to Diagram with Mermaid
 
 ### Initialize tutorial
