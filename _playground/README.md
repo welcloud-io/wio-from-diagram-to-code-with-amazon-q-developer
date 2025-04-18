@@ -51,7 +51,7 @@ you might need to type @workspace in Q manually and then copy/paste the rest of 
 
 ### Q Prompt:
 
-> @workspace 
+``` @workspace ```
 ```
 can you generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep simple formatting)
 ```
