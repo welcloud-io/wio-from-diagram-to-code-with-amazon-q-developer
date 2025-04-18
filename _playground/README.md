@@ -12,10 +12,10 @@ $> ./start-vscode-tutorial-window.sh
 
 > **!!! IMPORTANT !!! Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
 
-Remove amazonq cache content  
+Remove amazonq cache content manually  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
-Reload VS Code window  
+Then, reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
 
 OR
@@ -23,7 +23,7 @@ OR
 Remove amazonq cache content while initiating the tutorial   
  ``` ../init-playground.sh --hard ```
 
-Reload VS Code window   
+Then, reload VS Code window   
  ```Ctrl / Shift / P / Developer: Reload Window```
 
 which removes all files in the playground folder and amazonq cache content (that does not reload window)
