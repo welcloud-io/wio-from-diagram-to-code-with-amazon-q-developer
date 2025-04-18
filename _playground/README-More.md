@@ -157,3 +157,49 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ### Result Example
 
 ![sequence](../screenshots/deployment-pipeline.png)
+
+
+# 4 - API gateway
+
+```bash
+# From VS Code tutorial window terminal
+$ ../init-playground.sh --with-q-rules
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
+6. Api Gateway Diagram (from Diagram to Code)
+...
+
+Where do you want to start from ?: 6
+```
+
+## Generate API Gateway **with Q rules**
+
+**!!! Make sure you have use --with-q-rules option during initialization**
+
+```
+$ ../init-playground.sh --with-q-rules
+```
+
+### Q Prompt >
+
+---
+**`$> q chat`**
+
+```
+generate application
+```
+---
+
+![sequence](../screenshots/api-gateway.png)
