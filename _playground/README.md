@@ -113,6 +113,7 @@ can you generate a mermaid class diagram of the application
 
 - Click on preview, to preview .md file
 
+### Result Example
 
 ![class](../screenshots/mermaid-class-diagram.png)
 
@@ -161,13 +162,10 @@ end
 ```
 ---
 
-Accept changes, and try to deploy the application with the CDK
+- Accept changes, and try to deploy the application with the CDK
+- Test & fix the generated result
 
-Result Example:
-
-![app_and_infra](../screenshots/app+infra-from-mermaid.png)
-
-#### CDK installation
+### CDK installation
 ```bash
 $> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 $> . ~/.bashrc 
@@ -175,18 +173,20 @@ $> nvm install --lts
 $> npm install -g aws-cdk
 ```
 
-#### CDK packages installation
+### CDK packages installation
 ```bash
 $> sudo apt install python3-pip # if pip not installed yet
 $> pip install -r requirements.txt
 ```
 
-#### Deploy the application (N.B. The AWS CLI must be configured with credentials)
+### CDK Deploy (N.B. The AWS CLI must be configured with credentials)
 ```bash
-cdk deploy --app "python3 app.py"
+$> cdk deploy --app "python3 app.py"
 ```
 
-### Test & fix the generated result
+### Result Example (the diagram has been added to the generated Readme.md afterwards)
+
+![app_and_infra](../screenshots/app+infra-from-mermaid.png)
 
 # 3 - From Diagram to Code with Draw.io
 
