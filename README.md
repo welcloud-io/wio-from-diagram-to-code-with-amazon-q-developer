@@ -1,6 +1,6 @@
 # **From Diagram to Code with Amazon Q Developer**
 
-This repo is a list of tutorials based on this blog post:
+This repo is a list of tutorials related to this blog post:
 
 https://dev.to/welcloud-io/from-diagram-to-code-with-amazon-q-developer-2da4
 
@@ -9,7 +9,7 @@ You can also find some live demos in these videos:
 https://www.youtube.com/watch?v=D6cYFDoX1Es&list=PL7uUliWSzuvF0GS9jpaFGQxLKGC0CC2vq
 https://www.youtube.com/watch?v=QuAlzUVqi7I&t=4293s
 
-It demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
+This demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
 
 ![test](screenshots/vscode-bigpicture.png)
 
