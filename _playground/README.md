@@ -102,17 +102,28 @@ you might need to type @workspace in Q manually and then copy/paste the rest of 
 
 Q prompt:
 
-| **@workspace can you generate a mermaid class diagram of the application**
+| **@workspace **
 
 Result Example:
 
+### Q Prompt >
+
+---
+**`@workspace`**
+
+```
+can you generate a mermaid class diagram of the application
+```
+---
+
+- Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
+
+- Save the file and click on Preview on the right hand corner.
+
+- Click on preview, to preview .md file
+
+
 ![class](../screenshots/mermaid-class-diagram.png)
-
-Open the MERMAID-DIAGRAMS.md file in the folder and add the generated response.
-
-Save the file and click on Preview on the right hand corner.
-
-Click on preview, to preview .md file
 
 # 2 - From Diagram to Code with Mermaid
 
