@@ -281,39 +281,39 @@ Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
-2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+...
 
-Where do you want to start from (0-5)?: 2
+Where do you want to start from (0-5)?: 1
 ```
 
-**N.B.: When using @workspace, 
-you might need to type @workspace in Q manually and then copy/paste the rest of the prompt**
+## Generate drawio diagram from code
 
-Q Prompt:
+### Q Prompt >
 
-| **@workspace generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)**
+---
+**`@workspace`**
 
-Result Example:
+```
+generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)
+```
+---
+
+### Result Example
 
 ![drawio](../screenshots/drawio-diagram-from-code.png)
 
 
 ### Update app.drawio.xml file & display the content
 
-Select 'app.drawio.xml' file, right click, choose 'Open with...' and select 'Text Editor'
+- Right click on 'APP.DRAWIO.XML' file, choose 'Open with...' and select 'Text Editor'
 
-Copy & Paste generated XML document
+- Copy & Paste generated XML document
 
-Save the file, and double click on it to open it with the Drawio Integration extension
+- Save the file
 
-### Fix / Troubleshoot
+- Double click on 'APP.DRAWIO.XML' to open it with the Drawio Integration VS Code Extension
 
-In case of an error when opening the diagram, add this to your prompt, that can solve the issue:
 
-| **I got an error when I want to open the diagram**
 
 ---
 [MORE TUTORIALS](README-More.md)
