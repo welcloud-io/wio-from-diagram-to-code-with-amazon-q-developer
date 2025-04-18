@@ -136,19 +136,20 @@ $ ../init-playground.sh
 Available starting points:
 
 0. Empty Folder (from Code to Diagram)
-1. Feedback App Code (from Code to Diagram)
-2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+...
 
 Where do you want to start from (0-5)?: 0
 ```
 
-Q Prompt:
+## Generate application code
 
+### Q Prompt >
 
-| **/dev can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+---
+**`/dev`**
+
+```
+can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 graph TD  
 A[User] -->|HTTP GET /| B[API Gateway]  
 B -->|Invoke| C[Landing Page Function]  
@@ -165,7 +166,9 @@ C
 D  
 E  
 F  
-end**
+end
+```
+---
 
 Accept changes, and try to deploy the application with the CDK
 
