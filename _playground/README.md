@@ -245,28 +245,52 @@ $> cdk deploy --app "python3 app.py"
 
 ## 3.2 - From Diagram to Code with Draw.io (using Q CLI)
 
+### Q Prompt >
 
--> Open terminal and type:
+---
+**`$> q chat`**
 
 ```
-$> q chat
+can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
 
-then
+- Say yes (y) to all
+- Deploy if you want
 
-|> **can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)**
+```
+modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
+```
 
--> Say yes (y) to all
+- Say yes (y) to all
+- Q CLI will automatically keep my code in sync with the diagram
+- Deploy the application
 
-|> **modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)**
+---
 
--> Say yes (y) to all
+### CDK installation
+```bash
+$> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+$> . ~/.bashrc 
+$> nvm install --lts
+$> npm install -g aws-cdk
+```
 
-Result example:
+### CDK packages installation
+```bash
+$> sudo apt install python3-pip # if pip not installed yet
+$> pip install -r requirements.txt
+```
+
+### CDK Deploy (N.B. The AWS CLI must be configured with credentials)
+```bash
+$> cdk deploy --app "python3 app.py"
+```
+
+### Result Example
 
 ![cdk_construc_split](../screenshots/cdk-construct-split.png)
 
--> Deploy generated code in your folder with 'cdk deploy'
+
 
 
 # 4 - From Code to Diagram with Draw.io
