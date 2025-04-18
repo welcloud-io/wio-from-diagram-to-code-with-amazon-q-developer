@@ -8,17 +8,23 @@ That means you will have a blank playground where you will import a tutorial sta
 $> ./start-vscode-tutorial-window.sh
 ```
 
-If something doesn't work in this tutorial, these commands can help:
+![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
+
+> **!!! IMPORTANT !!! Refreshing the @workspace index can help when you don't get the expected result, you can do it 2 ways:**
 
 Remove amazonq cache content  
  ```$> rm ~/.aws/amazonq/cache/cache/*```
  
- Reload VS Code window  
+Reload VS Code window  
  ```Ctrl / Shift / P / Developer: Reload Window```
 
- OR
+OR
  
+Remove amazonq cache content while initiating the tutorial   
  ``` ../init-playground.sh --hard ```
+
+Reload VS Code window   
+ ```Ctrl / Shift / P / Developer: Reload Window```
 
 which removes all files in the playground folder and amazonq cache content (that does not reload window)
 
@@ -35,9 +41,9 @@ Available starting points:
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
 
 Where do you want to start from (0-5)?: 1
 ```

@@ -14,10 +14,10 @@ echo
 echo "0. Empty Folder (from Code to Diagram)"
 echo "1. Feedback App Code (from Code to Diagram)"
 echo "2. Feedback App Diagram (from Diagram to Code)"
-echo "3. S3 notification (from Diagram to Code)"
-echo "4. Data pipeline (from Diagram to Code)"
-echo "5. Deployment pipeline (from Diagram to Code)"
-echo "6. Api Gateway (from Diagram to Code)"
+echo "3. S3 notification Diagram (from Diagram to Code)"
+echo "4. Data pipeline Diagram (from Diagram to Code)"
+echo "5. Deployment pipeline Diagram (from Diagram to Code)"
+echo "6. Api Gateway Diagram (from Diagram to Code)"
 echo
 
 # Prompt user to select tutorial
