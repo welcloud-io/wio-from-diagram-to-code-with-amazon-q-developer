@@ -8,6 +8,15 @@ if [[ "$@" =~ "--help" ]]; then
     exit 0
 fi
 
+
+if ! [[ "$@" =~ "--hard" ]]; then
+echo
+echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
+echo -e "\033[33m# Refreshing the @workspace index can help when you don't get the expected result\033[0m"
+echo -e "\033[33m# If needed, use: '$0 --hard', then Ctrl+Shift+P => 'Developer: Reload Window'\033[0m"
+echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
+fi
+
 echo
 echo "Available starting points:"
 echo
@@ -21,7 +30,7 @@ echo "6. Api Gateway Diagram (from Diagram to Code)"
 echo
 
 # Prompt user to select tutorial
-read -p "Where do you want to start from (0-6)?: " tutorial_choice
+read -p "Where do you want to start from ?: " tutorial_choice
 
 # Validate input
 if [[ ! $tutorial_choice =~ ^[0-6]$ ]]; then

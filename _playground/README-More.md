@@ -44,15 +44,20 @@ you might need to**
 # From VS Code tutorial window terminal
 $ ../init-playground.sh 
 
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
 Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
 ...
 
-Where do you want to start from (0-5)?: 3
+Where do you want to start from ?: 3
 ```
 
 ## Generate CDK templates + lambda
@@ -80,16 +85,21 @@ can you generate application from the drawio diagram (I want the code of the lam
 # From VS Code tutorial window terminal
 $ ../init-playground.sh 
 
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
 Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
 ...
 
-Where do you want to start from (0-5)?: 4
+Where do you want to start from ?: 4
 ```
 
 ## Generate StepFunctions Workflow only
@@ -114,17 +124,22 @@ generate python CDK V2 code and the lambda functions of the step functions workf
 # From VS Code tutorial window terminal
 $ ../init-playground.sh 
 
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
 Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 1. Feedback App Code (from Code to Diagram)
 2. Feedback App Diagram (from Diagram to Code)
-3. S3 notification (from Diagram to Code)
-4. Data pipeline (from Diagram to Code)
-5. Deployment pipeline (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
 ...
 
-Where do you want to start from (0-5)?: 5
+Where do you want to start from ?: 5
 ```
 
 ## Generate deployment pipeline

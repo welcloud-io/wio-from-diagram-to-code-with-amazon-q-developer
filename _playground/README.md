@@ -41,8 +41,13 @@ you might need to**
 ### Initialize tutorial
 
 ```bash
-# In VS Code tutorial window terminal:
+# In VS Code tutorial window terminal
 $ ../init-playground.sh 
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
 
 Available starting points:
 
@@ -50,7 +55,7 @@ Available starting points:
 1. Feedback App Code (from Code to Diagram)
 ...
 
-Where do you want to start from (0-5)?: 1
+Where do you want to start from ?: 1
 ```
 
 ## 1.1 - Generate Application/Flow diagram
@@ -127,12 +132,17 @@ can you generate a mermaid class diagram of the application
 # In VS Code tutorial window terminal:
 $ ../init-playground.sh 
 
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
 Available starting points:
 
 0. Empty Folder (from Code to Diagram)
 ...
 
-Where do you want to start from (0-5)?: 0
+Where do you want to start from ?: 0
 ```
 
 ## Generate application code from mermaid diagram
@@ -196,7 +206,12 @@ $> cdk deploy --app "python3 app.py"
 
 ```bash
 # In VS Code tutorial window terminal:
-$ ../init-playground.sh 
+$ ../init-playground.sh
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
 
 Available starting points:
 
@@ -205,7 +220,7 @@ Available starting points:
 2. Feedback App Diagram (from Diagram to Code)
 ...
 
-Where do you want to start from (0-5)?: 2
+Where do you want to start from ?: 2
 ```
 
 ## 3.1 - Generate Code from Draw.io Diagram (using Q Desktop)
@@ -301,7 +316,12 @@ $> cdk deploy --app "python3 app.py"
 
 ```bash
 # In VS Code tutorial window terminal:
-$ ../init-playground.sh 
+$ ../init-playground.sh
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
 
 Available starting points:
 
@@ -309,7 +329,7 @@ Available starting points:
 1. Feedback App Code (from Code to Diagram)
 ...
 
-Where do you want to start from (0-5)?: 1
+Where do you want to start from ?: 1
 ```
 
 ## Generate drawio diagram from code
