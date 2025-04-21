@@ -73,7 +73,7 @@ Then:
 
 ### 3.2) Configure VS Code Automatically (Option 2)
 
-**Be aware that this may not work** if you environment has some settings already
+**Be aware that this may not work** if your environment has some settings already
 
 ```bash
 $> ./setup-vscode.sh
