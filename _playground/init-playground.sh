@@ -61,6 +61,21 @@ for arg in "$@"; do
         --with-result)
             WITH_RESULT=true
             ;;
+        --with-mcp-server)
+            cp -r ../../tutorials-starting-points/cdk-server/mcp.json ~/.aws/amazonq/mcp.json
+            ;;
+        --hard|--no-clear)
+            # Skip validation for these known args handled elsewhere
+            ;;
+        *)
+            echo
+            echo -e "\033[31m" #Red           
+            echo -e "!Error: Invalid argument '$arg'"
+            echo -e "Valid arguments are: --with-cdk-template, --with-q-rules, --with-result, --with-mcp-server, --hard, --no-clear"
+            echo -e "\033[0m"
+            echo
+            exit 1
+            ;;
     esac
 done
 
