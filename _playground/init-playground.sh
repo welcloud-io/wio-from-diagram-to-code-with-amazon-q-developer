@@ -62,7 +62,8 @@ for arg in "$@"; do
             WITH_RESULT=true
             ;;
         --with-mcp-server)
-            cp -r ../../tutorials-starting-points/cdk-server/mcp.json ~/.aws/amazonq/mcp.json
+            cp ../../tutorials-starting-points/mcp-servers/mcp.json ~/.aws/amazonq/mcp.json
+            cp ../../tutorials-starting-points/mcp-servers/server.py .
             ;;
         --hard|--no-clear)
             # Skip validation for these known args handled elsewhere
