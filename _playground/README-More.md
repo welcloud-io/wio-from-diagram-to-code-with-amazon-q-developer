@@ -229,7 +229,7 @@ Where do you want to start from ?: 1
 
 ## Generate Diagram
 
-**!!! Make sure you have used --with--simplest-mcp-server option during initialization**
+**!!! Make sure you have used --with-simplest-mcp-server option during initialization**
 
 ## Install uv
 
@@ -271,7 +271,7 @@ Where do you want to start from ?: 1
 
 ## Generate Diagram
 
-**!!! Make sure you have used --with--simplest-mcp-server option during initialization**
+**!!! Make sure you have used --with-diagram-mcp-server option during initialization**
 
 ## Install uv
 
