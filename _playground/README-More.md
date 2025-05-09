@@ -205,13 +205,13 @@ generate application
 ![sequence](../screenshots/api-gateway.png)
 
 
-# 5 - MCP Server
+# 5 - Build simplest MCP Server
 
 ### Initialize tutorial
 
 ```bash
 # From VS Code tutorial window terminal
-$ ../init-playground.sh --with-mcp-server
+$ ../init-playground.sh --with-simplest-mcp-server
 
 -------------------------------------------------------------------------------
 # Refreshing the @workspace index can help when you don't get the expected result
@@ -229,7 +229,49 @@ Where do you want to start from ?: 1
 
 ## Generate Diagram
 
-**!!! Make sure you have used --with-mcp-server option during initialization**
+**!!! Make sure you have used --with--simplest-mcp-server option during initialization**
+
+## Install uv
+
+```
+$> pip install uv
+```
+
+### Q Prompt >
+
+---
+**`$> q chat`**
+
+```
+add 1 + 1
+```
+---
+
+# 6 - Use existing MCP Server
+
+### Initialize tutorial
+
+```bash
+# From VS Code tutorial window terminal
+$ ../init-playground.sh --with-diagram-mcp-server
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+...
+
+Where do you want to start from ?: 1
+```
+
+## Generate Diagram
+
+**!!! Make sure you have used --with--simplest-mcp-server option during initialization**
 
 ## Install uv
 
@@ -246,5 +288,3 @@ $> pip install uv
 generate a diagram from the code in that folder
 ```
 ---
-
-
