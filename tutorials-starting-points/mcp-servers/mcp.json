@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "simplest-mcp-server": {
-      "command": "python3",
-      "args": ["server.py"]
-    }
-  }
-}

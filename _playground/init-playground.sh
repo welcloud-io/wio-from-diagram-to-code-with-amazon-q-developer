@@ -63,7 +63,7 @@ for arg in "$@"; do
             ;;
         --with-simplest-mcp-server)
             cp ../../tutorials-starting-points/mcp-servers/mcp-simplest.json ~/.aws/amazonq/mcp.json
-            cp ../../tutorials-starting-points/mcp-servers/server.py .
+            cp ../../tutorials-starting-points/mcp-servers/simplest-mcp-server.py .
             ;;
         --with-diagram-mcp-server)
             cp ../../tutorials-starting-points/mcp-servers/mcp-diagram.json ~/.aws/amazonq/mcp.json
