@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "awslabs.aws-diagram-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.aws-diagram-mcp-server"]
+    }
+  }
+}

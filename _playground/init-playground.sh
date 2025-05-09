@@ -65,6 +65,13 @@ for arg in "$@"; do
             cp ../../tutorials-starting-points/mcp-servers/mcp.json ~/.aws/amazonq/mcp.json
             cp ../../tutorials-starting-points/mcp-servers/server.py .
             ;;
+        --with-simplest-mcp-server)
+            cp ../../tutorials-starting-points/mcp-servers/mcp-simplest.json ~/.aws/amazonq/mcp.json
+            cp ../../tutorials-starting-points/mcp-servers/server.py .
+            ;;
+        --with-diagram-mcp-server)
+            cp ../../tutorials-starting-points/mcp-servers/mcp-diagram.json ~/.aws/amazonq/mcp.json
+            ;;
         --hard|--no-clear)
             # Skip validation for these known args handled elsewhere
             ;;
@@ -72,7 +79,7 @@ for arg in "$@"; do
             echo
             echo -e "\033[31m" #Red           
             echo -e "!Error: Invalid argument '$arg'"
-            echo -e "Valid arguments are: --with-cdk-template, --with-q-rules, --with-result, --with-mcp-server, --hard, --no-clear"
+            echo -e "Valid arguments are: --with-cdk-template, --with-q-rules, --with-result, --with-mcp-server, --with-simplest-mcp-server, --with-diagram-mcp-server, --hard, --no-clear"
             echo -e "\033[0m"
             echo
             exit 1
