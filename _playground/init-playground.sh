@@ -38,15 +38,20 @@ if [[ ! $tutorial_choice =~ ^[0-6]$ ]]; then
     exit 1
 fi
 
-if [[ "$@" =~ "--hard" ]]; then
-    ../clear-playground.sh --hard
-else
-    if [[ "$@" =~ "--no-clear" ]]; then
+case "$@" in
+    *--hard*)
+        ../clear-playground.sh --hard
+        ;;
+    *--no-clear*)
         echo > /dev/null
-    else
+        ;;
+    *mcp-server*)
+        ../clear-playground.sh --mcp-server
+        ;;
+    *)
         ../clear-playground.sh
-    fi
-fi
+        ;;
+esac
 
 WITH_RESULT=false
 
