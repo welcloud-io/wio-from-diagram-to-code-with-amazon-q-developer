@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $(which uv) ]; then
+    echo "uv is already installed"
+fi
+
 # Verify q cli is not istalled
 if [ $(which q) ]; then
     echo "q cli is already installed"
@@ -13,6 +17,9 @@ read -p "Do you want to proceed with Amazon Q installation (Yes/no)? " confirmat
 if [ "$confirmation" != "Yes" ]; then
     exit
 fi
+
+# Install uv to use remote MCP servers
+pip install uv
 
 # Install Q CLI
 curl --proto '=https' --tlsv1.2 -sSf https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.deb -o amazon-q.deb
