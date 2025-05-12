@@ -231,11 +231,7 @@ Where do you want to start from ?: 1
 
 **!!! Make sure you have used --with-simplest-mcp-server option during initialization**
 
-## Install uv
-
-```
-$> pip install uv
-```
+**!!! Make sure you have installed q cli and MCP utils (see main README)**
 
 ### Q Prompt >
 
@@ -273,11 +269,7 @@ Where do you want to start from ?: 1
 
 **!!! Make sure you have used --with-diagram-mcp-server option during initialization**
 
-## Install uv
-
-```
-$> pip install uv
-```
+**!!! Make sure you have installed q cli and MCP utils (see main README)**
 
 ### Q Prompt >
 

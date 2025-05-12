@@ -81,11 +81,21 @@ $> ./setup-vscode.sh
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
 
-## 4) Install Q CLI (Optional)
+## 4) Install Q CLI & MCP utils (Optional)
 
-Amazon Q Developer CLI (Command Line Interface) is used for some tutorials, but not for all.
+Amazon Q Developer CLI (Command Line Interface) and MCP utils are used for some tutorials, but not for all.
 
-To install it, you either follow this link:
+#### Install MCP Utils
+To test MCP servers tutorials you should install uv & fastmcp.
+You can use python pip or this script.
+
+```
+$> ./install-mcp-utils.sh
+```
+
+#### Install Q CLI
+
+To install Q CLI, you either follow this link:
 
 https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html
 

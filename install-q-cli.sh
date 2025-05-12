@@ -1,17 +1,14 @@
 #!/bin/bash
 
-# Install uv for remote MCP servers usage (if not installed yet)
-if [ $(which uv) ]; then
-    echo "uv is already installed (used for MCP servers)"
-else
-    echo "Installing uv to use remote MCP servers.."
-    pip install uv
-fi
-
-# Verify q cli is not istalled
+# Verify q cli is not installed or version is too old
 if [ $(which q) ]; then
-    echo "q cli is already installed"
-    exit
+    version=$(q --version | cut -d' ' -f2)
+    if [ "$(printf '%s\n' "1.9.1" "$version" | sort -V | head -n1)" = "$version" -a "$version" != "1.9.1" ]; then        
+        echo "q cli version $version is too old. Replacing with newest version"
+    else
+        echo "q cli is already installed"
+        exit
+    fi
 fi
 
 # Ask for confiramtion
