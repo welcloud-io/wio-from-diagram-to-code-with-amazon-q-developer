@@ -1,4 +1,4 @@
-# 0 - Start tutorials playground ( i.e. A new VS Code Window)
+# 0 - Start tutorials playground ( i.e. a new VS Code Window)
 
 The command below will open a new VS Code window. 
 That means you will have a blank playground where you will import a tutorial starting point.
