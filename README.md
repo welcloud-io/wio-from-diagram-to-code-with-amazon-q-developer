@@ -17,7 +17,7 @@ This demonstrates how you can generate diagrams from an application code, but al
 
 # Prerequisites
 
-I assume that you are using a **Linux Ubuntu 22-04** distribution, **but the instructions below can be adapted** to your environment.
+I assume that you are using a **Linux Ubuntu 22-04** distribution, **but instructions below can be adapted** to your environment.
 
 ## 1) Install & start VS Code (If not done yet in your environment)
 
