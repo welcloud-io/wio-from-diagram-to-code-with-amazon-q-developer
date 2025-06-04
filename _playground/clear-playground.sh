@@ -25,4 +25,7 @@ fi
 # Remove Q Developer cache
 if [ "$1" == "--hard" ]; then
     rm ~/.aws/amazonq/cache/cache/*
+    save_name="~/.aws/amazonq/mcp.json.$(date +%Y-%m-%d-%H-%M-%S)"
+    cp ~/.aws/amazonq/mcp.json $save_name
+    rm ~/.aws/amazonq/mcp.json
 fi
