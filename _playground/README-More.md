@@ -281,7 +281,9 @@ generate a diagram from the code in that folder
 ```
 ---
 
-# 7 - Generate App from Hand Drawn Diagram 
+# 7 - Generate App from Hand Drawn Diagram
+
+### N.B.: Install Q if not installed yet (c.f. [Installation Guide](../README.md))
 
 ```bash
 # From VS Code tutorial window terminal
@@ -311,6 +313,17 @@ Where do you want to start from ?: 7
 
 ---
 **`$> q chat`**
+
+
+```
+> /model
+? Select a model for this chat session ›
+❯ claude-4-sonnet
+  claude-3.7-sonnet (active)
+  claude-3.5-sonnet
+# => Select claude-4-sonnet and type enter
+```
+
 
 ```
 create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
