@@ -27,14 +27,15 @@ echo "3. S3 notification Diagram (from Diagram to Code)"
 echo "4. Data pipeline Diagram (from Diagram to Code)"
 echo "5. Deployment pipeline Diagram (from Diagram to Code)"
 echo "6. Api Gateway Diagram (from Diagram to Code)"
+echo "7. Hand Drawn Diagram (from Diagram to Code)"
 echo
 
 # Prompt user to select tutorial
 read -p "Where do you want to start from ?: " tutorial_choice
 
 # Validate input
-if [[ ! $tutorial_choice =~ ^[0-6]$ ]]; then
-    echo "Invalid selection. Please choose a number between 0 and 5."
+if [[ ! $tutorial_choice =~ ^[0-7]$ ]]; then
+    echo "Invalid selection. Please choose a number between 0 and 7."
     exit 1
 fi
 
@@ -157,6 +158,12 @@ cp -r ../../tutorials-starting-points/api-gateway-diagram/* .
    
 }
 
+prepare_playground_hand_drawn() {
+
+cp -r ../../tutorials-starting-points/hand-drawn-diagram/* .
+   
+}
+
 
 
 . ../tutorial_descriptions.sh
@@ -194,5 +201,10 @@ fi
 if [ $tutorial_choice == '6' ]; then
 prepare_playground_api_gateway
 tutorial_description_6
+fi
+
+if [ $tutorial_choice == '7' ]; then
+prepare_playground_hand_drawn
+tutorial_description_7
 fi
 

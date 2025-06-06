@@ -280,3 +280,50 @@ Where do you want to start from ?: 1
 generate a diagram from the code in that folder
 ```
 ---
+
+# 7 - Generate App from Hand Drawn Diagram 
+
+```bash
+# From VS Code tutorial window terminal
+$ ../init-playground.sh --with-q-rules
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
+6. Api Gateway Diagram (from Diagram to Code)
+7. Hand Drawn Diagram (from Diagram to Code)
+...
+
+Where do you want to start from ?: 7
+```
+
+### Q Prompt >
+
+---
+**`$> q chat`**
+
+```
+create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
+```
+
+```
+create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS 2024 Icons)
+```
+
+```
+can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```
+
+![handdrawn](../screenshots/hand-drawn-architecture.png)
+
+---
