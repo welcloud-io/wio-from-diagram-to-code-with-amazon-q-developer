@@ -285,7 +285,7 @@ generate a diagram from the code in that folder
 
 ```bash
 # From VS Code tutorial window terminal
-$ ../init-playground.sh --with-q-rules
+$ ../init-playground.sh
 
 -------------------------------------------------------------------------------
 # Refreshing the @workspace index can help when you don't get the expected result
