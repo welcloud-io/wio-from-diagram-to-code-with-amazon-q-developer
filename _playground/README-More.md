@@ -281,7 +281,7 @@ generate a diagram from the code in that folder
 ```
 ---
 
-# 7 - Generate App from Hand Drawn Diagram
+# 7 - Generate App from Hand Drawn Diagram (with Claude 4 model)
 
 ### N.B.: Install latest Q CLI version if not installed yet (c.f. [Prerequisites](../README.md))
 
@@ -312,16 +312,7 @@ Where do you want to start from ?: 7
 ### Q Prompts >
 
 ---
-**`$> q chat`**
-
-```
-> /model
-? Select a model for this chat session ›
-❯ claude-4-sonnet
-  claude-3.7-sonnet (active)
-  claude-3.5-sonnet
-# => Select claude-4-sonnet and type enter
-```
+**`$> q chat --model claude-4-sonnet`**
 
 ```
 create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
