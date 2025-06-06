@@ -283,7 +283,7 @@ generate a diagram from the code in that folder
 
 # 7 - Generate App from Hand Drawn Diagram
 
-### N.B.: Install Q if not installed yet (c.f. [Installation Guide](../README.md))
+
 
 ```bash
 # From VS Code tutorial window terminal
@@ -312,6 +312,7 @@ Where do you want to start from ?: 7
 ### Q Prompt >
 
 ---
+### N.B.: Install Q if not installed yet (c.f. [Prerequisites](../README.md))
 **`$> q chat`**
 
 
