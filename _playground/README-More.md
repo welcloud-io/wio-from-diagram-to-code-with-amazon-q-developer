@@ -309,7 +309,7 @@ Available starting points:
 Where do you want to start from ?: 7
 ```
 
-### Q Prompt >
+### Q Setup >
 
 ---
 **`$> q chat`**
@@ -324,6 +324,7 @@ Where do you want to start from ?: 7
 # => Select claude-4-sonnet and type enter
 ```
 
+### Q Prompts >
 
 ```
 create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
