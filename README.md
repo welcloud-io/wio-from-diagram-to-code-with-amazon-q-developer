@@ -81,7 +81,7 @@ $> ./setup-vscode.sh
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
 
-## 4) Install Q CLI & MCP utils (Optional)
+## 4) Install Q CLI & MCP utils
 
 Amazon Q Developer CLI (Command Line Interface) and MCP utils are used for some tutorials, but not for all.
 
