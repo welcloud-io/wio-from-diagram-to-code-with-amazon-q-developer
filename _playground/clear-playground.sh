@@ -29,3 +29,10 @@ if [ "$1" == "--hard" ]; then
     cp ~/.aws/amazonq/mcp.json $save_name
     rm ~/.aws/amazonq/mcp.json
 fi
+
+# Remove Q Developer mcp servers
+if [ "$1" == "--hard" ]; then
+    save_name="~/.aws/amazonq/mcp.json.$(date +%Y-%m-%d-%H-%M-%S)"
+    cp ~/.aws/amazonq/mcp.json $save_name
+    rm ~/.aws/amazonq/mcp.json
+fi
