@@ -7,7 +7,7 @@ fi
 
 # Create new folder
 timestamp=$(date +%Y-%m-%d-%H-%M-%S)
-folder_name="snapshot-$timestamp"
+folder_name="snapshot-$timestamp-$1"
 mkdir ../../vscode-app-folder-snapshots/$folder_name
 
 # Copy content
