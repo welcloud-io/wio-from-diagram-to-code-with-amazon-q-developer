@@ -108,7 +108,7 @@ $(tput bold)$(tput setaf 2)TUTORIAL [From Drawio Diagram to Code with Q CLI]$(tp
 
 tutorial_description_7() {
 echo """
-$(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawn Diagram to Code with Q CLI]$(tput sgr0)
+$(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawing to Code with Q CLI]$(tput sgr0)
 -------------------------------------------------------------------------------
 
 $> q chat --model claude-4-sonnet
@@ -116,6 +116,30 @@ $> q chat --model claude-4-sonnet
 > create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
 > create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS 2024 Icons)
 > can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+
+"""
+}
+
+tutorial_description_8() {
+echo """
+$(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawing to Code with Q CLI]$(tput sgr0)
+-------------------------------------------------------------------------------
+
+$> q chat --model claude-4-sonnet
+
+> can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2).
+> can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2). Keep it simple, don't add more than necessary, stick to the diagram intent.
+"""
+}
+
+tutorial_description_9() {
+echo """
+$(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawing to Code with Q CLI]$(tput sgr0)
+-------------------------------------------------------------------------------
+
+$> q chat --model claude-4-sonnet
+
+> Create a mermaid diagram from hand-drawn-architecture.jpg file. Stick to the image, do not add more information.
 
 """
 }

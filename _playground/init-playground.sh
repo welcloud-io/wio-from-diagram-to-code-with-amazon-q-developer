@@ -27,15 +27,17 @@ echo "3. S3 notification Diagram (from Diagram to Code)"
 echo "4. Data pipeline Diagram (from Diagram to Code)"
 echo "5. Deployment pipeline Diagram (from Diagram to Code)"
 echo "6. Api Gateway Diagram (from Diagram to Code)"
-echo "7. Hand Drawn Diagram (from Diagram to Code)"
+echo "7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)"
+echo "8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)"
+echo "9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)"
 echo
 
 # Prompt user to select tutorial
 read -p "Where do you want to start from ?: " tutorial_choice
 
 # Validate input
-if [[ ! $tutorial_choice =~ ^[0-7]$ ]]; then
-    echo "Invalid selection. Please choose a number between 0 and 7."
+if [[ ! $tutorial_choice =~ ^[0-9]$ ]]; then
+    echo "Invalid selection. Please choose a number between 0 and 9."
     exit 1
 fi
 
@@ -158,14 +160,23 @@ cp -r ../../tutorials-starting-points/api-gateway-diagram/* .
    
 }
 
-prepare_playground_hand_drawn() {
+prepare_playground_lambda_app_hand_drawn() {
 
-cp -r ../../tutorials-starting-points/hand-drawn-diagram/* .
+cp -r ../../tutorials-starting-points/lambda-app-hand-drawn-diagram/* .
    
 }
 
+prepare_playground_ecs_app_hand_drawn() {
 
+cp -r ../../tutorials-starting-points/ecs-app-hand-drawn-diagram/* .
+   
+}
 
+prepare_playground_security_pillar_hand_drawn() {
+
+cp -r ../../tutorials-starting-points/security-pillar-hand-drawn-diagram/* .
+   
+}
 . ../tutorial_descriptions.sh
 
 if [ $tutorial_choice == '0' ]; then
@@ -204,7 +215,16 @@ tutorial_description_6
 fi
 
 if [ $tutorial_choice == '7' ]; then
-prepare_playground_hand_drawn
+prepare_playground_lambda_app_hand_drawn
 tutorial_description_7
 fi
 
+if [ $tutorial_choice == '8' ]; then
+prepare_playground_ecs_app_hand_drawn
+tutorial_description_8
+fi
+
+if [ $tutorial_choice == '9' ]; then
+prepare_playground_security_pillar_hand_drawn
+tutorial_description_9
+fi
