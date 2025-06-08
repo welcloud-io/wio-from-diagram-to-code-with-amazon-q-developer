@@ -127,6 +127,8 @@ $(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawing to Code with Q CLI]$(tput
 
 $> q chat --model claude-4-sonnet
 
+> create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position. Note that ECR is outside the VPC.
+> create a drawio diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position.
 > can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2).
 > can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2). Keep it simple, don't add more than necessary, stick to the diagram intent.
 """

@@ -6,3 +6,5 @@ tutorial_description_3
 tutorial_description_4
 tutorial_description_5
 tutorial_description_7
+tutorial_description_8
+tutorial_description_9
