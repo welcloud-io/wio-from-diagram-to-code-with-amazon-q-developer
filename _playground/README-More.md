@@ -281,7 +281,7 @@ generate a diagram from the code in that folder
 ```
 ---
 
-# 7 - Generate App from Hand Drawn Diagram (with Claude 4 model)
+# 7 - Simple Lambda App Hand Drawn Diagram (with Claude 4 model)
 
 ### N.B.: Install latest Q CLI version if not installed yet (c.f. [Prerequisites](../README.md))
 
@@ -330,7 +330,19 @@ can you generate application from the hand-drawn-architecture file (I want the c
 
 ---
 
-# 10 - Generate App from Hand Drawn Diagram (with Claude 4 model)
+# 8 - Simple ECS App Hand Drawn Diagram (with Claude 4 model)
+
+Under construction
+
+---
+
+# 9 - Well Architected Pillar Hand Drawn Diagram (with Claude 4 model)
+
+Under construction
+
+---
+
+# 10 - Generate App from Hand Drawn Graphical Interface (with Claude 4 model)
 
 ### N.B.: Install latest Q CLI version if not installed yet (c.f. [Prerequisites](../README.md))
 
