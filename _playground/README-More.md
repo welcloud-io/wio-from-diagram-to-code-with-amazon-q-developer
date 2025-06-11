@@ -329,3 +329,53 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ![handdrawn](../screenshots/hand-drawn-architecture.png)
 
 ---
+
+# 10 - Generate App from Hand Drawn Diagram (with Claude 4 model)
+
+### N.B.: Install latest Q CLI version if not installed yet (c.f. [Prerequisites](../README.md))
+
+```bash
+# From VS Code tutorial window terminal
+$ ../init-playground.sh
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
+6. Api Gateway Diagram (from Diagram to Code)
+7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)
+8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)
+9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)
+10. Feedback App GUI Hand Drawn Diagram (from HandDrawing to Code)
+...
+
+Where do you want to start from ?: 7
+```
+
+### Q Prompts >
+
+---
+**`$> q chat --model claude-4-sonnet`**
+
+```
+Create an application from the hand-drawn-graphical-interface.jpg file. I want a CDK serverless backend.
+```
+
+```
+create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
+```
+
+```
+in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
+```
+
+![handdrawn-gui](../screenshots/feedbackapp-gui-hand-drawn.png)

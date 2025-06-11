@@ -145,3 +145,17 @@ $> q chat --model claude-4-sonnet
 
 """
 }
+
+tutorial_description_10() {
+echo """
+$(tput bold)$(tput setaf 2)TUTORIAL [From Hand Drawing to Code with Q CLI]$(tput sgr0)
+-------------------------------------------------------------------------------
+
+$> q chat --model claude-4-sonnet
+
+> Create an application from the hand-drawn-graphical-interface.jpg file. I want a CDK serverless backend.
+> create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
+> in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
+
+"""
+}

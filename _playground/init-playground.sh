@@ -30,14 +30,15 @@ echo "6. Api Gateway Diagram (from Diagram to Code)"
 echo "7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)"
 echo "8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)"
 echo "9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)"
+echo "10. Feedback App GUI Hand Drawn Diagram (from HandDrawing to Code)"
 echo
 
 # Prompt user to select tutorial
 read -p "Where do you want to start from ?: " tutorial_choice
 
 # Validate input
-if [[ ! $tutorial_choice =~ ^[0-9]$ ]]; then
-    echo "Invalid selection. Please choose a number between 0 and 9."
+if [[ ! $tutorial_choice =~ ^[0-9]$|^10$ ]]; then    
+    echo "Invalid selection. Please choose a number between 0 and 10."
     exit 1
 fi
 
@@ -177,6 +178,13 @@ prepare_playground_security_pillar_hand_drawn() {
 cp -r ../../tutorials-starting-points/security-pillar-hand-drawn-diagram/* .
    
 }
+
+prepare_playground_feedback_gui_hand_drawn() {
+
+cp -r ../../tutorials-starting-points/feedback-app-hand-drawn-diagram/* .
+   
+}
+
 . ../tutorial_descriptions.sh
 
 if [ $tutorial_choice == '0' ]; then
@@ -227,4 +235,9 @@ fi
 if [ $tutorial_choice == '9' ]; then
 prepare_playground_security_pillar_hand_drawn
 tutorial_description_9
+fi
+
+if [ $tutorial_choice == '10' ]; then
+prepare_playground_feedback_gui_hand_drawn
+tutorial_description_10
 fi
