@@ -11,6 +11,6 @@ folder_name="snapshot-$timestamp-$1"
 mkdir ../../vscode-app-folder-snapshots/$folder_name
 
 # Copy content
-cp -r ./* ../../vscode-app-folder-snapshots/$folder_name
+cp -r . ../../vscode-app-folder-snapshots/$folder_name
 
 echo "../../vscode-app-folder-snapshots/$folder_name created"
