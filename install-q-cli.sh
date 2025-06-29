@@ -3,7 +3,7 @@
 # Verify q cli is not installed or version is too old
 if [ $(which q) ]; then
     version=$(q --version | cut -d' ' -f2)
-    minimum_version="1.11.0"
+    minimum_version="1.12.1"
     if [ "$(printf '%s\n' "$minimum_version" "$version" | sort -V | head -n1)" = "$version" -a "$version" != "$minimum_version" ]; then        
         echo "q cli version ($version) is too old. Replacing with minimum version ($minimum_version)"
     else
