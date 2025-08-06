@@ -332,7 +332,45 @@ can you generate application from the hand-drawn-architecture file (I want the c
 
 # 8 - Simple ECS App Hand Drawn Diagram (with Claude 4 model)
 
-Under construction
+```bash
+# From VS Code tutorial window terminal
+$ ../init-playground.sh
+
+-------------------------------------------------------------------------------
+# Refreshing the @workspace index can help when you don't get the expected result
+# If needed, use: '../init-playground.sh --hard', then Ctrl+Shift+P => 'Developer: Reload Window'
+-------------------------------------------------------------------------------
+
+Available starting points:
+
+0. Empty Folder (from Code to Diagram)
+1. Feedback App Code (from Code to Diagram)
+2. Feedback App Diagram (from Diagram to Code)
+3. S3 notification Diagram (from Diagram to Code)
+4. Data pipeline Diagram (from Diagram to Code)
+5. Deployment pipeline Diagram (from Diagram to Code)
+6. Api Gateway Diagram (from Diagram to Code)
+7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)
+8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)
+...
+
+Where do you want to start from ?: 8
+```
+
+### Q Prompts >
+
+---
+**`@hand-drawn-architecture.jpg`**
+
+```
+generate application (I work with python and cdk v2)
+```
+
+```
+create a simple docker app, and a script to deploy this app
+```
+
+![handdrawn](../screenshots/hand-drawn-architecture-ecs.png)
 
 ---
 
