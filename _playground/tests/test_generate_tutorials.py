@@ -9,23 +9,24 @@ from generate_tutorials import generate_tutorials_md
 class TestGenerateTutorials(unittest.TestCase):
     
     def setUp(self):
+        # Create temporary file to put test data in
         self.test_dir = tempfile.mkdtemp()
         self.original_cwd = os.getcwd()
         os.chdir(self.test_dir)
         
-        # Create test tutorials.yaml
+        # Create test TUTORIALS.yaml
         test_data = {
             'Tutorial_1': {
                 'Title': 'Generate MERMAID Diagrams from code',
-                'Prompts': {
-                    'Starting_Point': ['1'],
+                'Tutorial': {
+                    'Starting_Point': ['--with-starting-point-folder=feedback-app-code'],
                     'Prompts': ['generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)'],
                     'Result_Example': ['../screenshots/mermaid-flow-diagram.png']
                 }
             }
         }
         
-        with open('tutorials.yaml', 'w') as f:
+        with open('TUTORIALS.yaml', 'w') as f:
             yaml.dump(test_data, f)
     
     def tearDown(self):
@@ -45,7 +46,7 @@ class TestGenerateTutorials(unittest.TestCase):
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```
-../init-playground.sh 1
+../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 ### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
 

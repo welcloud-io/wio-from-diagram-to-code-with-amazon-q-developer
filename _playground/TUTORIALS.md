@@ -6,7 +6,7 @@
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```
-../init-playground.sh 1
+../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 ### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
 

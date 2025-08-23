@@ -5,7 +5,7 @@ import os
 
 def generate_tutorials_md():
     # Read tutorials.yaml
-    with open('tutorials.yaml', 'r') as file:
+    with open('TUTORIALS.yaml', 'r') as file:
         tutorials = yaml.safe_load(file)
     
     # Generate TUTORIALS.md content
@@ -22,26 +22,26 @@ def generate_tutorials_md():
     
     for tutorial_key, tutorial_data in tutorials.items():
         title = tutorial_data.get('Title', '')
-        prompts = tutorial_data.get('Prompts', {})
+        tutorial = tutorial_data.get('Tutorial', {})
         
         # Add title
         content.append(f"## {title}")
         content.append("")
 
-        # Add prompts
-        if 'Starting_Point' in prompts:
+        # Add tutorial
+        if 'Starting_Point' in tutorial:
             content.append("### Initialize Tutorial (In VS Code tutorial window terminal)")
             # content.append("---")
             content.append("```")
-            for starting_point in prompts['Starting_Point']:
+            for starting_point in tutorial['Starting_Point']:
 
                 content.append(f"../init-playground.sh {starting_point}")
             content.append("```")
             # content.append("---")
 
-        # Add prompts
-        if 'Prompts' in prompts:
-            for prompt in prompts['Prompts']:
+        # Add tutorial
+        if 'Prompts' in tutorial:
+            for prompt in tutorial['Prompts']:
                 content.append("### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)")
                 content.append("")
                 # content.append("---")
@@ -54,10 +54,10 @@ def generate_tutorials_md():
                 content.append("")
         
         # Add result examples
-        if 'Result_Example' in prompts:
+        if 'Result_Example' in tutorial:
             content.append("### Result Example")
             content.append("")
-            for example in prompts['Result_Example']:
+            for example in tutorial['Result_Example']:
                 # Extract filename from path for alt text
                 filename = os.path.basename(example).replace('.png', '').replace('-', ' ')
                 content.append(f"![{filename}]({example})")
