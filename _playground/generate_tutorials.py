@@ -27,11 +27,19 @@ def generate_tutorials_md():
         # Add title
         content.append(f"## {title}")
         content.append("")
-        
+
+        # Add prompts
+        if 'Starting_Point' in prompts:
+            content.append("### Initialize Tutorial")
+            content.append("```")
+            for starting_point in prompts['Starting_Point']:
+                content.append(starting_point)
+            content.append("```")
+
         # Add prompts
         if 'Prompts' in prompts:
             for prompt in prompts['Prompts']:
-                content.append("### Q Prompt >")
+                content.append("### Write Prompt")
                 content.append("")
                 content.append("---")
                 content.append("")

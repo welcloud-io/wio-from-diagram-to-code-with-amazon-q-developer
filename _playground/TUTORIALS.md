@@ -4,7 +4,12 @@
 
 ## Generate MERMAID Diagrams from code
 
-### Q Prompt >
+### Initialize Tutorial
+```
+# In VS Code tutorial window terminal
+$ ../init-playground.sh 1
+```
+### Write Prompt
 
 ---
 
