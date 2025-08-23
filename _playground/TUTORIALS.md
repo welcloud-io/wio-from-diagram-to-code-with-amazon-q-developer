@@ -7,10 +7,10 @@
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ---
 ```
-$ ../init-playground.sh 1
+../init-playground.sh 1
 ```
 ---
-### Write Prompt
+### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
 
 ---
 

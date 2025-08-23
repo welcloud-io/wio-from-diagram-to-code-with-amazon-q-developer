@@ -35,14 +35,14 @@ def generate_tutorials_md():
             content.append("```")
             for starting_point in prompts['Starting_Point']:
 
-                content.append(f"$ ../init-playground.sh {starting_point}")
+                content.append(f"../init-playground.sh {starting_point}")
             content.append("```")
             content.append("---")
 
         # Add prompts
         if 'Prompts' in prompts:
             for prompt in prompts['Prompts']:
-                content.append("### Write Prompt")
+                content.append("### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)")
                 content.append("")
                 content.append("---")
                 content.append("")
