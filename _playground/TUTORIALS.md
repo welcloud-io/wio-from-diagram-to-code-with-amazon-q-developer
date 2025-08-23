@@ -1,3 +1,9 @@
+# Tutorial Index
+
+1. [Generate MERMAID Diagrams from code](#generate-mermaid-diagrams-from-code)
+
+---
+
 ## Generate MERMAID Diagrams from code
 
 ### Q Prompt >

@@ -11,6 +11,17 @@ def generate_tutorials_md():
     # Generate TUTORIALS.md content
     content = []
     
+    # Generate index
+    content.append("# Tutorial Index")
+    content.append("")
+    for i, (tutorial_key, tutorial_data) in enumerate(tutorials.items(), 1):
+        title = tutorial_data.get('Title', '')
+        anchor = title.lower().replace(' ', '-').replace('mermaid', 'mermaid')
+        content.append(f"{i}. [{title}](#{anchor})")
+    content.append("")
+    content.append("---")
+    content.append("")
+    
     for tutorial_key, tutorial_data in tutorials.items():
         title = tutorial_data.get('Title', '')
         prompts = tutorial_data.get('Prompts', {})
