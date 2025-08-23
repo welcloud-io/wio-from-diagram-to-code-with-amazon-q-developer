@@ -112,3 +112,5 @@ $> ./install-q-cli.sh
 [CLASSIC TUTORIALS INSTRUCTIONS](_playground/README.md)
 
 [MORE TUTORIALS](_playground/README-More.md)
+
+[TUTORIALS - TEST/EXPRIMENTATION](_playground/TUTORIALS.md)
