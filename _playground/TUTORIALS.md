@@ -5,20 +5,16 @@
 ## Generate MERMAID Diagrams from code
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
----
 ```
 ../init-playground.sh 1
 ```
----
 ### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
 
----
 
 ```
 generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 ```
 
----
 
 ### Result Example
 
