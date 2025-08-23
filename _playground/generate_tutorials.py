@@ -19,8 +19,6 @@ def generate_tutorials_md():
         anchor = title.lower().replace(' ', '-').replace('mermaid', 'mermaid')
         content.append(f"{i}. [{title}](#{anchor})")
     content.append("")
-    content.append("---")
-    content.append("")
     
     for tutorial_key, tutorial_data in tutorials.items():
         title = tutorial_data.get('Title', '')
