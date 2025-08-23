@@ -10,6 +10,7 @@ code --install-extension hediet.vscode-drawio
 echo
 echo "Create settings"
 if [ ! -f ~/.config/Code/User/settings.json ]; then
+mkdir -p ~/.config/Code/User
 cat << 'EOF' > ~/.config/Code/User/settings.json
 {
     "amazonQ.workspaceIndex": true,
