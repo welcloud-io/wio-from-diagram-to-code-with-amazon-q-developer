@@ -8,6 +8,9 @@ if [[ "$@" =~ "--help" ]]; then
     exit 0
 fi
 
+# -----------------------------------------------------------------------------
+# Choose tutorial number 
+# -----------------------------------------------------------------------------
 
 if ! [[ "$@" =~ "--hard" ]]; then
 echo
@@ -42,20 +45,47 @@ if [[ ! $tutorial_choice =~ ^[0-9]$|^10$ ]]; then
     exit 1
 fi
 
+
+# -----------------------------------------------------------------------------
+# Clean files 
+# --hard will delete cache & mcp.json file (but create a backup)
+# -----------------------------------------------------------------------------
+
+cleanup_files() {
+    # Remove all file in playground except .gitignore
+    find . -mindepth 1 -not -name '.gitignore' -exec rm -rf {} +
+
+    # Remove Q Developer cache
+    if [ "$1" == "--hard" -a -d ~/.aws/amazonq/cache/* ]; then
+        rm -r ~/.aws/amazonq/cache/*
+    fi
+
+    # Remove Q Developer mcp servers
+    if [ "$1" == "--hard" -a -f ~/.aws/amazonq/mcp.json ]; then
+        save_name="$HOME/.aws/amazonq/mcp.json.$(date +%Y-%m-%d-%H-%M-%S)"
+        cp ~/.aws/amazonq/mcp.json $save_name
+        rm ~/.aws/amazonq/mcp.json
+    fi
+}
+
 case "$@" in
     *--hard*)
-        ../clear-playground.sh --hard
+        cleanup_files --hard
         ;;
     *--no-clear*)
         echo > /dev/null
         ;;
     *mcp-server*)
-        ../clear-playground.sh --mcp-server
+        cleanup_files --mcp-server
         ;;
     *)
-        ../clear-playground.sh
+        cleanup_files
         ;;
 esac
+
+# -----------------------------------------------------------------------------
+# Create starting point configuration
+# -----------------------------------------------------------------------------
 
 WITH_RESULT=false
 
@@ -93,151 +123,86 @@ for arg in "$@"; do
 done
 
 # -----------------------------------------------------------------------------
-# Starting points preparation
+# Copy starting point files
 # -----------------------------------------------------------------------------
 
-prepare_playground_feedback_app_code() {
-
-cp -r ../../tutorials-starting-points/feedback-app-code/* .
-
-cat << 'EOF' > MERMAID-DIAGRAMS.md
-```mermaid
-<PUT MERMAID CODE HERE AND CLICK ON PREVIEW AT THE RIGHT HAND CORNER>
-```
-EOF
-
-cat << 'EOF' > APP.DRAWIO.XML
-<PUT GENERATED DIAGRAM HERE>
-EOF
-
-if [ "$WITH_RESULT" = true ]; then
-    cp -r ../../tutorials-generated-examples/drawio-diagram-generated-from-code/* .
-fi
-
-}
-
-prepare_playground_empty_folder() {
-
-echo
-   
-}
-
-prepare_playground_feedback_app_diagram() {
-
-cp -r ../../tutorials-starting-points/feedback-app-diagram/* .
-
-if [ "$WITH_RESULT" = true ]; then
-    cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app/* .
-    cp -r ../../tutorials-generated-examples/rewritten-diagrams/* .
-fi
-   
-}
-
-prepare_playground_s3_notification() {
-
-cp -r ../../tutorials-starting-points/s3-notification-diagram/* .
-   
-}
-
-prepare_playground_data_pipeline() {
-
-cp -r ../../tutorials-starting-points/data-pipeline-diagram/* .
-
-if [ "$WITH_RESULT" = true ]; then
-    cp -r ../../tutorials-generated-examples/code-generated-from-drawio-diagram/code-generated-from-q-desktop/data-pipeline/* .
-fi
-   
-}
-
-prepare_playground_deployment_pipeline() {
-
-cp -r ../../tutorials-starting-points/deployment-pipeline/* .
-   
-}
-
-prepare_playground_api_gateway() {
-
-cp -r ../../tutorials-starting-points/api-gateway-diagram/* .
-   
-}
-
-prepare_playground_lambda_app_hand_drawn() {
-
-cp -r ../../tutorials-starting-points/lambda-app-hand-drawn-diagram/* .
-   
-}
-
-prepare_playground_ecs_app_hand_drawn() {
-
-cp -r ../../tutorials-starting-points/ecs-app-hand-drawn-diagram/* .
-   
-}
-
-prepare_playground_security_pillar_hand_drawn() {
-
-cp -r ../../tutorials-starting-points/security-pillar-hand-drawn-diagram/* .
-   
-}
-
-prepare_playground_feedback_gui_hand_drawn() {
-
-cp -r ../../tutorials-starting-points/feedback-app-hand-drawn-diagram/* .
-   
-}
-
-. ../tutorial_descriptions.sh
-
 if [ $tutorial_choice == '0' ]; then
-prepare_playground_empty_folder
-tutorial_description_0
+echo
 fi
 
 if [ $tutorial_choice == '1' ]; then
-prepare_playground_feedback_app_code
-tutorial_description_1
+set -- "$@" "--with-starting-point-folder=feedback-app-code"
+fi
+
+if [ $tutorial_choice == '1' -a "$WITH_RESULT" == "true" ]; then
+set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app"
 fi
 
 if [ $tutorial_choice == '2' ]; then
-prepare_playground_feedback_app_diagram
-tutorial_description_2
+set -- "$@" "--with-starting-point-folder=feedback-app-diagram"
+fi
+
+if [ $tutorial_choice == '2' -a "$WITH_RESULT" == "true" ]; then
+set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app"
+set -- "$@" "--with-results=rewritten-diagrams"
 fi
 
 if [ $tutorial_choice == '3' ]; then
-prepare_playground_s3_notification
-tutorial_description_3
+set -- "$@" "--with-starting-point-folder=s3-notification-diagram"
+fi
+
+if [ $tutorial_choice == '3' -a "$WITH_RESULT" == "true" ]; then
+set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/data-pipeline"
 fi
 
 if [ $tutorial_choice == '4' ]; then
-prepare_playground_data_pipeline
-tutorial_description_4
+set -- "$@" "--with-starting-point-folder=data-pipeline-diagram"
 fi
 
 if [ $tutorial_choice == '5' ]; then
-prepare_playground_deployment_pipeline
-tutorial_description_5
+set -- "$@" "--with-starting-point-folder=deployment-pipeline"
 fi
 
 if [ $tutorial_choice == '6' ]; then
-prepare_playground_api_gateway
-tutorial_description_6
+set -- "$@" "--with-starting-point-folder=api-gateway-diagram"
 fi
 
 if [ $tutorial_choice == '7' ]; then
-prepare_playground_lambda_app_hand_drawn
-tutorial_description_7
+set -- "$@" "--with-starting-point-folder=lambda-app-hand-drawn-diagram"
 fi
 
 if [ $tutorial_choice == '8' ]; then
-prepare_playground_ecs_app_hand_drawn
-tutorial_description_8
+set -- "$@" "--with-starting-point-folder=ecs-app-hand-drawn-diagram"
 fi
 
 if [ $tutorial_choice == '9' ]; then
-prepare_playground_security_pillar_hand_drawn
-tutorial_description_9
+set -- "$@" "--with-starting-point-folder=security-pillar-hand-drawn-diagram"
 fi
 
 if [ $tutorial_choice == '10' ]; then
-prepare_playground_feedback_gui_hand_drawn
-tutorial_description_10
+set -- "$@" "--with-starting-point-folder=feedback-app-hand-drawn-diagram"
 fi
+
+for arg in "$@"; do
+    case "$arg" in
+        --with-starting-point-folder=*)
+            folder="${arg#*=}"
+            cp -r ../../tutorials-starting-points/$folder/* . 
+        ;;
+        --with-results=*)
+            folder="${arg#*=}"
+            cp -r ../../tutorials-generated-examples/$folder/* . 
+        ;;   
+        *)
+            echo
+            ;;
+    esac
+done
+
+# -----------------------------------------------------------------------------
+# Show Tutorial
+# -----------------------------------------------------------------------------
+
+. ../tutorial_descriptions.sh
+
+tutorial_description "$@"

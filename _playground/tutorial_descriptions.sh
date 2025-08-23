@@ -159,3 +159,37 @@ $> q chat --model claude-4-sonnet
 
 """
 }
+
+
+tutorial_description() {
+    if [[ "$1" == *"--with-starting-point-folder=feedback-app-code"* ]]; then
+        tutorial_description_1
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=feedback-app-diagram"* ]]; then
+        tutorial_description_2
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=s3-notification-diagram"* ]]; then
+        tutorial_description_3
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=data-pipeline-diagram"* ]]; then
+        tutorial_description_4
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=deployment-pipeline"* ]]; then
+        tutorial_description_5
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=api-gateway-diagram"* ]]; then
+        tutorial_description_6
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=lambda-app-hand-drawn-diagram"* ]]; then
+        tutorial_description_7
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=ecs-app-hand-drawn-diagram"* ]]; then
+        tutorial_description_8
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=security-pillar-hand-drawn-diagram"* ]]; then
+        tutorial_description_9
+    fi
+    if [[ "$1" == *"--with-starting-point-folder=feedback-app-hand-drawn-diagram"* ]]; then
+        tutorial_description_10
+    fi
+}
