@@ -30,11 +30,14 @@ def generate_tutorials_md():
 
         # Add prompts
         if 'Starting_Point' in prompts:
-            content.append("### Initialize Tutorial")
+            content.append("### Initialize Tutorial (In VS Code tutorial window terminal)")
+            content.append("---")
             content.append("```")
             for starting_point in prompts['Starting_Point']:
-                content.append(starting_point)
+
+                content.append(f"$ ../init-playground.sh {starting_point}")
             content.append("```")
+            content.append("---")
 
         # Add prompts
         if 'Prompts' in prompts:
