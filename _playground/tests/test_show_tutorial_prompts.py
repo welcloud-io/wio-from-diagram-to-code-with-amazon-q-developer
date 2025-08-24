@@ -42,7 +42,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
         sys.stdout = captured_output
         
         try:
-            show_tutorial_prompts('TUTORIALS.yaml')
+            show_tutorial_prompts('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml')
         finally:
             sys.stdout = original_stdout
         
