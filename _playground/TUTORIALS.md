@@ -1,8 +1,8 @@
 # Tutorial Index
 
-1. [Generate MERMAID Diagrams from code](#generate-mermaid-diagrams-from-code)
+1. [Generate Application/Flow Diagram](#generate-application/flow-diagram)
 
-## Generate MERMAID Diagrams from code
+## Generate Application/Flow Diagram
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```

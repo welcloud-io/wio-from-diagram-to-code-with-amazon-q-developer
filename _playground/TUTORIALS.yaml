@@ -1,5 +1,5 @@
 Tutorial_1:
-  Title: "Generate MERMAID Diagrams from code"
+  Title: "Generate Application/Flow Diagram"
   Tutorial:
     Starting_Point:
     - "--with-starting-point-folder=feedback-app-code"

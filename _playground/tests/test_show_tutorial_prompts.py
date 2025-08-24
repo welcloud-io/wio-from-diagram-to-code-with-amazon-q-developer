@@ -53,7 +53,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
         
         expected_output = """## TUTORIALS:
 
-## Generate MERMAID Diagrams from code
+## Generate Application/Flow Diagram
 > generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 
 """
