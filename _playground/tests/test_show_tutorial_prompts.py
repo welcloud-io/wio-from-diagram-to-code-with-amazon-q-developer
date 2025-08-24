@@ -11,29 +11,29 @@ from show_tutorial_prompts import show_tutorial_prompts
 
 class TestShowTutorialPrompts(unittest.TestCase):
     
-    def setUp(self):
-        # Create temporary file to put test data in
-        self.test_dir = tempfile.mkdtemp()
-        self.original_cwd = os.getcwd()
-        os.chdir(self.test_dir)
+    # def setUp(self):
+    #     # Create temporary file to put test data in
+    #     self.test_dir = tempfile.mkdtemp()
+    #     self.original_cwd = os.getcwd()
+    #     os.chdir(self.test_dir)
         
-        # Create test TUTORIALS.yaml
-        test_data = {
-            'Tutorial_1': {
-                'Title': 'Generate MERMAID Diagrams from code',
-                'Tutorial': {
-                    'Starting_Point': ['--with-starting-point-folder=feedback-app-code'],
-                    'Prompts': ['generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)'],
-                    'Result_Example': ['../screenshots/mermaid-flow-diagram.png']
-                }
-            }
-        }
+    #     # Create test TUTORIALS.yaml
+    #     test_data = {
+    #         'Tutorial_1': {
+    #             'Title': 'Generate MERMAID Diagrams from code',
+    #             'Tutorial': {
+    #                 'Starting_Point': ['--with-starting-point-folder=feedback-app-code'],
+    #                 'Prompts': ['generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)'],
+    #                 'Result_Example': ['../screenshots/mermaid-flow-diagram.png']
+    #             }
+    #         }
+    #     }
         
-        with open('TUTORIALS.yaml', 'w') as f:
-            yaml.dump(test_data, f)
+    #     with open('TUTORIALS.yaml', 'w') as f:
+    #         yaml.dump(test_data, f)
     
-    def tearDown(self):
-        os.chdir(self.original_cwd)
+    # def tearDown(self):
+    #     os.chdir(self.original_cwd)
     
     def test_show_tutorial_prompts_output(self):
         # Capture stdout
