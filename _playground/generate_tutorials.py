@@ -45,29 +45,29 @@ def generate_tutorials_md():
                 content.append(f"../init-playground.sh {starting_point}")
             content.append("```")
 
+        content.append("")
+
         # Add tutorial
         prompts_key = 'prompts'
         if prompts_key in tutorial:
             for prompt in tutorial[prompts_key]:
                 content.append("### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)")
-                content.append("")
-                content.append("")
                 content.append("```")
                 content.append(prompt)
                 content.append("```")
-                content.append("")
-                content.append("")
+                
+        content.append("")
         
         # Add result examples
         result_key = 'result_example'
         if result_key in tutorial:
             content.append("### Result Example")
-            content.append("")
             for example in tutorial[result_key]:
                 # Extract filename from path for alt text
                 filename = os.path.basename(example).replace('.png', '').replace('-', ' ')
                 content.append(f"![{filename}]({example})")
-            content.append("")
+        
+        content.append("")
     
     # Write to TUTORIALS.md
     with open('TUTORIALS.md', 'w') as file:
