@@ -3,11 +3,7 @@
 import yaml
 import os
 
-def generate_tutorials_md():
-    # Read tutorials.yaml
-    with open('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml', 'r') as file:
-        data = yaml.safe_load(file)
-    
+def create_content(data):
     # Handle the current YAML structure where tutorial is the top-level key
     if 'tutorial' in data:
         tutorials = {'tutorial': data['tutorial']}
@@ -68,6 +64,16 @@ def generate_tutorials_md():
                 content.append(f"![{filename}]({example})")
         
         content.append("")
+
+    return content  
+
+def generate_tutorials_md():
+    # Read tutorials.yaml
+    with open('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml', 'r') as file:
+        data = yaml.safe_load(file)
+    
+    # Create content
+    content = create_content(data)
     
     # Write to TUTORIALS.md
     with open('TUTORIALS.md', 'w') as file:
