@@ -6,7 +6,13 @@ import os
 def generate_tutorials_md():
     # Read tutorials.yaml
     with open('TUTORIALS.yaml', 'r') as file:
-        tutorials = yaml.safe_load(file)
+        data = yaml.safe_load(file)
+    
+    # Handle the current YAML structure where Tutorial is the top-level key
+    if 'Tutorial' in data:
+        tutorials = {'Tutorial': data['Tutorial']}
+    else:
+        tutorials = data
     
     # Generate TUTORIALS.md content
     content = []
@@ -16,13 +22,13 @@ def generate_tutorials_md():
     content.append("")
     for i, (tutorial_key, tutorial_data) in enumerate(tutorials.items(), 1):
         title = tutorial_data.get('Title', '')
-        anchor = title.lower().replace(' ', '-').replace('mermaid', 'mermaid')
+        anchor = title.lower().replace(' ', '-')
         content.append(f"{i}. [{title}](#{anchor})")
     content.append("")
     
     for tutorial_key, tutorial_data in tutorials.items():
         title = tutorial_data.get('Title', '')
-        tutorial = tutorial_data.get('Tutorial', {})
+        tutorial = tutorial_data
         
         # Add title
         content.append(f"## {title}")

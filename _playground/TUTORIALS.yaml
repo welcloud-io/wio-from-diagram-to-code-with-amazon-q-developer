@@ -1,9 +1,8 @@
-Tutorial_1:
+Tutorial:
   Title: "Generate Application/Flow Diagram"
-  Tutorial:
-    Starting_Point:
-    - "--with-starting-point-folder=feedback-app-code"
-    Prompts:
-    - "generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)"
-    Result_Example:
-    - "../screenshots/mermaid-flow-diagram.png"
+  Starting_Point:
+  - "--with-starting-point-folder=feedback-app-code"
+  Prompts:
+  - "generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)"
+  Result_Example:
+  - "../screenshots/mermaid-flow-diagram.png"
