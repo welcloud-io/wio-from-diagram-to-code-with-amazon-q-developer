@@ -4,7 +4,7 @@ import unittest
 import tempfile
 import os
 import yaml
-from generate_tutorials import generate_tutorials_md
+from build_tutorials_page import build_tutorials_page
 
 class TestGenerateTutorials(unittest.TestCase):
     
@@ -33,7 +33,7 @@ class TestGenerateTutorials(unittest.TestCase):
     #     os.chdir(self.original_cwd)
     
     def test_generate_tutorials_md_output(self):
-        generate_tutorials_md()
+        build_tutorials_page()
         
         with open('TUTORIALS.md', 'r') as f:
             content = f.read()

@@ -67,7 +67,7 @@ def create_content(data):
 
     return content  
 
-def generate_tutorials_md():
+def build_tutorials_page():
     # Read tutorials.yaml
     with open('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml', 'r') as file:
         data = yaml.safe_load(file)
@@ -82,4 +82,4 @@ def generate_tutorials_md():
     print("TUTORIALS.md generated successfully!")
 
 if __name__ == "__main__":
-    generate_tutorials_md()
+    build_tutorials_page()
