@@ -3,30 +3,16 @@
 import yaml
 import os
 
-def create_content(data):
+def create_page(tutorial_data):
     # Handle the current YAML structure where tutorial is the top-level key
-    if 'tutorial' in data:
-        tutorials = {'tutorial': data['tutorial']}
-    elif 'Tutorial' in data:
-        tutorials = {'Tutorial': data['Tutorial']}
-    else:
-        tutorials = data
-    
+    tutorial = {'tutorial': tutorial_data['tutorial']}
+
     # Generate TUTORIALS.md content
     content = []
-    
-    # Generate index
-    content.append("# Tutorial Index")
-    content.append("")
-    for i, (tutorial_key, tutorial_data) in enumerate(tutorials.items(), 1):
-        title = tutorial_data.get('title', tutorial_data.get('Title', ''))
-        anchor = title.lower().replace(' ', '-')
-        content.append(f"{i}. [{title}](#{anchor})")
-    content.append("")
-    
-    for tutorial_key, tutorial_data in tutorials.items():
-        title = tutorial_data.get('title', tutorial_data.get('Title', ''))
-        tutorial = tutorial_data
+        
+    for tutorial_key, tutorial_properties in tutorial.items():
+        title = tutorial_properties.get('title', tutorial_properties.get('Title', ''))
+        tutorial = tutorial_properties
         
         # Add title
         content.append(f"## {title}")
@@ -64,22 +50,57 @@ def create_content(data):
                 content.append(f"![{filename}]({example})")
         
         content.append("")
+        content.append("")
 
-    return content  
+    return content
 
-def build_tutorials_page():
-    # Read tutorials.yaml
-    with open('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml', 'r') as file:
-        data = yaml.safe_load(file)
-    
-    # Create content
-    content = create_content(data)
-    
-    # Write to TUTORIALS.md
+def get_tutorial_title(tutorial_file):
+    title = ''
+    with open(tutorial_file, 'r') as file:
+        tutorial_data = yaml.safe_load(file)
+        title = tutorial_data['tutorial']['title']
+    return title
+
+def build_tutorials_page(tutorial_files):
+
+    # Clear existing content in TUTORIALS.md
     with open('TUTORIALS.md', 'w') as file:
+        file.write("")
+
+    # Generate index
+    content = []
+    content.append("# Tutorial Index")
+    for i, filename in enumerate(tutorial_files, 1):
+        title = get_tutorial_title(filename)
+        anchor = title.lower().replace(' ', '-')                
+        content.append(f"{i}. [{title}](#{anchor})")
+    content.append("")
+    content.append("")
+
+    # Write to TUTORIALS.md
+    with open('TUTORIALS.md', 'a') as file:
         file.write('\n'.join(content))
-    
-    print("TUTORIALS.md generated successfully!")
+
+    for filename in tutorial_files:
+        # Read tutorials.yaml
+        with open(filename, 'r') as file:
+            tutorial_data = yaml.safe_load(file)
+        
+        # Create content
+        content = create_page(tutorial_data)
+        
+        # Write to TUTORIALS.md
+        with open('TUTORIALS.md', 'a') as file:
+            file.write('\n'.join(content))
+        
+        print("TUTORIALS.md generated successfully!")
 
 if __name__ == "__main__":
-    build_tutorials_page()
+
+    with open('tutorials/tutorial-index.yaml', 'r') as f:
+        index_data = yaml.safe_load(f)
+    
+    tutorial_files = index_data['tutorial_index']
+    tutorial_files = [f"tutorials/{file}" for file in tutorial_files]
+
+    build_tutorials_page(tutorial_files)

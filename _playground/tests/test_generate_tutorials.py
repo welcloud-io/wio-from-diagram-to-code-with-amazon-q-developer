@@ -9,16 +9,20 @@ from build_tutorials_page import build_tutorials_page
 class TestGenerateTutorials(unittest.TestCase):
     
     def test_generate_tutorials_md_output(self):
-        build_tutorials_page()
+
+        tutorial_files = [
+            'tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
+        ]
+
+        build_tutorials_page(tutorial_files)
         
         with open('TUTORIALS.md', 'r') as f:
             content = f.read()
         
         expected_content = """# Tutorial Index
+1. [Generate Flow Diagram](#generate-flow-diagram)
 
-1. [Generate Application/Flow Diagram](#generate-application/flow-diagram)
-
-## Generate Application/Flow Diagram
+## Generate Flow Diagram
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```
@@ -32,6 +36,7 @@ generate a mermaid flow diagram of my application (data flow from up to bottom, 
 
 ### Result Example
 ![mermaid flow diagram](../screenshots/mermaid-flow-diagram.png)
+
 """
         
         actual_lines = content.splitlines()

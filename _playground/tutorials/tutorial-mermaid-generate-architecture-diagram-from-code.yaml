@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Application/Flow Diagram"
+  title: "Generate Flow Diagram"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:

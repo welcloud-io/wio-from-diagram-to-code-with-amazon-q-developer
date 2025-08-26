@@ -1,2 +1,3 @@
 tutorial_index:
   - 'tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
+  - 'tutorial-mermaid-generate-sequence-diagram-from-code.yaml'
