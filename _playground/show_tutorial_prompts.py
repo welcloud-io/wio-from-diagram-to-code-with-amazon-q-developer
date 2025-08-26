@@ -14,20 +14,15 @@ def show_tutorial_prompts(yaml_file='../tutorials/tutorial-mermaid-generate-arch
     print()
     
     # Handle the current YAML structure where tutorial is the top-level key
-    if 'tutorial' in data:
-        tutorials = {'tutorial': data['tutorial']}
-    elif 'Tutorial' in data:
-        tutorials = {'Tutorial': data['Tutorial']}
-    else:
-        tutorials = data
+    tutorials = {'tutorial': data['tutorial']}
     
     for tutorial_key, tutorial_data in tutorials.items():
-        title = tutorial_data.get('title', tutorial_data.get('Title', ''))
+        title = tutorial_data.get('title', '')
         prompts = tutorial_data.get('prompts', tutorial_data.get('Prompts', []))
         starting_point = tutorial_data.get('starting_point', tutorial_data.get('starting_Point', tutorial_data.get('Starting_Point', [])))
         
         # Check if starting_point list is not empty and contains the expected value
-        if starting_point and starting_point[0] == '--with-starting-point-folder=feedback-app-code':
+        if starting_point[0] == '--with-starting-point-folder=feedback-app-code':
             print_green(f"## {title}")
             for prompt in prompts:
                 print(f"> {prompt}")
