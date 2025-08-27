@@ -151,7 +151,7 @@ generate python cdk V2 template from diagram
 ```
 
 ### Result Example
-![tutorial code from drawio diagram s3 notification](../screenshots/tutorial-code-from-drawio-diagram-s3-notification.png)
+![code from drawio diagram s3 notification](../screenshots/code-from-drawio-diagram-s3-notification.png)
 
 ## 9. Generate Code from Drawio Diagram - Step Functions
 
@@ -170,7 +170,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 ```
 
 ### Result Example
-![tutorial code from drawio diagram data pipeline](../screenshots/tutorial-code-from-drawio-diagram-data-pipeline.png)
+![code from drawio diagram data pipeline](../screenshots/code-from-drawio-diagram-data-pipeline.png)
 
 ## 10. Generate Code from Drawio Diagram - Deployment Pipeline
 

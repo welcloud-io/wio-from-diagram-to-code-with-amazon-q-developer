@@ -74,7 +74,7 @@ can you generate application from the drawio diagram (I want the code of the lam
 
 ### Result Example
 
-![sequence](../screenshots/tutorial-code-from-drawio-diagram-s3-notification.png)
+![sequence](../screenshots/code-from-drawio-diagram-s3-notification.png)
 
 
 # 2 - Data Pipeline
@@ -116,7 +116,7 @@ generate python CDK V2 code and the lambda functions of the step functions workf
 
 ### Result Example
 
-![sequence](../screenshots/tutorial-code-from-drawio-diagram-data-pipeline.png)
+![sequence](../screenshots/code-from-drawio-diagram-data-pipeline.png)
 
 # 3 - Deployment Pipeline
 
