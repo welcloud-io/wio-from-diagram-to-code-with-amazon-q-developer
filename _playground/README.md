@@ -198,7 +198,7 @@ $> cdk deploy --app "python3 app.py"
 
 ### Result Example (n.b. the diagram has been added to the generated Readme.md afterwards)
 
-![app_and_infra](../screenshots/screenshots/drawio-architecture-diagram-from-code.png)
+![app_and_infra](../screenshots/drawio-architecture-diagram-from-code.png)
 
 # 3 - From Diagram to Code with Draw.io
 
