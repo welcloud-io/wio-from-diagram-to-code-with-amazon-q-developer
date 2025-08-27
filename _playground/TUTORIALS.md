@@ -9,6 +9,7 @@
 8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
 9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
 10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
+11. [Generate Code from HandDrawn Diagram - Landing Page](#11-generate-code-from-handdrawn-diagram---landing-page)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -185,4 +186,27 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 
 ### Result Example
 ![code from drawio diagram deployment pipeline](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
+
+## 11. Generate Code from HandDrawn Diagram - Landing Page
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=lambda-app-hand-drawn-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS 2024 Icons)
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```
+
+### Result Example
+![code from handdrawn diagram landing page](../screenshots/code-from-handdrawn-diagram-landing-page.png)
 

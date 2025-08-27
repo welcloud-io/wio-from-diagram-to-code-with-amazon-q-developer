@@ -326,7 +326,7 @@ create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS
 can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
 
-![handdrawn](../screenshots/hand-drawn-architecture.png)
+![handdrawn](../screenshots/code-from-handdrawn-diagram-landing-page.png)
 
 ---
 
