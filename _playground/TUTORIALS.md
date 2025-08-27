@@ -2,6 +2,7 @@
 1. [Generate Flow Diagram from Code](#1-generate-flow-diagram-from-code)
 2. [Generate Sequence Diagram from Code](#2-generate-sequence-diagram-from-code)
 3. [Generate Class Diagram from Code](#3-generate-class-diagram-from-code)
+4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
 
 ## 1. Generate Flow Diagram from Code
 
@@ -47,4 +48,19 @@ create a mermaid class diagram of the application
 
 ### Result Example
 ![mermaid class diagram](../screenshots/mermaid-class-diagram.png)
+
+## 4. Generate Code from Mermaid Diagram
+
+### Initialize Tutorial (In VS Code tutorial window terminal)
+```
+../init-playground.sh --with-starting-point-folder=empty
+```
+
+### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+```
+can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2) graph TD A[User] -->|HTTP GET /| B[API Gateway] B -->|Invoke| C[Landing Page Function] C -->|Return HTML| B B -->|Return HTML| A A -->|HTTP POST /feedbacks| B B -->|Invoke| D[Send Feedback Function] D -->|Write| E[(DynamoDB Table)] D -->|Publish| F[SNS Topic] F -->|Send Email| G[User Email] subgraph AWS Cloud B C D E F end
+```
+
+### Result Example
+![app+infra from mermaid](../screenshots/app+infra-from-mermaid.png)
 
