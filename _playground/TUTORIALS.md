@@ -1,19 +1,19 @@
 # Tutorial Index
-1. [Generate Flow Diagram from Code](#1-generate-flow-diagram-from-code)
-2. [Generate Sequence Diagram from Code](#2-generate-sequence-diagram-from-code)
-3. [Generate Class Diagram from Code](#3-generate-class-diagram-from-code)
+1. [Generate Mermaid Flow Diagram from Code](#1-generate-mermaid-flow-diagram-from-code)
+2. [Generate Mermaid Sequence Diagram from Code](#2-generate-mermaid-sequence-diagram-from-code)
+3. [Generate Mermaid Class Diagram from Code](#3-generate-mermaid-class-diagram-from-code)
 4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
 5. [Generate Code from Drawio Diagram](#5-generate-code-from-drawio-diagram)
 6. [Split Drawio Diagram into CDK Constructs](#6-split-drawio-diagram-into-cdk-constructs)
 
-## 1. Generate Flow Diagram from Code
+## 1. Generate Mermaid Flow Diagram from Code
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 ```
@@ -21,14 +21,14 @@ create a mermaid flow diagram of my application (data flow from up to bottom, us
 ### Result Example
 ![mermaid flow diagram](../screenshots/mermaid-flow-diagram.png)
 
-## 2. Generate Sequence Diagram from Code
+## 2. Generate Mermaid Sequence Diagram from Code
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a mermaid sequence diagram of the application
 ```
@@ -36,14 +36,14 @@ create a mermaid sequence diagram of the application
 ### Result Example
 ![mermaid sequence diagram](../screenshots/mermaid-sequence-diagram.png)
 
-## 3. Generate Class Diagram from Code
+## 3. Generate Mermaid Class Diagram from Code
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a mermaid class diagram of the application
 ```
@@ -53,12 +53,12 @@ create a mermaid class diagram of the application
 
 ## 4. Generate Code from Mermaid Diagram
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=empty
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 graph TD  
@@ -86,12 +86,12 @@ end
 
 ## 5. Generate Code from Drawio Diagram
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
@@ -101,12 +101,12 @@ can you generate application from the drawio diagram (I want the code of the lam
 
 ## 6. Split Drawio Diagram into CDK Constructs
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
 ```

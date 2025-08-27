@@ -21,7 +21,7 @@ def create_page(tutorial_data, index_number):
         # Add tutorial
         starting_point_key = 'starting_point'
         if starting_point_key in tutorial:
-            content.append("### Initialize Tutorial (In VS Code tutorial window terminal)")
+            content.append("### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)")
             content.append("```")
             for starting_point in tutorial[starting_point_key]:
                 content.append(f"../init-playground.sh {starting_point}")
@@ -33,7 +33,7 @@ def create_page(tutorial_data, index_number):
         prompts_key = 'prompts'
         if prompts_key in tutorial:
             for prompt in tutorial[prompts_key]:
-                content.append("### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)")
+                content.append("### Prompts to execute In Q Desktop, Q CLI, Kiro, ...")
                 content.append("```")
                 content.append(prompt)
                 content.append("```")
