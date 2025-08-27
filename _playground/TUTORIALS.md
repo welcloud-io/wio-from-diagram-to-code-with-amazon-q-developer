@@ -4,7 +4,8 @@
 3. [Generate Mermaid Class Diagram from Code](#3-generate-mermaid-class-diagram-from-code)
 4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
 5. [Generate Code from Drawio Diagram](#5-generate-code-from-drawio-diagram)
-6. [Split Drawio Diagram into CDK Constructs](#6-split-drawio-diagram-into-cdk-constructs)
+6. [Generate Drawio Flow Diagram from Code](#6-generate-drawio-flow-diagram-from-code)
+7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
 
 ## 1. Generate Mermaid Flow Diagram from Code
 
@@ -99,7 +100,22 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ### Result Example
 ![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
 
-## 6. Split Drawio Diagram into CDK Constructs
+## 6. Generate Drawio Flow Diagram from Code
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-code
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)
+```
+
+### Result Example
+![drawio diagram from code](../screenshots/drawio-diagram-from-code.png)
+
+## 7. Split Drawio Diagram into CDK Constructs
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```

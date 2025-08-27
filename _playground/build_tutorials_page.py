@@ -93,6 +93,15 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
         # Write to TUTORIALS.md
         with open(target_file, 'a') as file:
             file.write('\n'.join(content))
+
+def orphans(tutorial_files):
+    # list all files in the tutorials directory
+    files = [f for f in os.listdir('tutorials') if f != 'main-index.yaml']    # find all files that are not in the index
+    orphaned_files = []
+    for file in files:
+        if f"tutorials/{file}" not in tutorial_files:
+            orphaned_files.append(file)
+    return orphaned_files
         
 if __name__ == "__main__":
 
@@ -103,3 +112,6 @@ if __name__ == "__main__":
     tutorial_files = [f"tutorials/{file}" for file in tutorial_files]
 
     build_tutorials_page(tutorial_files)
+
+    orphan_files = orphans(tutorial_files)
+    if orphan_files != []: print ('orphans', orphan_files)

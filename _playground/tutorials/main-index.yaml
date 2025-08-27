@@ -1,7 +1,8 @@
 tutorial_index:
-  - 'tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
-  - 'tutorial-mermaid-generate-sequence-diagram-from-code.yaml'
-  - 'tutorial-mermaid-generate-class-diagram-from-code.yaml'
+  - 'tutorial-mermaid-architecture-diagram-from-code.yaml'
+  - 'tutorial-mermaid-sequence-diagram-from-code.yaml'
+  - 'tutorial-mermaid-class-diagram-from-code.yaml'
   - 'tutorial-code-from-mermaid-diagram.yaml'
   - 'tutorial-code-from-drawio-diagram.yaml'
-  - 'tutorial-drawio-split-into-constructs.yaml'
+  - 'tutorial-drawio-architecture-diagram-from-code.yaml'
+  - 'tutorial-drawio-split-diagram-into-constructs.yaml'
