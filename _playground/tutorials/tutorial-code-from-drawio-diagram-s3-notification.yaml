@@ -1,0 +1,9 @@
+tutorial:
+  title: "Generate Code from Drawio Diagram - S3 Notification"
+  starting_point:
+  - "--with-starting-point-folder=s3-notification-diagram"
+  prompts:
+  - generate lambda function code in python from diagram
+  - generate python cdk V2 template from diagram
+  result_example:
+  - "../screenshots/tutorial-code-from-drawio-diagram-s3-notification.png"

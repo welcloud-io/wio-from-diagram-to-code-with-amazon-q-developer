@@ -74,7 +74,7 @@ can you generate application from the drawio diagram (I want the code of the lam
 
 ### Result Example
 
-![sequence](../screenshots/s3-notification.png)
+![sequence](../screenshots/tutorial-code-from-drawio-diagram-s3-notification.png)
 
 
 # 2 - Data Pipeline
