@@ -366,7 +366,7 @@ $> q chat --model claude-4-sonnet
 tutorial_description() {
     if [[ "$1" == *"--with-starting-point-folder=feedback-app-code"* ]]; then
         clear
-        ../show_tutorial_prompts.py
+        ../show_tutorial_prompts.py '--with-starting-point-folder=feedback-app-code'
     fi
     if [[ "$1" == *"--with-starting-point-folder=feedback-app-diagram"* ]]; then
         tutorial_description_2

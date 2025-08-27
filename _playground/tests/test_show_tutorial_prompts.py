@@ -18,7 +18,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
         sys.stdout = captured_output
         
         try:
-            show_tutorial_prompts('tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml')
+            show_tutorial_prompts('./tutorials', '--with-starting-point-folder=feedback-app-code')
         finally:
             sys.stdout = original_stdout
         
@@ -31,6 +31,9 @@ class TestShowTutorialPrompts(unittest.TestCase):
 
 ## Generate Flow Diagram
 > generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
+
+## Generate Sequence Diagram
+> generate a mermaid sequence diagram of the application
 
 """
         
