@@ -203,7 +203,7 @@ generate application
 ```
 
 ### Result Example
-![code from drawio diagram data pipeline](../screenshots/code-from-drawio-diagram-data-pipeline.png)
+![code from drawio diagram api gateway](../screenshots/code-from-drawio-diagram-api-gateway.png)
 
 ## 12. Generate Code from HandDrawn Diagram - Landing Page
 

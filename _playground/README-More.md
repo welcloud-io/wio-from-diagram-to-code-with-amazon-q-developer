@@ -202,7 +202,7 @@ generate application
 ```
 ---
 
-![sequence](../screenshots/api-gateway.png)
+![sequence](../screenshots/code-from-drawio-diagram-api-gateway.png)
 
 
 # 5 - Build simplest MCP Server
