@@ -1,7 +1,7 @@
 # Tutorial Index
-1. [Generate Flow Diagram](#generate-flow-diagram)
+1. [Generate Flow Diagram](#1-generate-flow-diagram)
 
-## Generate Flow Diagram
+## 1. Generate Flow Diagram
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```

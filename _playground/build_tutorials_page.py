@@ -3,7 +3,7 @@
 import yaml
 import os
 
-def create_page(tutorial_data):
+def create_page(tutorial_data, index_number):
     # Handle the current YAML structure where tutorial is the top-level key
     tutorial = {'tutorial': tutorial_data['tutorial']}
 
@@ -15,7 +15,7 @@ def create_page(tutorial_data):
         tutorial = tutorial_properties
         
         # Add title
-        content.append(f"## {title}")
+        content.append(f"## {index_number}. {title}")
         content.append("")
 
         # Add tutorial
@@ -72,7 +72,8 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
     content.append("# Tutorial Index")
     for i, filename in enumerate(tutorial_files, 1):
         title = get_tutorial_title(filename)
-        anchor = title.lower().replace(' ', '-')                
+        indexed_title = f"{i}. {title}"
+        anchor = indexed_title.lower().replace(' ', '-').replace('.', '')               
         content.append(f"{i}. [{title}](#{anchor})")
     content.append("")
     content.append("")
@@ -81,13 +82,13 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
     with open(target_file, 'a') as file:
         file.write('\n'.join(content))
 
-    for filename in tutorial_files:
+    for i, filename in enumerate(tutorial_files, 1):
         # Read tutorials.yaml
         with open(filename, 'r') as file:
             tutorial_data = yaml.safe_load(file)
         
         # Create content
-        content = create_page(tutorial_data)
+        content = create_page(tutorial_data, i)
         
         # Write to TUTORIALS.md
         with open(target_file, 'a') as file:

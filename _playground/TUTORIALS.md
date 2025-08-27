@@ -1,8 +1,8 @@
 # Tutorial Index
-1. [Generate Flow Diagram](#generate-flow-diagram)
-2. [Generate Sequence Diagram](#generate-sequence-diagram)
+1. [Generate Flow Diagram](#1-generate-flow-diagram)
+2. [Generate Sequence Diagram](#2-generate-sequence-diagram)
 
-## Generate Flow Diagram
+## 1. Generate Flow Diagram
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```
@@ -17,7 +17,7 @@ generate a mermaid flow diagram of my application (data flow from up to bottom, 
 ### Result Example
 ![mermaid flow diagram](../screenshots/mermaid-flow-diagram.png)
 
-## Generate Sequence Diagram
+## 2. Generate Sequence Diagram
 
 ### Initialize Tutorial (In VS Code tutorial window terminal)
 ```
