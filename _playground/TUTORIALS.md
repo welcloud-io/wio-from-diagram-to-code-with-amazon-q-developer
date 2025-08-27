@@ -160,11 +160,11 @@ generate python cdk V2 template from diagram
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
-generate generate lambda code in the drawio diagram (take notes into account)
+generate lambda code in the drawio diagram (take notes into account)
 ```
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
-generate enerate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
+generate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
 ```
 
 ### Result Example
