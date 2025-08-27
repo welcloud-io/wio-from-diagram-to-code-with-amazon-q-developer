@@ -409,7 +409,8 @@ tutorial_description() {
         ../show_tutorial_prompts.py '--with-starting-point-folder=lambda-app-hand-drawn-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=ecs-app-hand-drawn-diagram"* ]]; then
-        tutorial_description_8
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=ecs-app-hand-drawn-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=security-pillar-hand-drawn-diagram"* ]]; then
         tutorial_description_9

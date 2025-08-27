@@ -10,6 +10,7 @@
 9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
 10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
 11. [Generate Code from HandDrawn Diagram - Landing Page](#11-generate-code-from-handdrawn-diagram---landing-page)
+12. [Generate Code from HandDrawn Diagram - ECS App](#12-generate-code-from-handdrawn-diagram---ecs-app)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -209,4 +210,31 @@ can you generate application from the hand-drawn-architecture file (I want the c
 
 ### Result Example
 ![code from handdrawn diagram landing page](../screenshots/code-from-handdrawn-diagram-landing-page.png)
+
+## 12. Generate Code from HandDrawn Diagram - ECS App
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=ecs-app-hand-drawn-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position. Note that ECR is outside the VPC.
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a drawio diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position.
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2).
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2). Keep it simple, don't add more than necessary, stick to the diagram intent.
+```
+
+### Result Example
+![code from handdrawn diagram ecs app](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
 

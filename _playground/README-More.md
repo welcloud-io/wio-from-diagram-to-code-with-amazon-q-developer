@@ -370,7 +370,7 @@ generate application (I work with python and cdk v2)
 create a simple docker app, and a script to deploy this app
 ```
 
-![handdrawn](../screenshots/hand-drawn-architecture-ecs.png)
+![handdrawn](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
 ---
 
