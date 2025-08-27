@@ -398,7 +398,8 @@ tutorial_description() {
         ../show_tutorial_prompts.py '--with-starting-point-folder=data-pipeline-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=deployment-pipeline"* ]]; then
-        tutorial_description_5
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=deployment-pipeline'
     fi
     if [[ "$1" == *"--with-starting-point-folder=api-gateway-diagram"* ]]; then
         tutorial_description_6
