@@ -1,0 +1,8 @@
+tutorial:
+  title: "Generate Drawio Flow Diagram from Code"
+  starting_point:
+  - "--with-starting-point-folder=feedback-app-code"
+  prompts:
+  - "generate a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)"
+  result_example:
+  - "../screenshots/drawio-diagram-from-code.png"

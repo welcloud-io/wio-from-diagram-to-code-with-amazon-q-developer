@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Sequence Diagram from Code"
+  title: "Generate Mermaid Sequence Diagram from Code"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:

@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Flow Diagram from Code"
+  title: "Generate Mermaid Flow Diagram from Code"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:
