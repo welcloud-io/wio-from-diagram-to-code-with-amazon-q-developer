@@ -138,7 +138,7 @@ done
 # -----------------------------------------------------------------------------
 
 if [ $tutorial_choice == '0' ]; then
-echo
+set -- "$@" "--with-starting-point-folder=empty"
 fi
 
 if [ $tutorial_choice == '1' ]; then
@@ -198,7 +198,9 @@ for arg in "$@"; do
     case "$arg" in
         --with-starting-point-folder=*)
             folder="${arg#*=}"
-            cp -r ../../tutorials-starting-points/$folder/* . 
+            if [[ "$folder" != "empty" ]]; then
+                cp -r ../../tutorials-starting-points/$folder/* . 
+            fi
         ;;
         --with-results=*)
             folder="${arg#*=}"
@@ -375,6 +377,10 @@ $> q chat --model claude-4-sonnet
 
 
 tutorial_description() {
+    if [[ "$1" == *"--with-starting-point-folder=empty"* ]]; then
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=empty'
+    fi
     if [[ "$1" == *"--with-starting-point-folder=feedback-app-code"* ]]; then
         clear
         ../show_tutorial_prompts.py '--with-starting-point-folder=feedback-app-code'

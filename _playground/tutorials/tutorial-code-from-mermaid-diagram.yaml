@@ -3,7 +3,8 @@ tutorial:
   starting_point:
   - "--with-starting-point-folder=empty"
   prompts:
-  - "can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+  - |
+    can you generate application files from this mermaid diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
     graph TD  
     A[User] -->|HTTP GET /| B[API Gateway]  
     B -->|Invoke| C[Landing Page Function]  
@@ -20,6 +21,6 @@ tutorial:
     D  
     E  
     F  
-    end"
+    end
   result_example:
   - "../screenshots/app+infra-from-mermaid.png"
