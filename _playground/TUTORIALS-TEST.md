@@ -14,5 +14,5 @@ generate a mermaid flow diagram of my application (data flow from up to bottom, 
 ```
 
 ### Result Example
-![mermaid flow diagram](../screenshots/mermaid-flow-diagram.png)
+![mermaid flow diagram](../screenshots/mermaid-architecture-diagram-from-code.png)
 

@@ -102,6 +102,19 @@ def orphans(tutorial_files):
         if f"tutorials/{file}" not in tutorial_files:
             orphaned_files.append(file)
     return orphaned_files
+
+def screenshot_dead_links(tutorial_files):
+    dead_links = []
+    for file in tutorial_files:
+        with open(file, 'r') as f:
+            data = yaml.safe_load(f)
+
+        if 'result_example' in data['tutorial']:
+            for example in data['tutorial']['result_example']:
+                if not os.path.exists(example):
+                    dead_links.append((example, file))
+
+    return dead_links
         
 if __name__ == "__main__":
 
@@ -114,4 +127,7 @@ if __name__ == "__main__":
     build_tutorials_page(tutorial_files)
 
     orphan_files = orphans(tutorial_files)
-    if orphan_files != []: print ('orphans', orphan_files)
+    if orphan_files != []: print ('orphans tutorials', orphan_files)
+
+    screenshot_dead_links = screenshot_dead_links(tutorial_files)
+    if screenshot_dead_links != []: print ('screenshot dead links', screenshot_dead_links)

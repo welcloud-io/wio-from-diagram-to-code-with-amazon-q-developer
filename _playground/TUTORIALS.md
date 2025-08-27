@@ -20,7 +20,7 @@ create a mermaid flow diagram of my application (data flow from up to bottom, us
 ```
 
 ### Result Example
-![mermaid flow diagram](../screenshots/mermaid-flow-diagram.png)
+![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
 
 ## 2. Generate Mermaid Sequence Diagram from Code
 
@@ -35,7 +35,7 @@ create a mermaid sequence diagram of the application
 ```
 
 ### Result Example
-![mermaid sequence diagram](../screenshots/mermaid-sequence-diagram.png)
+![mermaid sequence diagram from code](../screenshots/mermaid-sequence-diagram-from-code.png)
 
 ## 3. Generate Mermaid Class Diagram from Code
 
@@ -50,7 +50,7 @@ create a mermaid class diagram of the application
 ```
 
 ### Result Example
-![mermaid class diagram](../screenshots/mermaid-class-diagram.png)
+![mermaid class diagram from code](../screenshots/mermaid-class-diagram-from-code.png)
 
 ## 4. Generate Code from Mermaid Diagram
 
@@ -83,7 +83,7 @@ end
 ```
 
 ### Result Example
-![app+infra from mermaid](../screenshots/app+infra-from-mermaid.png)
+![code from mermaid diagram](../screenshots/code-from-mermaid-diagram.png)
 
 ## 5. Generate Code from Drawio Diagram
 
@@ -113,7 +113,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 ```
 
 ### Result Example
-![drawio diagram from code](../screenshots/drawio-diagram-from-code.png)
+![drawio architecture diagram from code](../screenshots/drawio-architecture-diagram-from-code.png)
 
 ## 7. Split Drawio Diagram into CDK Constructs
 
@@ -128,5 +128,5 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ```
 
 ### Result Example
-![cdk construct split](../screenshots/cdk-construct-split.png)
+![drawio split diagram into cdk constructs](../screenshots/drawio-split-diagram-into-cdk-constructs.png)
 

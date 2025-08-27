@@ -5,4 +5,4 @@ tutorial_index:
   - 'tutorial-code-from-mermaid-diagram.yaml'
   - 'tutorial-code-from-drawio-diagram.yaml'
   - 'tutorial-drawio-architecture-diagram-from-code.yaml'
-  - 'tutorial-drawio-split-diagram-into-constructs.yaml'
+  - 'tutorial-drawio-split-diagram-into-cdk-constructs.yaml'

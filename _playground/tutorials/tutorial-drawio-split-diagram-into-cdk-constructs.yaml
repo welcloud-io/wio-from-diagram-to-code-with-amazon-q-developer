@@ -5,4 +5,4 @@ tutorial:
   prompts:
   - modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
   result_example:
-  - "../screenshots/cdk-construct-split.png"
+  - "../screenshots/drawio-split-diagram-into-cdk-constructs.png"
