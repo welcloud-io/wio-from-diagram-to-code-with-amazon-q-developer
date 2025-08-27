@@ -81,7 +81,16 @@ $> ./setup-vscode.sh
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
 
-## 4) Install Q CLI & MCP utils
+## 4) Install CDK (only if you want to deploy your the generated code)
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+. ~/.bashrc 
+nvm install --lts
+npm install -g aws-cdk
+```
+
+## 5) Install Q CLI & MCP utils
 
 Amazon Q Developer CLI (Command Line Interface) and MCP utils are used for some tutorials, but not for all.
 
