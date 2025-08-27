@@ -11,7 +11,7 @@ class TestGenerateTutorials(unittest.TestCase):
     def test_generate_tutorials_md_output(self):
 
         tutorial_files = [
-            'tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
+            'tutorials/tutorial-mermaid-architecture-diagram-from-code.yaml'
         ]
 
         target_file = 'TUTORIALS-TEST.md'
@@ -22,22 +22,22 @@ class TestGenerateTutorials(unittest.TestCase):
             content = f.read()
         
         expected_content = """# Tutorial Index
-1. [Generate Flow Diagram](#1-generate-flow-diagram)
+1. [Generate Mermaid Architecture Diagram from Code](#1-generate-mermaid-architecture-diagram-from-code)
 
-## 1. Generate Flow Diagram
+## 1. Generate Mermaid Architecture Diagram from Code
 
-### Initialize Tutorial (In VS Code tutorial window terminal)
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
 
-### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
-generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
+create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 ```
 
 ### Result Example
-![mermaid flow diagram](../screenshots/mermaid-architecture-diagram-from-code.png)
+![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
 
 """
         

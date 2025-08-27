@@ -9,9 +9,10 @@
 8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
 9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
 10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
-11. [Generate Code from HandDrawn Diagram - Landing Page](#11-generate-code-from-handdrawn-diagram---landing-page)
-12. [Generate Code from HandDrawn Diagram - ECS App](#12-generate-code-from-handdrawn-diagram---ecs-app)
-13. [Generate Code from HandDrawn Diagram - GUI](#13-generate-code-from-handdrawn-diagram---gui)
+11. [Generate Code from Drawio Diagram - API Gateway](#11-generate-code-from-drawio-diagram---api-gateway)
+12. [Generate Code from HandDrawn Diagram - Landing Page](#12-generate-code-from-handdrawn-diagram---landing-page)
+13. [Generate Code from HandDrawn Diagram - ECS App](#13-generate-code-from-handdrawn-diagram---ecs-app)
+14. [Generate Code from HandDrawn Diagram - GUI](#14-generate-code-from-handdrawn-diagram---gui)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -189,7 +190,22 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ### Result Example
 ![code from drawio diagram deployment pipeline](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
-## 11. Generate Code from HandDrawn Diagram - Landing Page
+## 11. Generate Code from Drawio Diagram - API Gateway
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=api-gateway-diagram --with-q-rules
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+generate application
+```
+
+### Result Example
+![code from drawio diagram data pipeline](../screenshots/code-from-drawio-diagram-data-pipeline.png)
+
+## 12. Generate Code from HandDrawn Diagram - Landing Page
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -212,7 +228,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ### Result Example
 ![code from handdrawn diagram landing page](../screenshots/code-from-handdrawn-diagram-landing-page.png)
 
-## 12. Generate Code from HandDrawn Diagram - ECS App
+## 13. Generate Code from HandDrawn Diagram - ECS App
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -239,7 +255,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ### Result Example
 ![code from handdrawn diagram ecs app](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
-## 13. Generate Code from HandDrawn Diagram - GUI
+## 14. Generate Code from HandDrawn Diagram - GUI
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```

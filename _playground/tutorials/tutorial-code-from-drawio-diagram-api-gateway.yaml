@@ -1,0 +1,9 @@
+tutorial:
+  title: "Generate Code from Drawio Diagram - API Gateway"
+  starting_point:
+  - "--with-starting-point-folder=api-gateway-diagram"
+  - "--with-q-rules"
+  prompts:
+  - generate application
+  result_example:
+  - "../screenshots/code-from-drawio-diagram-data-pipeline.png"

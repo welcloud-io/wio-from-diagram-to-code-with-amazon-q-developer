@@ -9,6 +9,7 @@ tutorial_index:
   - 'tutorial-code-from-drawio-diagram-s3-notification.yaml'
   - 'tutorial-code-from-drawio-diagram-step-functions.yaml'
   - 'tutorial-code-from-drawio-diagram-deployment-pipeline.yaml'
+  - 'tutorial-code-from-drawio-diagram-api-gateway.yaml'
   - 'tutorial-code-from-handdrawn-diagram-landing-page.yaml'
   - 'tutorial-code-from-handdrawn-diagram-ecs-app.yaml'
   - 'tutorial-code-from-handdrawn-diagram-gui.yaml'

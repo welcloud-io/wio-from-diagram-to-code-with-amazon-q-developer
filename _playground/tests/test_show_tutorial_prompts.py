@@ -12,7 +12,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
     def test_show_tutorial_prompts_output(self):
 
         filtered_list_of_files = [
-            'tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
+            'tutorials/tutorial-mermaid-architecture-diagram-from-code.yaml'
         ]
         
         content = build_tutorial_prompts(filtered_list_of_files)
@@ -24,8 +24,8 @@ class TestShowTutorialPrompts(unittest.TestCase):
         
         expected_output = """## TUTORIALS:
 
-## Generate Flow Diagram
-> generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
+## Generate Mermaid Architecture Diagram from Code
+> create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 """
 
         self.assertEqual(output_clean, expected_output)

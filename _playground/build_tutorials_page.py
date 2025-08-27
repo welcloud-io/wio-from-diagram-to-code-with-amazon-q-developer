@@ -23,8 +23,10 @@ def create_page(tutorial_data, index_number):
         if starting_point_key in tutorial:
             content.append("### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)")
             content.append("```")
+            command_to_execute = '../init-playground.sh'
             for starting_point in tutorial[starting_point_key]:
-                content.append(f"../init-playground.sh {starting_point}")
+                command_to_execute += f" {starting_point}"
+            content.append(command_to_execute)
             content.append("```")
 
         content.append("")
