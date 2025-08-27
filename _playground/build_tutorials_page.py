@@ -94,8 +94,6 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
         with open(target_file, 'a') as file:
             file.write('\n'.join(content))
         
-        print("TUTORIALS.md generated successfully!")
-
 if __name__ == "__main__":
 
     with open('tutorials/main-index.yaml', 'r') as f:
