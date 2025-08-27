@@ -93,7 +93,7 @@ end
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
-can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
 
 ### Result Example
