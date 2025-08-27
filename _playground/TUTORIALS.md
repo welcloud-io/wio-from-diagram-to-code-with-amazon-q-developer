@@ -8,6 +8,7 @@
 7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
 8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
 9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
+10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -169,4 +170,19 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 
 ### Result Example
 ![tutorial code from drawio diagram data pipeline](../screenshots/tutorial-code-from-drawio-diagram-data-pipeline.png)
+
+## 10. Generate Code from Drawio Diagram - Deployment Pipeline
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=deployment-pipeline
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+can you generate the deployment pipeline with python cdk v2 from my diagram
+```
+
+### Result Example
+![code from drawio diagram deployment pipeline](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 

@@ -1,0 +1,9 @@
+
+tutorial:
+  title: "Generate Code from Drawio Diagram - Deployment Pipeline"
+  starting_point:
+  - "--with-starting-point-folder=deployment-pipeline"
+  prompts:
+  - can you generate the deployment pipeline with python cdk v2 from my diagram
+  result_example:
+  - "../screenshots/code-from-drawio-diagram-deployment-pipeline.png"

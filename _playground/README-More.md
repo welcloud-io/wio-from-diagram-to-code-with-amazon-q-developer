@@ -156,7 +156,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 
 ### Result Example
 
-![sequence](../screenshots/deployment-pipeline.png)
+![sequence](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
 
 # 4 - API Gateway

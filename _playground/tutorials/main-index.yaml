@@ -8,3 +8,4 @@ tutorial_index:
   - 'tutorial-drawio-split-diagram-into-cdk-constructs.yaml'
   - 'tutorial-code-from-drawio-diagram-s3-notification.yaml'
   - 'tutorial-code-from-drawio-diagram-step-functions.yaml'
+  - 'tutorial-code-from-drawio-diagram-deployment-pipeline.yaml'
