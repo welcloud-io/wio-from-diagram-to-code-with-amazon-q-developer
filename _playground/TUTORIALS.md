@@ -112,5 +112,5 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ```
 
 ### Result Example
-![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
+![cdk construct split](../screenshots/cdk-construct-split.png)
 
