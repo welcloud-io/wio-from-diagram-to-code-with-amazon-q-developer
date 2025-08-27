@@ -116,7 +116,7 @@ generate python CDK V2 code and the lambda functions of the step functions workf
 
 ### Result Example
 
-![sequence](../screenshots/data-pipeline.png)
+![sequence](../screenshots/tutorial-code-from-drawio-diagram-data-pipeline.png)
 
 # 3 - Deployment Pipeline
 

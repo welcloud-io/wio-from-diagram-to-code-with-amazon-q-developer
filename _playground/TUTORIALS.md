@@ -7,6 +7,7 @@
 6. [Generate Drawio Flow Diagram from Code](#6-generate-drawio-flow-diagram-from-code)
 7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
 8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
+9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -149,4 +150,23 @@ generate python cdk V2 template from diagram
 
 ### Result Example
 ![tutorial code from drawio diagram s3 notification](../screenshots/tutorial-code-from-drawio-diagram-s3-notification.png)
+
+## 9. Generate Code from Drawio Diagram - Step Functions
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=data-pipeline-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+generate generate lambda code in the drawio diagram (take notes into account)
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+generate enerate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
+```
+
+### Result Example
+![tutorial code from drawio diagram data pipeline](../screenshots/tutorial-code-from-drawio-diagram-data-pipeline.png)
 

@@ -394,7 +394,8 @@ tutorial_description() {
         ../show_tutorial_prompts.py '--with-starting-point-folder=s3-notification-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=data-pipeline-diagram"* ]]; then
-        tutorial_description_4
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=data-pipeline-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=deployment-pipeline"* ]]; then
         tutorial_description_5

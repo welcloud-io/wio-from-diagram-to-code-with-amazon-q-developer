@@ -7,3 +7,4 @@ tutorial_index:
   - 'tutorial-drawio-architecture-diagram-from-code.yaml'
   - 'tutorial-drawio-split-diagram-into-cdk-constructs.yaml'
   - 'tutorial-code-from-drawio-diagram-s3-notification.yaml'
+  - 'tutorial-code-from-drawio-diagram-step-functions.yaml'
