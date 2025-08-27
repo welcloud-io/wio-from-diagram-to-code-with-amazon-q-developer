@@ -1,29 +1,24 @@
 #!/usr/bin/env python3
 
 import unittest
-import tempfile
-import os
-import yaml
-import sys
+
 import re
-from io import StringIO
-from show_tutorial_prompts import show_tutorial_prompts
+
+from show_tutorial_prompts import build_tutorial_prompts
+from show_tutorial_prompts import display_format
 
 class TestShowTutorialPrompts(unittest.TestCase):
         
     def test_show_tutorial_prompts_output(self):
-        # Capture stdout
-        captured_output = StringIO()
-        original_stdout = sys.stdout
-        sys.stdout = captured_output
+
+        filtered_list_of_files = [
+            'tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
+        ]
         
-        try:
-            show_tutorial_prompts('./tutorials', '--with-starting-point-folder=feedback-app-code')
-        finally:
-            sys.stdout = original_stdout
+        content = build_tutorial_prompts(filtered_list_of_files)
         
-        output = captured_output.getvalue()
-        
+        output = display_format(content)
+
         # Remove ANSI color codes for comparison
         output_clean = re.sub(r'\033\[[0-9;]*m', '', output)
         
@@ -31,12 +26,8 @@ class TestShowTutorialPrompts(unittest.TestCase):
 
 ## Generate Flow Diagram
 > generate a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
-
-## Generate Sequence Diagram
-> generate a mermaid sequence diagram of the application
-
 """
-        
+
         self.assertEqual(output_clean, expected_output)
 
 if __name__ == '__main__':

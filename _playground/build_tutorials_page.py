@@ -98,7 +98,7 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
 
 if __name__ == "__main__":
 
-    with open('tutorials/tutorial-index.yaml', 'r') as f:
+    with open('tutorials/main-index.yaml', 'r') as f:
         index_data = yaml.safe_load(f)
     
     tutorial_files = index_data['tutorial_index']
