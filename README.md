@@ -81,7 +81,7 @@ $> ./setup-vscode.sh
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
 
-## 4) Install CDK (only if you want to deploy your the generated code)
+## 4) Install CDK (only if you want to deploy the generated code)
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
