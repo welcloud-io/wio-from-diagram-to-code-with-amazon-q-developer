@@ -14,9 +14,11 @@ class TestGenerateTutorials(unittest.TestCase):
             'tutorials/tutorial-mermaid-generate-architecture-diagram-from-code.yaml'
         ]
 
-        build_tutorials_page(tutorial_files)
+        target_file = 'TUTORIALS-TEST.md'
+
+        build_tutorials_page(tutorial_files, target_file)
         
-        with open('TUTORIALS.md', 'r') as f:
+        with open(target_file, 'r') as f:
             content = f.read()
         
         expected_content = """# Tutorial Index

@@ -61,10 +61,10 @@ def get_tutorial_title(tutorial_file):
         title = tutorial_data['tutorial']['title']
     return title
 
-def build_tutorials_page(tutorial_files):
+def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
 
     # Clear existing content in TUTORIALS.md
-    with open('TUTORIALS.md', 'w') as file:
+    with open(target_file, 'w') as file:
         file.write("")
 
     # Generate index
@@ -78,7 +78,7 @@ def build_tutorials_page(tutorial_files):
     content.append("")
 
     # Write to TUTORIALS.md
-    with open('TUTORIALS.md', 'a') as file:
+    with open(target_file, 'a') as file:
         file.write('\n'.join(content))
 
     for filename in tutorial_files:
@@ -90,7 +90,7 @@ def build_tutorials_page(tutorial_files):
         content = create_page(tutorial_data)
         
         # Write to TUTORIALS.md
-        with open('TUTORIALS.md', 'a') as file:
+        with open(target_file, 'a') as file:
             file.write('\n'.join(content))
         
         print("TUTORIALS.md generated successfully!")
