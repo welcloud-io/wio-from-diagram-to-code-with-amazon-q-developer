@@ -386,7 +386,8 @@ tutorial_description() {
         ../show_tutorial_prompts.py '--with-starting-point-folder=feedback-app-code'
     fi
     if [[ "$1" == *"--with-starting-point-folder=feedback-app-diagram"* ]]; then
-        tutorial_description_2
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=feedback-app-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=s3-notification-diagram"* ]]; then
         tutorial_description_3

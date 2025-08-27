@@ -1,0 +1,8 @@
+tutorial:
+  title: "Split Drawio Diagram into CDK Constructs"
+  starting_point:
+  - "--with-starting-point-folder=feedback-app-diagram"
+  prompts:
+  - modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
+  result_example:
+  - "../screenshots/code-from-drawio-diagram.png"
