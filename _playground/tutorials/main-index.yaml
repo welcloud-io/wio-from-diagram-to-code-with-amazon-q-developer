@@ -3,3 +3,5 @@ tutorial_index:
   - 'tutorial-mermaid-generate-sequence-diagram-from-code.yaml'
   - 'tutorial-mermaid-generate-class-diagram-from-code.yaml'
   - 'tutorial-code-from-mermaid-diagram.yaml'
+  - 'tutorial-code-from-drawio-diagram.yaml'
+  - 'tutorial-drawio-split-into-constructs.yaml'

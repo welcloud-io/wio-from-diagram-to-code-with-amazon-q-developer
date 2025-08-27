@@ -3,6 +3,8 @@
 2. [Generate Sequence Diagram from Code](#2-generate-sequence-diagram-from-code)
 3. [Generate Class Diagram from Code](#3-generate-class-diagram-from-code)
 4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
+5. [Generate Code from Drawio Diagram](#5-generate-code-from-drawio-diagram)
+6. [Split Drawio Diagram into CDK Constructs](#6-split-drawio-diagram-into-cdk-constructs)
 
 ## 1. Generate Flow Diagram from Code
 
@@ -81,4 +83,34 @@ end
 
 ### Result Example
 ![app+infra from mermaid](../screenshots/app+infra-from-mermaid.png)
+
+## 5. Generate Code from Drawio Diagram
+
+### Initialize Tutorial (In VS Code tutorial window terminal)
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-diagram
+```
+
+### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+```
+can you generate application from the drawio diagram (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
+```
+
+### Result Example
+![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
+
+## 6. Split Drawio Diagram into CDK Constructs
+
+### Initialize Tutorial (In VS Code tutorial window terminal)
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-diagram
+```
+
+### Write Prompt (In Q Desktop, Q CLI, Kiro, ...)
+```
+modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
+```
+
+### Result Example
+![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
 
