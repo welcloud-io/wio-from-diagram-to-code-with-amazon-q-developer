@@ -1,0 +1,11 @@
+
+tutorial:
+  title: "Generate Code from HandDrawn Diagram - GUI"
+  starting_point:
+  - "--with-starting-point-folder=feedback-app-hand-drawn-diagram"
+  prompts:
+  - Create an application from the hand-drawn-graphical-interface.jpg file. I want a CDK serverless backend.
+  - create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
+  - in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
+  result_example:
+  - "../screenshots/code-from-handdrawn-diagram-gui.png"

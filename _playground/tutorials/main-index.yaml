@@ -11,3 +11,4 @@ tutorial_index:
   - 'tutorial-code-from-drawio-diagram-deployment-pipeline.yaml'
   - 'tutorial-code-from-handdrawn-diagram-landing-page.yaml'
   - 'tutorial-code-from-handdrawn-diagram-ecs-app.yaml'
+  - 'tutorial-code-from-handdrawn-diagram-gui.yaml'

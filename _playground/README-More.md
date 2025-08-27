@@ -428,4 +428,4 @@ create a drawio diagram of this application using AWS icons 2024 (dataflow from 
 in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
 ```
 
-![handdrawn-gui](../screenshots/feedbackapp-gui-hand-drawn.png)
+![handdrawn-gui](../screenshots/code-from-handdrawn-diagram-gui.png)

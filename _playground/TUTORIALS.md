@@ -11,6 +11,7 @@
 10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
 11. [Generate Code from HandDrawn Diagram - Landing Page](#11-generate-code-from-handdrawn-diagram---landing-page)
 12. [Generate Code from HandDrawn Diagram - ECS App](#12-generate-code-from-handdrawn-diagram---ecs-app)
+13. [Generate Code from HandDrawn Diagram - GUI](#13-generate-code-from-handdrawn-diagram---gui)
 
 ## 1. Generate Mermaid Architecture Diagram from Code
 
@@ -237,4 +238,27 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 
 ### Result Example
 ![code from handdrawn diagram ecs app](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
+
+## 13. Generate Code from HandDrawn Diagram - GUI
+
+### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-hand-drawn-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+Create an application from the hand-drawn-graphical-interface.jpg file. I want a CDK serverless backend.
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
+```
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
+```
+
+### Result Example
+![code from handdrawn diagram gui](../screenshots/code-from-handdrawn-diagram-gui.png)
 

@@ -413,7 +413,8 @@ tutorial_description() {
         ../show_tutorial_prompts.py '--with-starting-point-folder=ecs-app-hand-drawn-diagram'
     fi
     if [[ "$1" == *"--with-starting-point-folder=feedback-app-hand-drawn-diagram"* ]]; then
-        tutorial_description_10
+        clear
+        ../show_tutorial_prompts.py '--with-starting-point-folder=feedback-app-hand-drawn-diagram'
     fi
 }
 
