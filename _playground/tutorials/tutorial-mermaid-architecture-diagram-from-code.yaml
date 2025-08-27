@@ -3,6 +3,6 @@ tutorial:
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:
-  - "create a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)"
+  - "create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)"
   result_example:
   - "../screenshots/mermaid-architecture-diagram-from-code.png"
