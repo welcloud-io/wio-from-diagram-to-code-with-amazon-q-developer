@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Code from Mermaid Diagram"
+  title: "Generate Code from Mermaid Diagram - Feedback App"
   starting_point:
   - "--with-starting-point-folder=empty"
   prompts:

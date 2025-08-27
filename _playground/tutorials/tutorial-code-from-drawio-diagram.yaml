@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Code from Drawio Diagram"
+  title: "Generate Code from Drawio Diagram - Feedback App"
   starting_point:
   - "--with-starting-point-folder=feedback-app-diagram"
   prompts:
