@@ -9,42 +9,50 @@ if [[ "$@" =~ "--help" ]]; then
 fi
 
 # -----------------------------------------------------------------------------
-# Choose tutorial number 
+# Choose tutorial configurtaion 
 # -----------------------------------------------------------------------------
 
-if ! [[ "$@" =~ "--hard" ]]; then
-echo
-echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
-echo -e "\033[33m# Refreshing the @workspace index can help when you don't get the expected result\033[0m"
-echo -e "\033[33m# If needed, use: '$0 --hard', then Ctrl+Shift+P => 'Developer: Reload Window'\033[0m"
-echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
+if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
+
+    if ! [[ "$@" =~ "--hard" ]]; then
+    echo
+    echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
+    echo -e "\033[33m# Refreshing the @workspace index can help when you don't get the expected result\033[0m"
+    echo -e "\033[33m# If needed, use: '$0 --hard', then Ctrl+Shift+P => 'Developer: Reload Window'\033[0m"
+    echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
+    fi
+
+
+    if [[ "$1" =~ ^[0-9]$|^10$ ]]; then
+        tutorial_choice=$1
+        shift
+    else
+        echo
+        echo "Available starting points:"
+        echo
+        echo "0. Empty Folder (from Code to Diagram)"
+        echo "1. Feedback App Code (from Code to Diagram)"
+        echo "2. Feedback App Diagram (from Diagram to Code)"
+        echo "3. S3 notification Diagram (from Diagram to Code)"
+        echo "4. Data pipeline Diagram (from Diagram to Code)"
+        echo "5. Deployment pipeline Diagram (from Diagram to Code)"
+        echo "6. Api Gateway Diagram (from Diagram to Code)"
+        echo "7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)"
+        echo "8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)"
+        echo "9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)"
+        echo "10. Feedback App GUI Hand Drawn Diagram (from HandDrawing to Code)"
+        echo
+
+        # Prompt user to select tutorial
+        read -p "Where do you want to start from ?: " tutorial_choice
+
+        # Validate input
+        if [[ ! $tutorial_choice =~ ^[0-9]$|^10$ ]]; then    
+            echo "Invalid selection. Please choose a number between 0 and 10."
+            exit 1
+        fi
+    fi
 fi
-
-echo
-echo "Available starting points:"
-echo
-echo "0. Empty Folder (from Code to Diagram)"
-echo "1. Feedback App Code (from Code to Diagram)"
-echo "2. Feedback App Diagram (from Diagram to Code)"
-echo "3. S3 notification Diagram (from Diagram to Code)"
-echo "4. Data pipeline Diagram (from Diagram to Code)"
-echo "5. Deployment pipeline Diagram (from Diagram to Code)"
-echo "6. Api Gateway Diagram (from Diagram to Code)"
-echo "7. Simple Lambda App Hand Drawn Diagram (from HandDrawing to Code)"
-echo "8. Simple ECS App Hand Drawn Diagram (from HandDrawing to Code)"
-echo "9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)"
-echo "10. Feedback App GUI Hand Drawn Diagram (from HandDrawing to Code)"
-echo
-
-# Prompt user to select tutorial
-read -p "Where do you want to start from ?: " tutorial_choice
-
-# Validate input
-if [[ ! $tutorial_choice =~ ^[0-9]$|^10$ ]]; then    
-    echo "Invalid selection. Please choose a number between 0 and 10."
-    exit 1
-fi
-
 
 # -----------------------------------------------------------------------------
 # Clean files 
@@ -91,6 +99,9 @@ WITH_RESULT=false
 
 for arg in "$@"; do
     case "$arg" in
+        --with-starting-point-folder=*)
+            echo > /dev/null
+            ;;
         --with-cdk-template)
             cp -r ../../tutorials-starting-points/cdk-template/* .
             ;;
