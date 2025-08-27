@@ -1,10 +1,10 @@
 # Tutorial Index
-1. [Generate Mermaid Architecture Diagram from Code](#1-generate-mermaid-architecture-diagram-from-code)
-2. [Generate Mermaid Sequence Diagram from Code](#2-generate-mermaid-sequence-diagram-from-code)
-3. [Generate Mermaid Class Diagram from Code](#3-generate-mermaid-class-diagram-from-code)
+1. [Generate Mermaid Architecture Diagram from Code - Feedback App](#1-generate-mermaid-architecture-diagram-from-code---feedback-app)
+2. [Generate Mermaid Sequence Diagram from Code - Feedback App](#2-generate-mermaid-sequence-diagram-from-code---feedback-app)
+3. [Generate Mermaid Class Diagram from Code - Feedback App](#3-generate-mermaid-class-diagram-from-code---feedback-app)
 4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
 5. [Generate Code from Drawio Diagram](#5-generate-code-from-drawio-diagram)
-6. [Generate Drawio Flow Diagram from Code](#6-generate-drawio-flow-diagram-from-code)
+6. [Generate Drawio Architecture Diagram from Code - Feedback App](#6-generate-drawio-architecture-diagram-from-code---feedback-app)
 7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
 8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
 9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
@@ -14,7 +14,7 @@
 13. [Generate Code from HandDrawn Diagram - ECS App](#13-generate-code-from-handdrawn-diagram---ecs-app)
 14. [Generate Code from HandDrawn Diagram - GUI](#14-generate-code-from-handdrawn-diagram---gui)
 
-## 1. Generate Mermaid Architecture Diagram from Code
+## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -29,7 +29,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ### Result Example
 ![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
 
-## 2. Generate Mermaid Sequence Diagram from Code
+## 2. Generate Mermaid Sequence Diagram from Code - Feedback App
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -44,7 +44,7 @@ create a mermaid sequence diagram of the application
 ### Result Example
 ![mermaid sequence diagram from code](../screenshots/mermaid-sequence-diagram-from-code.png)
 
-## 3. Generate Mermaid Class Diagram from Code
+## 3. Generate Mermaid Class Diagram from Code - Feedback App
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -107,7 +107,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ### Result Example
 ![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
 
-## 6. Generate Drawio Flow Diagram from Code
+## 6. Generate Drawio Architecture Diagram from Code - Feedback App
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
