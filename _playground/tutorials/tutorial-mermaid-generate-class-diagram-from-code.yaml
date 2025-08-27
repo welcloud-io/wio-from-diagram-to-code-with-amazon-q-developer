@@ -1,8 +1,8 @@
 tutorial:
-  title: "Generate Class Diagram"
+  title: "Generate Class Diagram from Code"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:
-  - "generate a mermaid sequence diagram of the application"
+  - "create a mermaid class diagram of the application"
   result_example:
   - "../screenshots/mermaid-class-diagram.png"

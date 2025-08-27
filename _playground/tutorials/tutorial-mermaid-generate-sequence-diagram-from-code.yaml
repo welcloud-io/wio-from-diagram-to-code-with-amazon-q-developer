@@ -1,8 +1,8 @@
 tutorial:
-  title: "Generate Sequence Diagram"
+  title: "Generate Sequence Diagram from Code"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:
-  - "generate a mermaid sequence diagram of the application"
+  - "create a mermaid sequence diagram of the application"
   result_example:
   - "../screenshots/mermaid-sequence-diagram.png"
