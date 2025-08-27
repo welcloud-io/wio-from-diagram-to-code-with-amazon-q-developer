@@ -41,7 +41,7 @@ $> git clone https://github.com/welcloud-io/wio-from-diagram-to-code-with-amazon
 $> cd wio-from-diagram-to-code-with-amazon-q-developer/
 ```
 
-## 3) Configure VS Code
+## 3) Configure VS Code (Manually or Automatically)
 
 ### 3.1) Configure VS Code Manually (Option 1)
 
