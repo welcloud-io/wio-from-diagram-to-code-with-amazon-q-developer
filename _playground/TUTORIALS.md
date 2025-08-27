@@ -1,5 +1,5 @@
 # Tutorial Index
-1. [Generate Mermaid Flow Diagram from Code](#1-generate-mermaid-flow-diagram-from-code)
+1. [Generate Mermaid Architecture Diagram from Code](#1-generate-mermaid-architecture-diagram-from-code)
 2. [Generate Mermaid Sequence Diagram from Code](#2-generate-mermaid-sequence-diagram-from-code)
 3. [Generate Mermaid Class Diagram from Code](#3-generate-mermaid-class-diagram-from-code)
 4. [Generate Code from Mermaid Diagram](#4-generate-code-from-mermaid-diagram)
@@ -7,7 +7,7 @@
 6. [Generate Drawio Flow Diagram from Code](#6-generate-drawio-flow-diagram-from-code)
 7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
 
-## 1. Generate Mermaid Flow Diagram from Code
+## 1. Generate Mermaid Architecture Diagram from Code
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
@@ -16,7 +16,7 @@
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
-create a mermaid flow diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
+create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 ```
 
 ### Result Example
