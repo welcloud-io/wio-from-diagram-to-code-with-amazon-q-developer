@@ -42,11 +42,14 @@ def build_tutorial_prompts(filtered_list_of_files):
 
     content = []
 
+    content.append("┌" + "─" * 50 + "┐")
     content.append(set_green("## TUTORIALS:"))
     content.append("")
 
     for (file) in filtered_list_of_files:
         content += get_prompts(file)
+
+    content.append("└" + "─" * 50 + "┘")
     
     return content
         
