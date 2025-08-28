@@ -18,6 +18,9 @@ def create_page(tutorial_data, index_number):
         content.append(f"## {index_number}. {title}")
         content.append("")
 
+        content.append("### Make sure you have installed the [prerequisites](../README.md#prerequisites)")
+        content.append("")
+            
         # Add tutorial
         starting_point_key = 'starting_point'
         if starting_point_key in tutorial:

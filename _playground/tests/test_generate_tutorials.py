@@ -22,9 +22,11 @@ class TestGenerateTutorials(unittest.TestCase):
             content = f.read()
         
         expected_content = """# Tutorial Index
-1. [Generate Mermaid Architecture Diagram from Code](#1-generate-mermaid-architecture-diagram-from-code)
+1. [Generate Mermaid Architecture Diagram from Code - Feedback App](#1-generate-mermaid-architecture-diagram-from-code---feedback-app)
 
-## 1. Generate Mermaid Architecture Diagram from Code
+## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
+
+### Make sure you have installed the [prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
