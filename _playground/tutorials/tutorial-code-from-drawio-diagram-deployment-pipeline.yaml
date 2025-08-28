@@ -6,4 +6,4 @@ tutorial:
   prompts:
   - can you generate the deployment pipeline with python cdk v2 from my diagram
   result_example:
-  - "../screenshots/code-from-drawio-diagram-deployment-pipeline.png"
+  - "./screenshots/code-from-drawio-diagram-deployment-pipeline.png"

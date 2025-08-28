@@ -6,4 +6,4 @@ tutorial:
   prompts:
   - generate application
   result_example:
-  - "../screenshots/code-from-drawio-diagram-api-gateway.png"
+  - "./screenshots/code-from-drawio-diagram-api-gateway.png"

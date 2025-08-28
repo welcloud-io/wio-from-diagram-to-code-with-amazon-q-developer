@@ -8,4 +8,4 @@ tutorial:
   - create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
   - in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
   result_example:
-  - "../screenshots/code-from-handdrawn-diagram-gui.png"
+  - "./screenshots/code-from-handdrawn-diagram-gui.png"

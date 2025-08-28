@@ -29,7 +29,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ```
 
 ### Result Example
-![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
+![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 
 ## 2. Generate Mermaid Sequence Diagram from Code - Feedback App
@@ -47,7 +47,7 @@ create a mermaid sequence diagram of the application
 ```
 
 ### Result Example
-![mermaid sequence diagram from code](../screenshots/mermaid-sequence-diagram-from-code.png)
+![mermaid sequence diagram from code](./screenshots/mermaid-sequence-diagram-from-code.png)
 
 
 ## 3. Generate Mermaid Class Diagram from Code - Feedback App
@@ -65,7 +65,7 @@ create a mermaid class diagram of the application
 ```
 
 ### Result Example
-![mermaid class diagram from code](../screenshots/mermaid-class-diagram-from-code.png)
+![mermaid class diagram from code](./screenshots/mermaid-class-diagram-from-code.png)
 
 
 ## 4. Generate Code from Mermaid Diagram - Feedback App
@@ -101,7 +101,7 @@ end
 ```
 
 ### Result Example
-![code from mermaid diagram](../screenshots/code-from-mermaid-diagram.png)
+![code from mermaid diagram](./screenshots/code-from-mermaid-diagram.png)
 
 
 ## 5. Generate Code from Drawio Diagram - Feedback App
@@ -119,7 +119,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ```
 
 ### Result Example
-![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
+![code from drawio diagram](./screenshots/code-from-drawio-diagram.png)
 
 
 ## 6. Generate Drawio Architecture Diagram from Code - Feedback App
@@ -137,7 +137,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 ```
 
 ### Result Example
-![drawio architecture diagram from code](../screenshots/drawio-architecture-diagram-from-code.png)
+![drawio architecture diagram from code](./screenshots/drawio-architecture-diagram-from-code.png)
 
 
 ## 7. Split Drawio Diagram into CDK Constructs
@@ -155,7 +155,7 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ```
 
 ### Result Example
-![drawio split diagram into cdk constructs](../screenshots/drawio-split-diagram-into-cdk-constructs.png)
+![drawio split diagram into cdk constructs](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
 
 
 ## 8. Generate Code from Drawio Diagram - S3 Notification
@@ -177,7 +177,7 @@ generate python cdk V2 template from diagram
 ```
 
 ### Result Example
-![code from drawio diagram s3 notification](../screenshots/code-from-drawio-diagram-s3-notification.png)
+![code from drawio diagram s3 notification](./screenshots/code-from-drawio-diagram-s3-notification.png)
 
 
 ## 9. Generate Code from Drawio Diagram - Step Functions
@@ -199,7 +199,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 ```
 
 ### Result Example
-![code from drawio diagram data pipeline](../screenshots/code-from-drawio-diagram-data-pipeline.png)
+![code from drawio diagram data pipeline](./screenshots/code-from-drawio-diagram-data-pipeline.png)
 
 
 ## 10. Generate Code from Drawio Diagram - Deployment Pipeline
@@ -217,7 +217,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ```
 
 ### Result Example
-![code from drawio diagram deployment pipeline](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
+![code from drawio diagram deployment pipeline](./screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
 
 ## 11. Generate Code from Drawio Diagram - API Gateway
@@ -235,7 +235,7 @@ generate application
 ```
 
 ### Result Example
-![code from drawio diagram api gateway](../screenshots/code-from-drawio-diagram-api-gateway.png)
+![code from drawio diagram api gateway](./screenshots/code-from-drawio-diagram-api-gateway.png)
 
 
 ## 12. Generate Code from HandDrawn Diagram - Landing Page
@@ -261,7 +261,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ```
 
 ### Result Example
-![code from handdrawn diagram landing page](../screenshots/code-from-handdrawn-diagram-landing-page.png)
+![code from handdrawn diagram landing page](./screenshots/code-from-handdrawn-diagram-landing-page.png)
 
 
 ## 13. Generate Code from HandDrawn Diagram - ECS App
@@ -291,7 +291,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ```
 
 ### Result Example
-![code from handdrawn diagram ecs app](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
+![code from handdrawn diagram ecs app](./screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
 
 ## 14. Generate Code from HandDrawn Diagram - GUI
@@ -317,5 +317,5 @@ in the drawio diagram add a user desktop and separate cloufront/s3 data flow fro
 ```
 
 ### Result Example
-![code from handdrawn diagram gui](../screenshots/code-from-handdrawn-diagram-gui.png)
+![code from handdrawn diagram gui](./screenshots/code-from-handdrawn-diagram-gui.png)
 

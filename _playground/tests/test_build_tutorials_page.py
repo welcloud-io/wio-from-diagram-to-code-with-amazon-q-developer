@@ -55,11 +55,11 @@ class TestBuildTutorialsPage(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_tutorial_results(self):
-        props = {'result_example': ['../screenshots/test-image.png']}
+        props = {'result_example': ['./screenshots/test-image.png']}
         result = tutorial_results(props)
         expected = [
             '### Result Example',
-            '![test image](../screenshots/test-image.png)',
+            '![test image](./screenshots/test-image.png)',
             ''
         ]
         self.assertEqual(result, expected)
@@ -226,7 +226,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ```
 
 ### Result Example
-![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
+![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 """
         

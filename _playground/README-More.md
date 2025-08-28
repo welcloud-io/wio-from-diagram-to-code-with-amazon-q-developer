@@ -8,7 +8,7 @@ That means you will have a blank playground where you will import a tutorial sta
 $> ./start-vscode-tutorial-window.sh
 ```
 
-![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
+![new-tutorial-window](./screenshots/create-new-tutorial-window.png)
 
 
 ### **!!! IMPORTANT !!!** 
@@ -74,7 +74,7 @@ can you generate application from the drawio diagram (I want the code of the lam
 
 ### Result Example
 
-![sequence](../screenshots/code-from-drawio-diagram-s3-notification.png)
+![sequence](./screenshots/code-from-drawio-diagram-s3-notification.png)
 
 
 # 2 - Data Pipeline
@@ -116,7 +116,7 @@ generate python CDK V2 code and the lambda functions of the step functions workf
 
 ### Result Example
 
-![sequence](../screenshots/code-from-drawio-diagram-data-pipeline.png)
+![sequence](./screenshots/code-from-drawio-diagram-data-pipeline.png)
 
 # 3 - Deployment Pipeline
 
@@ -156,7 +156,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 
 ### Result Example
 
-![sequence](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
+![sequence](./screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
 
 # 4 - API Gateway
@@ -202,7 +202,7 @@ generate application
 ```
 ---
 
-![sequence](../screenshots/code-from-drawio-diagram-api-gateway.png)
+![sequence](./screenshots/code-from-drawio-diagram-api-gateway.png)
 
 
 # 5 - Build simplest MCP Server
@@ -326,7 +326,7 @@ create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS
 can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
 
-![handdrawn](../screenshots/code-from-handdrawn-diagram-landing-page.png)
+![handdrawn](./screenshots/code-from-handdrawn-diagram-landing-page.png)
 
 ---
 
@@ -370,7 +370,7 @@ generate application (I work with python and cdk v2)
 create a simple docker app, and a script to deploy this app
 ```
 
-![handdrawn](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
+![handdrawn](./screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
 ---
 
@@ -428,4 +428,4 @@ create a drawio diagram of this application using AWS icons 2024 (dataflow from 
 in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
 ```
 
-![handdrawn-gui](../screenshots/code-from-handdrawn-diagram-gui.png)
+![handdrawn-gui](./screenshots/code-from-handdrawn-diagram-gui.png)

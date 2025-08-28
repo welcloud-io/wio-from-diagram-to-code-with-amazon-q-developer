@@ -6,4 +6,4 @@ tutorial:
   - generate lambda code in the drawio diagram (take notes into account)
   - generate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
   result_example:
-  - "../screenshots/code-from-drawio-diagram-data-pipeline.png"
+  - "./screenshots/code-from-drawio-diagram-data-pipeline.png"

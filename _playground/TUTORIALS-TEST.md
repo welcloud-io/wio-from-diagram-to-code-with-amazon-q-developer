@@ -16,5 +16,5 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ```
 
 ### Result Example
-![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
+![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 

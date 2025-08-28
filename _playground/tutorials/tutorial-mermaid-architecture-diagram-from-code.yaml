@@ -5,4 +5,4 @@ tutorial:
   prompts:
   - "create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)"
   result_example:
-  - "../screenshots/mermaid-architecture-diagram-from-code.png"
+  - "./screenshots/mermaid-architecture-diagram-from-code.png"

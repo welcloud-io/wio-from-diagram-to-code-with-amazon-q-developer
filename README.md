@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=QuAlzUVqi7I&t=4293s
 
 This demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
 
-![test](screenshots/vscode-bigpicture.png)
+![test](./_playground/screenshots/vscode-bigpicture.png)
 
 ---
 

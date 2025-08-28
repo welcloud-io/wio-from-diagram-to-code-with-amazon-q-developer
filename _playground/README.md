@@ -8,7 +8,7 @@ That means you will have a blank playground where you will import a tutorial sta
 $> ./start-vscode-tutorial-window.sh
 ```
 
-![new-tutorial-window](../screenshots/create-new-tutorial-window.png)
+![new-tutorial-window](./screenshots/create-new-tutorial-window.png)
 
 
 ### **!!! IMPORTANT !!!** 
@@ -78,7 +78,7 @@ can you generate a mermaid flow diagram of my application (data flow from up to 
 
 ### Result Example
 
-![application](../screenshots/mermaid-architecture-diagram-from-code.png)
+![application](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 ## 1.2 - Generate Sequence diagram
 
@@ -100,7 +100,7 @@ can you generate a mermaid sequence diagram of the application
 
 ### Result Example
 
-![sequence](../screenshots/mermaid-sequence-diagram-from-code.png)
+![sequence](./screenshots/mermaid-sequence-diagram-from-code.png)
 
 ## 1.3 - Generate Class diagram
 
@@ -122,7 +122,7 @@ can you generate a mermaid class diagram of the application
 
 ### Result Example
 
-![class](../screenshots/mermaid-class-diagram-from-code.png)
+![class](./screenshots/mermaid-class-diagram-from-code.png)
 
 # 2 - From Diagram to Code with Mermaid
 
@@ -198,7 +198,7 @@ $> cdk deploy --app "python3 app.py"
 
 ### Result Example (n.b. the diagram has been added to the generated Readme.md afterwards)
 
-![app_and_infra](../screenshots/drawio-architecture-diagram-from-code.png)
+![app_and_infra](./screenshots/drawio-architecture-diagram-from-code.png)
 
 # 3 - From Diagram to Code with Draw.io
 
@@ -258,7 +258,7 @@ $> cdk deploy --app "python3 app.py"
 
 ### Result Example
 
-![code-from-drawio-diagram](../screenshots/code-from-drawio-diagram.png)
+![code-from-drawio-diagram](./screenshots/code-from-drawio-diagram.png)
 
 ## 3.2 - From Diagram to Code with Draw.io (using Q CLI)
 
@@ -305,7 +305,7 @@ $> cdk deploy --app "python3 app.py"
 
 ### Result Example
 
-![cdk_construc_split](../screenshots/drawio-split-diagram-into-cdk-constructs.png)
+![cdk_construc_split](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
 
 
 
@@ -346,7 +346,7 @@ generate a draw.io diagram in an xml format for this application (I want to use 
 
 ### Result Example
 
-![drawio](../screenshots/drawio-architecture-diagram-from-code.png)
+![drawio](./screenshots/drawio-architecture-diagram-from-code.png)
 
 
 ### Update app.drawio.xml file & display the content
