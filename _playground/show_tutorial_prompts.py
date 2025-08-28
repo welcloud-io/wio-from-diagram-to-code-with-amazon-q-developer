@@ -7,26 +7,25 @@ def set_green(text):
     """Print text in green color using ANSI escape codes"""
     return f"\033[32m{text}\033[0m"
 
-def get_tutorial_files(tutorials_folder, tutorial_configuration):
-    list_of_files = [f for f in os.listdir(tutorials_folder) if f.startswith('tutorial')]
-    filtered_list_of_files = []
-    for yaml_file in list_of_files:
-        with open(f"{tutorials_folder}/{yaml_file}", 'r') as file:
+def files_related_to_tutorial_configuration(tutorials_folder, tutorial_configuration):
+    list_of_tutorials = [f for f in os.listdir(tutorials_folder) if f.startswith('tutorial')]
+
+    filtered_list_of_tutorials = []
+    for tutorial_file in list_of_tutorials:
+        with open(f"{tutorials_folder}/{tutorial_file}", 'r') as file:
             data = yaml.safe_load(file)
         if tutorial_configuration in data['tutorial']["starting_point"]:
-            filtered_list_of_files.append(f"{tutorials_folder}/{yaml_file}")
-    return filtered_list_of_files
+            filtered_list_of_tutorials.append(f"{tutorials_folder}/{tutorial_file}")
 
-def get_prompts(file):
-    """Load and display tutorial prompts from YAML file"""
-    with open(file, 'r') as file:
-        data = yaml.safe_load(file)
+    return filtered_list_of_tutorials
 
-    tutorials = {'tutorial': data['tutorial']}
+def tutorial_prompts(tutorial_file):
+    with open(tutorial_file, 'r') as file:
+        tutorial = yaml.safe_load(file)
     
     content=[]
 
-    for tutorial_key, tutorial_data in tutorials.items():
+    for tutorial_key, tutorial_data in tutorial.items():
         title = tutorial_data.get('title', '')
         prompts = tutorial_data.get('prompts', tutorial_data.get('Prompts', []))
         starting_point = tutorial_data.get('starting_point', [])
@@ -37,31 +36,27 @@ def get_prompts(file):
         content.append("")
     
     return content
-
-def build_tutorial_prompts(filtered_list_of_files):
-
+        
+def terminal_formated_prompts_related_to_tutorial_configuration(tutorials_folder, tutorial_configuration):
     content = []
 
     content.append("┌" + "─" * 50 + "┐")
     content.append(set_green("## TUTORIALS:"))
     content.append("")
 
-    for (file) in filtered_list_of_files:
-        content += get_prompts(file)
+    filtered_list_of_tutorials = files_related_to_tutorial_configuration(tutorials_folder, tutorial_configuration)
+    for (file) in filtered_list_of_tutorials:
+        content += tutorial_prompts(file)
 
     content.append("└" + "─" * 50 + "┘")
-    
-    return content
-        
-def display_format(content):
-    return '\n'.join(content)
 
-def show_tutorial_prompts(tutorials_folder, tutorial_configuration):
-    
-    filtered_list_of_files = get_tutorial_files(tutorials_folder, tutorial_configuration)
-    content = build_tutorial_prompts(filtered_list_of_files)
-    print(display_format(content))
+    return content
+
+# -----------------------------------------------------------------------------
+# MAIN
+# -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
     tutorial_configuration = sys.argv[1]
-    show_tutorial_prompts('../tutorials', tutorial_configuration)
+    content = terminal_formated_prompts_related_to_tutorial_configuration('../tutorials', tutorial_configuration)
+    print('\n'.join(content))

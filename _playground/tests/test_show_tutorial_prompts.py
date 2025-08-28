@@ -4,8 +4,7 @@ import unittest
 
 import re
 
-from show_tutorial_prompts import build_tutorial_prompts
-from show_tutorial_prompts import display_format
+from show_tutorial_prompts import tutorial_prompts
 
 class TestShowTutorialPrompts(unittest.TestCase):
         
@@ -15,17 +14,14 @@ class TestShowTutorialPrompts(unittest.TestCase):
             'tutorials/tutorial-mermaid-architecture-diagram-from-code.yaml'
         ]
         
-        content = build_tutorial_prompts(filtered_list_of_files)
+        content = tutorial_prompts(filtered_list_of_files[0])
         
-        output = display_format(content)
+        output = '\n'.join(content)
 
         # Remove ANSI color codes for comparison
         output_clean = re.sub(r'\033\[[0-9;]*m', '', output)
         
-        expected_output = """┌──────────────────────────────────────────────────┐
-## TUTORIALS:
-
-## Generate Mermaid Architecture Diagram from Code - Feedback App
+        expected_output = """## Generate Mermaid Architecture Diagram from Code - Feedback App
 > create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 
 └──────────────────────────────────────────────────┘
