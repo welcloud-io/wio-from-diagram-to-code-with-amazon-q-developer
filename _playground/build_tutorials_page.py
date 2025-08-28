@@ -3,61 +3,89 @@
 import yaml
 import os
 
-def create_page(tutorial_data, index_number):
-    # Handle the current YAML structure where tutorial is the top-level key
-    tutorial = {'tutorial': tutorial_data['tutorial']}
+# -----------------------------------------------------------------------------
+# ONE TUTORIAL SECTION
+# -----------------------------------------------------------------------------
 
-    # Generate TUTORIALS.md content
+def tutorial_title(tutorial_properties, index_number):
+    content = []
+    title = tutorial_properties.get('title', '')
+
+    content.append(f"## {index_number}. {title}")
+    content.append("")
+
+    return content
+
+def prerequisites():
+    content = []
+
+    content.append("### Make sure you have installed the [prerequisites](../README.md#prerequisites)")
+    content.append("")
+    
+    return content
+
+def tutorial_starting_point(tutorial_properties):
+    content = []
+
+    content.append("### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)")
+    content.append("```")
+
+    command_to_execute = '../init-playground.sh'
+    for starting_point in tutorial_properties['starting_point']:
+        command_to_execute += f" {starting_point}"
+    content.append(command_to_execute)
+    content.append("```")
+    content.append("")
+
+    return content
+
+def tutorial_prompts(tutorial_properties):
+    content = []
+
+    for prompt in tutorial_properties['prompts']:
+        content.append("### Prompts to execute In Q Desktop, Q CLI, Kiro, ...")
+        content.append("```")
+        content.append(prompt)
+        content.append("```")
+    content.append("")
+
+    return content
+
+def tutorial_results(tutorial_properties):
+    content = []    
+
+    content.append("### Result Example")
+    for example in tutorial_properties['result_example']:
+        filename = os.path.basename(example).replace('.png', '').replace('-', ' ')
+        content.append(f"![{filename}]({example})")
+    content.append("")
+    
+    return content
+
+def create_tutorial_section(tutorial_data, index_number):
     content = []
         
-    for tutorial_key, tutorial_properties in tutorial.items():
-        title = tutorial_properties.get('title', tutorial_properties.get('Title', ''))
-        tutorial = tutorial_properties
-        
-        # Add title
-        content.append(f"## {index_number}. {title}")
-        content.append("")
-
-        content.append("### Make sure you have installed the [prerequisites](../README.md#prerequisites)")
-        content.append("")
-            
-        # Add tutorial
-        starting_point_key = 'starting_point'
-        if starting_point_key in tutorial:
-            content.append("### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)")
-            content.append("```")
-            command_to_execute = '../init-playground.sh'
-            for starting_point in tutorial[starting_point_key]:
-                command_to_execute += f" {starting_point}"
-            content.append(command_to_execute)
-            content.append("```")
-
-        content.append("")
-
-        # Add tutorial
-        prompts_key = 'prompts'
-        if prompts_key in tutorial:
-            for prompt in tutorial[prompts_key]:
-                content.append("### Prompts to execute In Q Desktop, Q CLI, Kiro, ...")
-                content.append("```")
-                content.append(prompt)
-                content.append("```")
-                
-        content.append("")
-        
-        # Add result examples
-        result_key = 'result_example'
-        if result_key in tutorial:
-            content.append("### Result Example")
-            for example in tutorial[result_key]:
-                # Extract filename from path for alt text
-                filename = os.path.basename(example).replace('.png', '').replace('-', ' ')
-                content.append(f"![{filename}]({example})")
-        
-        content.append("")
+    for tutorial_key, tutorial_properties in tutorial_data.items():
+        content += tutorial_title(tutorial_properties, index_number)
+        content += prerequisites()
+        content += tutorial_starting_point(tutorial_properties)
+        content += tutorial_prompts(tutorial_properties)
+        content += tutorial_results(tutorial_properties)
         content.append("")
 
     return content
+
+# -----------------------------------------------------------------------------
+# TUTORIALS PAGE WITH INDEX
+# -----------------------------------------------------------------------------
+
+def empty_target_file(target_file):
+    with open(target_file, 'w') as file:
+        file.write("")
+
+def write_target_file(target_file, content):
+    with open(target_file, 'w') as file:
+        file.write('\n'.join(content))
 
 def get_tutorial_title(tutorial_file):
     title = ''
@@ -66,14 +94,9 @@ def get_tutorial_title(tutorial_file):
         title = tutorial_data['tutorial']['title']
     return title
 
-def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
-
-    # Clear existing content in TUTORIALS.md
-    with open(target_file, 'w') as file:
-        file.write("")
-
-    # Generate index
+def tutorials_index(tutorial_files):
     content = []
+
     content.append("# Tutorial Index")
     for i, filename in enumerate(tutorial_files, 1):
         title = get_tutorial_title(filename)
@@ -81,26 +104,35 @@ def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
         anchor = indexed_title.lower().replace(' ', '-').replace('.', '')               
         content.append(f"{i}. [{title}](#{anchor})")
     content.append("")
-    content.append("")
 
-    # Write to TUTORIALS.md
-    with open(target_file, 'a') as file:
-        file.write('\n'.join(content))
+    return content
+
+def tutorials_section(tutorial_files):
+    content = []
 
     for i, filename in enumerate(tutorial_files, 1):
-        # Read tutorials.yaml
         with open(filename, 'r') as file:
             tutorial_data = yaml.safe_load(file)
-        
-        # Create content
-        content = create_page(tutorial_data, i)
-        
-        # Write to TUTORIALS.md
-        with open(target_file, 'a') as file:
-            file.write('\n'.join(content))
 
-def orphans(tutorial_files):
-    # list all files in the tutorials directory
+        content += create_tutorial_section(tutorial_data, i)
+
+    return content
+
+def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
+
+    empty_target_file(target_file)
+
+    content = []
+    content += tutorials_index(tutorial_files)
+    content += tutorials_section(tutorial_files)
+    
+    write_target_file(target_file, content)
+
+# -----------------------------------------------------------------------------
+# HELPERS
+# -----------------------------------------------------------------------------
+
+def check_orphans(tutorial_files):
     files = [f for f in os.listdir('tutorials') if f != 'main-index.yaml']    # find all files that are not in the index
     orphaned_files = []
     for file in files:
@@ -108,7 +140,7 @@ def orphans(tutorial_files):
             orphaned_files.append(file)
     return orphaned_files
 
-def screenshot_dead_links(tutorial_files):
+def check_screenshot_dead_links(tutorial_files):
     dead_links = []
     for file in tutorial_files:
         with open(file, 'r') as f:
@@ -120,6 +152,10 @@ def screenshot_dead_links(tutorial_files):
                     dead_links.append((example, file))
 
     return dead_links
+
+# -----------------------------------------------------------------------------
+# MAIN
+# -----------------------------------------------------------------------------
         
 if __name__ == "__main__":
 
@@ -131,8 +167,8 @@ if __name__ == "__main__":
 
     build_tutorials_page(tutorial_files)
 
-    orphan_files = orphans(tutorial_files)
+    orphan_files = check_orphans(tutorial_files)
     if orphan_files != []: print ('orphans tutorials', orphan_files)
 
-    screenshot_dead_links = screenshot_dead_links(tutorial_files)
+    screenshot_dead_links = check_screenshot_dead_links(tutorial_files)
     if screenshot_dead_links != []: print ('screenshot dead links', screenshot_dead_links)

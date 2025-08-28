@@ -17,6 +17,7 @@
 ## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
@@ -30,9 +31,11 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ### Result Example
 ![mermaid architecture diagram from code](../screenshots/mermaid-architecture-diagram-from-code.png)
 
+
 ## 2. Generate Mermaid Sequence Diagram from Code - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
@@ -46,9 +49,11 @@ create a mermaid sequence diagram of the application
 ### Result Example
 ![mermaid sequence diagram from code](../screenshots/mermaid-sequence-diagram-from-code.png)
 
+
 ## 3. Generate Mermaid Class Diagram from Code - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
@@ -62,9 +67,11 @@ create a mermaid class diagram of the application
 ### Result Example
 ![mermaid class diagram from code](../screenshots/mermaid-class-diagram-from-code.png)
 
+
 ## 4. Generate Code from Mermaid Diagram - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=empty
@@ -96,9 +103,11 @@ end
 ### Result Example
 ![code from mermaid diagram](../screenshots/code-from-mermaid-diagram.png)
 
+
 ## 5. Generate Code from Drawio Diagram - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
@@ -112,9 +121,11 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ### Result Example
 ![code from drawio diagram](../screenshots/code-from-drawio-diagram.png)
 
+
 ## 6. Generate Drawio Architecture Diagram from Code - Feedback App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
@@ -128,9 +139,11 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 ### Result Example
 ![drawio architecture diagram from code](../screenshots/drawio-architecture-diagram-from-code.png)
 
+
 ## 7. Split Drawio Diagram into CDK Constructs
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
@@ -144,9 +157,11 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ### Result Example
 ![drawio split diagram into cdk constructs](../screenshots/drawio-split-diagram-into-cdk-constructs.png)
 
+
 ## 8. Generate Code from Drawio Diagram - S3 Notification
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=s3-notification-diagram
@@ -164,9 +179,11 @@ generate python cdk V2 template from diagram
 ### Result Example
 ![code from drawio diagram s3 notification](../screenshots/code-from-drawio-diagram-s3-notification.png)
 
+
 ## 9. Generate Code from Drawio Diagram - Step Functions
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=data-pipeline-diagram
@@ -184,9 +201,11 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 ### Result Example
 ![code from drawio diagram data pipeline](../screenshots/code-from-drawio-diagram-data-pipeline.png)
 
+
 ## 10. Generate Code from Drawio Diagram - Deployment Pipeline
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=deployment-pipeline
@@ -200,9 +219,11 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ### Result Example
 ![code from drawio diagram deployment pipeline](../screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
+
 ## 11. Generate Code from Drawio Diagram - API Gateway
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=api-gateway-diagram --with-q-rules
@@ -216,9 +237,11 @@ generate application
 ### Result Example
 ![code from drawio diagram api gateway](../screenshots/code-from-drawio-diagram-api-gateway.png)
 
+
 ## 12. Generate Code from HandDrawn Diagram - Landing Page
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=lambda-app-hand-drawn-diagram
@@ -240,9 +263,11 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ### Result Example
 ![code from handdrawn diagram landing page](../screenshots/code-from-handdrawn-diagram-landing-page.png)
 
+
 ## 13. Generate Code from HandDrawn Diagram - ECS App
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=ecs-app-hand-drawn-diagram
@@ -268,9 +293,11 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ### Result Example
 ![code from handdrawn diagram ecs app](../screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
+
 ## 14. Generate Code from HandDrawn Diagram - GUI
 
 ### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-hand-drawn-diagram
