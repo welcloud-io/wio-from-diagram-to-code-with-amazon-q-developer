@@ -46,7 +46,6 @@ class TestBuildTutorialsPage(unittest.TestCase):
             '```',
             'prompt1',
             '```',
-            '### Prompts to execute In Q Desktop, Q CLI, Kiro, ...',
             '```',
             'prompt2',
             '```',

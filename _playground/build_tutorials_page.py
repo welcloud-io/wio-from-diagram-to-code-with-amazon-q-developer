@@ -42,8 +42,9 @@ def tutorial_starting_point(tutorial_properties):
 def tutorial_prompts(tutorial_properties):
     content = []
 
+    content.append("### Prompts to execute In Q Desktop, Q CLI, Kiro, ...")
     for prompt in tutorial_properties['prompts']:
-        content.append("### Prompts to execute In Q Desktop, Q CLI, Kiro, ...")
+        
         content.append("```")
         content.append(prompt)
         content.append("```")

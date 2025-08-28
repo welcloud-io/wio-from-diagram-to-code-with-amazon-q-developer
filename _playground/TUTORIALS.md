@@ -171,7 +171,6 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ```
 generate lambda function code in python from diagram
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 generate python cdk V2 template from diagram
 ```
@@ -193,7 +192,6 @@ generate python cdk V2 template from diagram
 ```
 generate lambda code in the drawio diagram (take notes into account)
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 generate infrastructure with CDK V2 (be aware that you have a step functions workflow with lambda orchestration in the diagram)
 ```
@@ -251,11 +249,9 @@ generate application
 ```
 create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a draw.io diagram from the hand-drawn-architecture.jpg (I want to use AWS 2024 Icons)
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 can you generate application from the hand-drawn-architecture file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2)
 ```
@@ -277,15 +273,12 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ```
 create a mermaid diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position. Note that ECR is outside the VPC.
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a drawio diagram from the hand-drawn-architecture.jpg file in this folder. Keep all components at the original position.
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2).
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2). Keep it simple, don't add more than necessary, stick to the diagram intent.
 ```
@@ -307,11 +300,9 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ```
 Create an application from the hand-drawn-graphical-interface.jpg file. I want a CDK serverless backend.
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 create a drawio diagram of this application using AWS icons 2024 (dataflow from up to bottom)
 ```
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
 ```
 in the drawio diagram add a user desktop and separate cloufront/s3 data flow from api/lambda/dynamo data flow
 ```
