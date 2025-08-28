@@ -3,7 +3,7 @@
 
 ## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```

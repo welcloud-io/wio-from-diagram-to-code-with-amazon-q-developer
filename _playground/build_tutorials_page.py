@@ -19,7 +19,7 @@ def tutorial_title(tutorial_properties, index_number):
 def prerequisites():
     content = []
 
-    content.append("### [=> PREREQUSITES](../README.md#prerequisites)")
+    content.append("### [=> PREREQUISITES](../README.md#prerequisites)")
     content.append("")
     
     return content

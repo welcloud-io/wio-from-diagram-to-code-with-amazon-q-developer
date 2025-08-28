@@ -16,7 +16,7 @@
 
 ## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -34,7 +34,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 
 ## 2. Generate Mermaid Sequence Diagram from Code - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -52,7 +52,7 @@ create a mermaid sequence diagram of the application
 
 ## 3. Generate Mermaid Class Diagram from Code - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -70,7 +70,7 @@ create a mermaid class diagram of the application
 
 ## 4. Generate Code from Mermaid Diagram - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -106,7 +106,7 @@ end
 
 ## 5. Generate Code from Drawio Diagram - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -124,7 +124,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 
 ## 6. Generate Drawio Architecture Diagram from Code - Feedback App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -142,7 +142,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 
 ## 7. Split Drawio Diagram into CDK Constructs
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -160,7 +160,7 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 
 ## 8. Generate Code from Drawio Diagram - S3 Notification
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -181,7 +181,7 @@ generate python cdk V2 template from diagram
 
 ## 9. Generate Code from Drawio Diagram - Step Functions
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -202,7 +202,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 
 ## 10. Generate Code from Drawio Diagram - Deployment Pipeline
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -220,7 +220,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 
 ## 11. Generate Code from Drawio Diagram - API Gateway
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -238,7 +238,7 @@ generate application
 
 ## 12. Generate Code from HandDrawn Diagram - Landing Page
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -262,7 +262,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 
 ## 13. Generate Code from HandDrawn Diagram - ECS App
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
@@ -289,7 +289,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 
 ## 14. Generate Code from HandDrawn Diagram - GUI
 
-### [=> PREREQUSITES](../README.md#prerequisites)
+### [=> PREREQUISITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
