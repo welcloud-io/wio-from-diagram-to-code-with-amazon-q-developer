@@ -5,7 +5,7 @@
 
 ### [=> PREREQUSITES](../README.md#prerequisites)
 
-### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```

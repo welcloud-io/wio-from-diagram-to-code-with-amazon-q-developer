@@ -27,7 +27,7 @@ def prerequisites():
 def tutorial_starting_point(tutorial_properties):
     content = []
 
-    content.append("### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)")
+    content.append("### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
     content.append("```")
 
     command_to_execute = '../init-playground.sh'
