@@ -45,8 +45,8 @@ def terminal_formated_prompts_related_to_tutorial_configuration(tutorials_folder
     content.append("")
 
     filtered_list_of_tutorials = files_related_to_tutorial_configuration(tutorials_folder, tutorial_configuration)
-    for (file) in filtered_list_of_tutorials:
-        content += tutorial_prompts(file)
+    for (tutorial_file) in filtered_list_of_tutorials:
+        content += tutorial_prompts(tutorial_file)
 
     content.append("└" + "─" * 50 + "┘")
 
