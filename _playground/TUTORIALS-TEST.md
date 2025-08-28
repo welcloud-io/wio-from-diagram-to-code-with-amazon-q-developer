@@ -3,7 +3,7 @@
 
 ## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
-### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+### [=> PREREQUSITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```

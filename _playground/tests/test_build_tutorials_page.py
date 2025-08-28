@@ -23,7 +23,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
 
     def test_prerequisites(self):
         result = prerequisites()
-        expected = ['### Make sure you have installed the [prerequisites](../README.md#prerequisites)', '']
+        expected = ['### [=> PREREQUSITES](../README.md#prerequisites)', '']
         self.assertEqual(result, expected)
 
     def test_tutorial_starting_point(self):
@@ -75,7 +75,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
         }
         result = create_tutorial_section(tutorial_data, 1)
         self.assertIn('## 1. Test', result)
-        self.assertIn('### Make sure you have installed the [prerequisites](../README.md#prerequisites)', result)
+        self.assertIn('### [=> PREREQUSITES](../README.md#prerequisites)', result)
 
     def test_empty_target_file(self):
         with tempfile.NamedTemporaryFile(mode='w', delete=False) as tmp:
@@ -213,7 +213,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
 
 ## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
-### Make sure you have installed the [prerequisites](../README.md#prerequisites)
+### [=> PREREQUSITES](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal (```~/wio-from-diagram-to-code-with-amazon-q-developer/_playground/vscode-app-folder$```)
 ```
