@@ -1,20 +1,40 @@
 # Tutorial Index
-1. [Generate Mermaid Architecture Diagram from Code - Feedback App](#1-generate-mermaid-architecture-diagram-from-code---feedback-app)
-2. [Generate Mermaid Sequence Diagram from Code - Feedback App](#2-generate-mermaid-sequence-diagram-from-code---feedback-app)
-3. [Generate Mermaid Class Diagram from Code - Feedback App](#3-generate-mermaid-class-diagram-from-code---feedback-app)
-4. [Generate Code from Mermaid Diagram - Feedback App](#4-generate-code-from-mermaid-diagram---feedback-app)
-5. [Generate Code from Drawio Diagram - Feedback App](#5-generate-code-from-drawio-diagram---feedback-app)
-6. [Generate Drawio Architecture Diagram from Code - Feedback App](#6-generate-drawio-architecture-diagram-from-code---feedback-app)
-7. [Split Drawio Diagram into CDK Constructs](#7-split-drawio-diagram-into-cdk-constructs)
-8. [Generate Code from Drawio Diagram - S3 Notification](#8-generate-code-from-drawio-diagram---s3-notification)
-9. [Generate Code from Drawio Diagram - Step Functions](#9-generate-code-from-drawio-diagram---step-functions)
-10. [Generate Code from Drawio Diagram - Deployment Pipeline](#10-generate-code-from-drawio-diagram---deployment-pipeline)
-11. [Generate Code from Drawio Diagram - API Gateway](#11-generate-code-from-drawio-diagram---api-gateway)
-12. [Generate Code from HandDrawn Diagram - Landing Page](#12-generate-code-from-handdrawn-diagram---landing-page)
-13. [Generate Code from HandDrawn Diagram - ECS App](#13-generate-code-from-handdrawn-diagram---ecs-app)
-14. [Generate Code from HandDrawn Diagram - GUI](#14-generate-code-from-handdrawn-diagram---gui)
 
-## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
+1. [Generate Mermaid Diagrams from Code](#1-generate-mermaid-diagrams-from-code)
+
+    - 1.1 [Generate Mermaid Architecture Diagram from Code - Feedback App](#11-generate-mermaid-architecture-diagram-from-code---feedback-app)
+    - 1.2 [Generate Mermaid Sequence Diagram from Code - Feedback App](#12-generate-mermaid-sequence-diagram-from-code---feedback-app)
+    - 1.3 [Generate Mermaid Class Diagram from Code - Feedback App](#13-generate-mermaid-class-diagram-from-code---feedback-app)
+
+2. [Generate Drawio Diagrams from Code](#2-generate-drawio-diagrams-from-code)
+
+    - 2.1 [Generate Drawio Architecture Diagram from Code - Feedback App](#21-generate-drawio-architecture-diagram-from-code---feedback-app)
+
+3. [Generate Code From Mermaid Diagram](#3-generate-code-from-mermaid-diagram)
+
+    - 3.1 [Generate Code from Mermaid Diagram - Feedback App](#31-generate-code-from-mermaid-diagram---feedback-app)
+
+4. [Generate Code From Drawio Diagram](#4-generate-code-from-drawio-diagram)
+
+    - 4.1 [Generate Code from Drawio Diagram - Feedback App](#41-generate-code-from-drawio-diagram---feedback-app)
+    - 4.2 [Generate Code from Drawio Diagram - S3 Notification](#42-generate-code-from-drawio-diagram---s3-notification)
+    - 4.3 [Generate Code from Drawio Diagram - Step Functions](#43-generate-code-from-drawio-diagram---step-functions)
+    - 4.4 [Generate Code from Drawio Diagram - Deployment Pipeline](#44-generate-code-from-drawio-diagram---deployment-pipeline)
+    - 4.5 [Generate Code from Drawio Diagram - API Gateway](#45-generate-code-from-drawio-diagram---api-gateway)
+
+5. [Generate Code From Hand-Drawn Diagram](#5-generate-code-from-hand-drawn-diagram)
+
+    - 5.1 [Generate Code from HandDrawn Diagram - Landing Page](#51-generate-code-from-handdrawn-diagram---landing-page)
+    - 5.2 [Generate Code from HandDrawn Diagram - ECS App](#52-generate-code-from-handdrawn-diagram---ecs-app)
+    - 5.3 [Generate Code from HandDrawn Diagram - GUI](#53-generate-code-from-handdrawn-diagram---gui)
+
+6. [Transform Drawio Diagram](#6-transform-drawio-diagram)
+
+    - 6.1 [Split Drawio Diagram into CDK Constructs](#61-split-drawio-diagram-into-cdk-constructs)
+
+# 1. Generate Mermaid Diagrams from Code
+
+## 1.1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -32,7 +52,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 
-## 2. Generate Mermaid Sequence Diagram from Code - Feedback App
+## 1.2. Generate Mermaid Sequence Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -50,7 +70,7 @@ create a mermaid sequence diagram of the application
 ![mermaid sequence diagram from code](./screenshots/mermaid-sequence-diagram-from-code.png)
 
 
-## 3. Generate Mermaid Class Diagram from Code - Feedback App
+## 1.3. Generate Mermaid Class Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -68,7 +88,29 @@ create a mermaid class diagram of the application
 ![mermaid class diagram from code](./screenshots/mermaid-class-diagram-from-code.png)
 
 
-## 4. Generate Code from Mermaid Diagram - Feedback App
+# 2. Generate Drawio Diagrams from Code
+
+## 2.1. Generate Drawio Architecture Diagram from Code - Feedback App
+
+### [=> PREREQUISITES](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-code
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)
+```
+
+### Result Example
+![drawio architecture diagram from code](./screenshots/drawio-architecture-diagram-from-code.png)
+
+
+# 3. Generate Code From Mermaid Diagram
+
+## 3.1. Generate Code from Mermaid Diagram - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -104,7 +146,9 @@ end
 ![code from mermaid diagram](./screenshots/code-from-mermaid-diagram.png)
 
 
-## 5. Generate Code from Drawio Diagram - Feedback App
+# 4. Generate Code From Drawio Diagram
+
+## 4.1. Generate Code from Drawio Diagram - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -122,43 +166,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ![code from drawio diagram](./screenshots/code-from-drawio-diagram.png)
 
 
-## 6. Generate Drawio Architecture Diagram from Code - Feedback App
-
-### [=> PREREQUISITES](../README.md#prerequisites)
-
-### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-```
-../init-playground.sh --with-starting-point-folder=feedback-app-code
-```
-
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
-```
-create a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)
-```
-
-### Result Example
-![drawio architecture diagram from code](./screenshots/drawio-architecture-diagram-from-code.png)
-
-
-## 7. Split Drawio Diagram into CDK Constructs
-
-### [=> PREREQUISITES](../README.md#prerequisites)
-
-### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-```
-../init-playground.sh --with-starting-point-folder=feedback-app-diagram
-```
-
-### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
-```
-modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
-```
-
-### Result Example
-![drawio split diagram into cdk constructs](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
-
-
-## 8. Generate Code from Drawio Diagram - S3 Notification
+## 4.2. Generate Code from Drawio Diagram - S3 Notification
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -179,7 +187,7 @@ generate python cdk V2 template from diagram
 ![code from drawio diagram s3 notification](./screenshots/code-from-drawio-diagram-s3-notification.png)
 
 
-## 9. Generate Code from Drawio Diagram - Step Functions
+## 4.3. Generate Code from Drawio Diagram - Step Functions
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -200,7 +208,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 ![code from drawio diagram data pipeline](./screenshots/code-from-drawio-diagram-data-pipeline.png)
 
 
-## 10. Generate Code from Drawio Diagram - Deployment Pipeline
+## 4.4. Generate Code from Drawio Diagram - Deployment Pipeline
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -218,7 +226,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ![code from drawio diagram deployment pipeline](./screenshots/code-from-drawio-diagram-deployment-pipeline.png)
 
 
-## 11. Generate Code from Drawio Diagram - API Gateway
+## 4.5. Generate Code from Drawio Diagram - API Gateway
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -236,7 +244,9 @@ generate application
 ![code from drawio diagram api gateway](./screenshots/code-from-drawio-diagram-api-gateway.png)
 
 
-## 12. Generate Code from HandDrawn Diagram - Landing Page
+# 5. Generate Code From Hand-Drawn Diagram
+
+## 5.1. Generate Code from HandDrawn Diagram - Landing Page
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -260,7 +270,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ![code from handdrawn diagram landing page](./screenshots/code-from-handdrawn-diagram-landing-page.png)
 
 
-## 13. Generate Code from HandDrawn Diagram - ECS App
+## 5.2. Generate Code from HandDrawn Diagram - ECS App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -287,7 +297,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ![code from handdrawn diagram ecs app](./screenshots/code-from-handdrawn-diagram-ecs-app.png)
 
 
-## 14. Generate Code from HandDrawn Diagram - GUI
+## 5.3. Generate Code from HandDrawn Diagram - GUI
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -309,4 +319,24 @@ in the drawio diagram add a user desktop and separate cloufront/s3 data flow fro
 
 ### Result Example
 ![code from handdrawn diagram gui](./screenshots/code-from-handdrawn-diagram-gui.png)
+
+
+# 6. Transform Drawio Diagram
+
+## 6.1. Split Drawio Diagram into CDK Constructs
+
+### [=> PREREQUISITES](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+modify the drawio diagram to split the architecture diagram into well defined cdk construts (use colors and legend)
+```
+
+### Result Example
+![drawio split diagram into cdk constructs](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
 

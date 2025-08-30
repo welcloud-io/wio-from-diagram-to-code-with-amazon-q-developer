@@ -112,15 +112,26 @@ class TestBuildTutorialsPage(unittest.TestCase):
     @patch('build_tutorials_page.get_tutorial_title')
     def test_tutorials_index(self, mock_get_title):
         mock_get_title.side_effect = ['Title 1', 'Title 2']
-        files = ['file1.yaml', 'file2.yaml']
+        index_data = {
+            'tutorial_index': [
+                {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}},
+                {'index_section': {'index_section_name': 'Section 2', 'indexed_tutorials': ['file2.yaml']}}
+            ]
+        }
         
-        result = tutorials_index(files)
+        result = tutorials_index(index_data)
         
         expected = [
-            '# Tutorial Index',
-            '1. [Title 1](#1-title-1)',
-            '2. [Title 2](#2-title-2)',
-            ''
+        '# Tutorial Index',
+        '',
+        '1. [Section 1](#1-section-1)',
+        '',
+        '    - 1.1 [Title 1](#11-title-1)',
+        '',
+        '2. [Section 2](#2-section-2)',
+        '',
+        '    - 2.1 [Title 2](#21-title-2)',
+        ''
         ]
         self.assertEqual(result, expected)
 
@@ -136,10 +147,14 @@ class TestBuildTutorialsPage(unittest.TestCase):
             }
         }
         
-        files = ['test.yaml']
-        result = tutorials_section(files)
+        index_data = {
+            'tutorial_index': [
+                {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}}
+            ]
+        }
+        result = tutorials_section(index_data)
         
-        self.assertIn('## 1. Test', result)
+        self.assertIn('## 1.1. Test', result)
 
     @patch('build_tutorials_page.tutorials_section')
     @patch('build_tutorials_page.tutorials_index')
@@ -196,21 +211,35 @@ class TestBuildTutorialsPage(unittest.TestCase):
 
     def test_generate_tutorials_md_output(self):
 
-        tutorial_files = [
-            'tutorials/tutorial-mermaid-architecture-diagram-from-code.yaml'
-        ]
+        index_data = {
+            'tutorial_index': [
+                {
+                    'index_section': {
+                        'index_section_name': 'Section 1',
+                        'indexed_tutorials': [
+                            'tutorial-mermaid-architecture-diagram-from-code.yaml'
+                        ]
+                    }
+                }
+            ]
+        }
 
         target_file = 'TUTORIALS-TEST.md'
 
-        build_tutorials_page(tutorial_files, target_file)
+        build_tutorials_page(index_data, target_file)
         
         with open(target_file, 'r') as f:
             content = f.read()
         
         expected_content = """# Tutorial Index
-1. [Generate Mermaid Architecture Diagram from Code - Feedback App](#1-generate-mermaid-architecture-diagram-from-code---feedback-app)
 
-## 1. Generate Mermaid Architecture Diagram from Code - Feedback App
+1. [Section 1](#1-section-1)
+
+    - 1.1 [Generate Mermaid Architecture Diagram from Code - Feedback App](#11-generate-mermaid-architecture-diagram-from-code---feedback-app)
+
+# 1. Section 1
+
+## 1.1. Generate Mermaid Architecture Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 

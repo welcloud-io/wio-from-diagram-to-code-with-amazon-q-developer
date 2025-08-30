@@ -95,37 +95,69 @@ def get_tutorial_title(tutorial_file):
         title = tutorial_data['tutorial']['title']
     return title
 
-def tutorials_index(tutorial_files):
+def tutorials_index(index_data):
     content = []
-
+    
     content.append("# Tutorial Index")
-    for i, filename in enumerate(tutorial_files, 1):
-        title = get_tutorial_title(filename)
-        indexed_title = f"{i}. {title}"
-        anchor = indexed_title.lower().replace(' ', '-').replace('.', '')               
-        content.append(f"{i}. [{title}](#{anchor})")
     content.append("")
-
+    
+    section_counter = 1
+    tutorial_counter = 1
+    
+    for section in index_data['tutorial_index']:
+        section_info = section['index_section']
+        section_name = section_info['index_section_name']
+        section_anchor = f"{section_counter}-{section_name.lower().replace(' ', '-')}"
+        
+        content.append(f"{section_counter}. [{section_name}](#{section_anchor})")
+        content.append("")
+        
+        sub_counter = 1
+        for tutorial_file in section_info['indexed_tutorials']:
+            full_path = f"tutorials/{tutorial_file}"
+            title = get_tutorial_title(full_path)
+            hierarchical_number = f"{section_counter}.{sub_counter}"
+            indexed_title = f"{hierarchical_number}. {title}"
+            anchor = indexed_title.lower().replace(' ', '-').replace('.', '')
+            content.append(f"    - {hierarchical_number} [{title}](#{anchor})")
+            sub_counter += 1
+        
+        content.append("")
+        section_counter += 1
+    
     return content
 
-def tutorials_section(tutorial_files):
+def tutorials_section(index_data):
     content = []
-
-    for i, filename in enumerate(tutorial_files, 1):
-        with open(filename, 'r') as file:
-            tutorial_data = yaml.safe_load(file)
-
-        content += create_tutorial_section(tutorial_data, i)
-
+    section_counter = 1
+    
+    for section in index_data['tutorial_index']:
+        section_info = section['index_section']
+        section_name = section_info['index_section_name']
+        
+        content.append(f"# {section_counter}. {section_name}")
+        content.append("")
+        
+        sub_counter = 1
+        for tutorial_file in section_info['indexed_tutorials']:
+            full_path = f"tutorials/{tutorial_file}"
+            with open(full_path, 'r') as file:
+                tutorial_data = yaml.safe_load(file)
+            
+            hierarchical_number = f"{section_counter}.{sub_counter}"
+            content += create_tutorial_section(tutorial_data, hierarchical_number)
+            sub_counter += 1
+        
+        section_counter += 1
+    
     return content
 
-def build_tutorials_page(tutorial_files, target_file='TUTORIALS.md'):
-
+def build_tutorials_page(index_data, target_file='TUTORIALS.md'):
     empty_target_file(target_file)
 
     content = []
-    content += tutorials_index(tutorial_files)
-    content += tutorials_section(tutorial_files)
+    content += tutorials_index(index_data)
+    content += tutorials_section(index_data)
     
     write_target_file(target_file, content)
 
@@ -163,10 +195,13 @@ if __name__ == "__main__":
     with open('tutorials/main-index.yaml', 'r') as f:
         index_data = yaml.safe_load(f)
     
-    tutorial_files = index_data['tutorial_index']
-    tutorial_files = [f"tutorials/{file}" for file in tutorial_files]
+    # Extract all tutorial files for orphan and dead link checks
+    tutorial_files = []
+    for section in index_data['tutorial_index']:
+        for tutorial_file in section['index_section']['indexed_tutorials']:
+            tutorial_files.append(f"tutorials/{tutorial_file}")
 
-    build_tutorials_page(tutorial_files)
+    build_tutorials_page(index_data)
 
     orphan_files = check_orphans(tutorial_files)
     if orphan_files != []: print ('orphans tutorials', orphan_files)
