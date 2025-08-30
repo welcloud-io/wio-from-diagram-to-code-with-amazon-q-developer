@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Drawio Diagram from Code - Architecture - Feedback App"
+  title: "Generate Drawio - Architecture Diagram - from Code - Feedback App"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:

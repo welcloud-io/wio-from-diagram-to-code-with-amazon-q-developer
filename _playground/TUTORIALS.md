@@ -2,13 +2,13 @@
 
 1. [Generate Mermaid Diagram from Code](#1-generate-mermaid-diagram-from-code)
 
-    - 1.1 [Generate Mermaid - Architecture - Diagram from Code - Feedback App](#11-generate-mermaid---architecture---diagram-from-code---feedback-app)
-    - 1.2 [Generate Mermaid - Sequence - Diagram from Code - Feedback App](#12-generate-mermaid---sequence---diagram-from-code---feedback-app)
-    - 1.3 [Generate Mermaid - Class - Diagram from Code - Feedback App](#13-generate-mermaid---class---diagram-from-code---feedback-app)
+    - 1.1 [Generate Mermaid - Architecture Diagram - from Code - Feedback App](#11-generate-mermaid---architecture-diagram---from-code---feedback-app)
+    - 1.2 [Generate Mermaid - Sequence Diagram - from Code - Feedback App](#12-generate-mermaid---sequence-diagram---from-code---feedback-app)
+    - 1.3 [Generate Mermaid - Class Diagram - from Code - Feedback App](#13-generate-mermaid---class-diagram---from-code---feedback-app)
 
 2. [Generate Drawio Diagram from Code](#2-generate-drawio-diagram-from-code)
 
-    - 2.1 [Generate Drawio Diagram from Code - Architecture - Feedback App](#21-generate-drawio-diagram-from-code---architecture---feedback-app)
+    - 2.1 [Generate Drawio - Architecture Diagram - from Code - Feedback App](#21-generate-drawio---architecture-diagram---from-code---feedback-app)
 
 3. [Generate Code from Mermaid Diagram](#3-generate-code-from-mermaid-diagram)
 
@@ -34,7 +34,7 @@
 
 # 1. Generate Mermaid Diagram from Code
 
-## 1.1. Generate Mermaid - Architecture - Diagram from Code - Feedback App
+## 1.1. Generate Mermaid - Architecture Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -52,7 +52,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 
-## 1.2. Generate Mermaid - Sequence - Diagram from Code - Feedback App
+## 1.2. Generate Mermaid - Sequence Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -70,7 +70,7 @@ create a mermaid sequence diagram of the application
 ![mermaid sequence diagram from code](./screenshots/mermaid-sequence-diagram-from-code.png)
 
 
-## 1.3. Generate Mermaid - Class - Diagram from Code - Feedback App
+## 1.3. Generate Mermaid - Class Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -90,7 +90,7 @@ create a mermaid class diagram of the application
 
 # 2. Generate Drawio Diagram from Code
 
-## 2.1. Generate Drawio Diagram from Code - Architecture - Feedback App
+## 2.1. Generate Drawio - Architecture Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
