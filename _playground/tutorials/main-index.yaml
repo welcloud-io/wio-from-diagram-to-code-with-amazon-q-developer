@@ -1,20 +1,20 @@
 tutorial_index:
   - index_section:
-      index_section_name: Generate Mermaid Diagrams from Code
+      index_section_name: Generate Mermaid Diagram from Code
       indexed_tutorials:
       - 'tutorial-mermaid-architecture-diagram-from-code.yaml'
       - 'tutorial-mermaid-sequence-diagram-from-code.yaml'
       - 'tutorial-mermaid-class-diagram-from-code.yaml'
   - index_section:
-      index_section_name: Generate Drawio Diagrams from Code
+      index_section_name: Generate Drawio Diagram from Code
       indexed_tutorials:
       - 'tutorial-drawio-architecture-diagram-from-code.yaml'
   - index_section:
-      index_section_name: Generate Code From Mermaid Diagram
+      index_section_name: Generate Code from Mermaid Diagram
       indexed_tutorials:   
       - 'tutorial-code-from-mermaid-diagram.yaml'
   - index_section:
-      index_section_name: Generate Code From Drawio Diagram
+      index_section_name: Generate Code from Drawio Diagram
       indexed_tutorials:  
       - 'tutorial-code-from-drawio-diagram.yaml'
       - 'tutorial-code-from-drawio-diagram-s3-notification.yaml'
@@ -22,7 +22,7 @@ tutorial_index:
       - 'tutorial-code-from-drawio-diagram-deployment-pipeline.yaml'
       - 'tutorial-code-from-drawio-diagram-api-gateway.yaml'
   - index_section:
-      index_section_name: Generate Code From Hand-Drawn Diagram
+      index_section_name: Generate Code from Hand-Drawn Diagram
       indexed_tutorials:  
       - 'tutorial-code-from-handdrawn-diagram-landing-page.yaml'
       - 'tutorial-code-from-handdrawn-diagram-ecs-app.yaml'

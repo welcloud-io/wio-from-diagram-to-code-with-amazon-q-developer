@@ -1,20 +1,20 @@
 # Tutorial Index
 
-1. [Generate Mermaid Diagrams from Code](#1-generate-mermaid-diagrams-from-code)
+1. [Generate Mermaid Diagram from Code](#1-generate-mermaid-diagram-from-code)
 
-    - 1.1 [Generate Mermaid Architecture Diagram from Code - Feedback App](#11-generate-mermaid-architecture-diagram-from-code---feedback-app)
-    - 1.2 [Generate Mermaid Sequence Diagram from Code - Feedback App](#12-generate-mermaid-sequence-diagram-from-code---feedback-app)
-    - 1.3 [Generate Mermaid Class Diagram from Code - Feedback App](#13-generate-mermaid-class-diagram-from-code---feedback-app)
+    - 1.1 [Generate Mermaid - Architecture - Diagram from Code - Feedback App](#11-generate-mermaid---architecture---diagram-from-code---feedback-app)
+    - 1.2 [Generate Mermaid - Sequence - Diagram from Code - Feedback App](#12-generate-mermaid---sequence---diagram-from-code---feedback-app)
+    - 1.3 [Generate Mermaid - Class - Diagram from Code - Feedback App](#13-generate-mermaid---class---diagram-from-code---feedback-app)
 
-2. [Generate Drawio Diagrams from Code](#2-generate-drawio-diagrams-from-code)
+2. [Generate Drawio Diagram from Code](#2-generate-drawio-diagram-from-code)
 
-    - 2.1 [Generate Drawio Architecture Diagram from Code - Feedback App](#21-generate-drawio-architecture-diagram-from-code---feedback-app)
+    - 2.1 [Generate Drawio Diagram from Code - Architecture - Feedback App](#21-generate-drawio-diagram-from-code---architecture---feedback-app)
 
-3. [Generate Code From Mermaid Diagram](#3-generate-code-from-mermaid-diagram)
+3. [Generate Code from Mermaid Diagram](#3-generate-code-from-mermaid-diagram)
 
     - 3.1 [Generate Code from Mermaid Diagram - Feedback App](#31-generate-code-from-mermaid-diagram---feedback-app)
 
-4. [Generate Code From Drawio Diagram](#4-generate-code-from-drawio-diagram)
+4. [Generate Code from Drawio Diagram](#4-generate-code-from-drawio-diagram)
 
     - 4.1 [Generate Code from Drawio Diagram - Feedback App](#41-generate-code-from-drawio-diagram---feedback-app)
     - 4.2 [Generate Code from Drawio Diagram - S3 Notification](#42-generate-code-from-drawio-diagram---s3-notification)
@@ -22,9 +22,9 @@
     - 4.4 [Generate Code from Drawio Diagram - Deployment Pipeline](#44-generate-code-from-drawio-diagram---deployment-pipeline)
     - 4.5 [Generate Code from Drawio Diagram - API Gateway](#45-generate-code-from-drawio-diagram---api-gateway)
 
-5. [Generate Code From Hand-Drawn Diagram](#5-generate-code-from-hand-drawn-diagram)
+5. [Generate Code from Hand-Drawn Diagram](#5-generate-code-from-hand-drawn-diagram)
 
-    - 5.1 [Generate Code from HandDrawn Diagram - Landing Page](#51-generate-code-from-handdrawn-diagram---landing-page)
+    - 5.1 [Generate Code from HandDrawn Diagram - Lambda App](#51-generate-code-from-handdrawn-diagram---lambda-app)
     - 5.2 [Generate Code from HandDrawn Diagram - ECS App](#52-generate-code-from-handdrawn-diagram---ecs-app)
     - 5.3 [Generate Code from HandDrawn Diagram - GUI](#53-generate-code-from-handdrawn-diagram---gui)
 
@@ -32,9 +32,9 @@
 
     - 6.1 [Split Drawio Diagram into CDK Constructs](#61-split-drawio-diagram-into-cdk-constructs)
 
-# 1. Generate Mermaid Diagrams from Code
+# 1. Generate Mermaid Diagram from Code
 
-## 1.1. Generate Mermaid Architecture Diagram from Code - Feedback App
+## 1.1. Generate Mermaid - Architecture - Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -52,7 +52,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
 
 
-## 1.2. Generate Mermaid Sequence Diagram from Code - Feedback App
+## 1.2. Generate Mermaid - Sequence - Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -70,7 +70,7 @@ create a mermaid sequence diagram of the application
 ![mermaid sequence diagram from code](./screenshots/mermaid-sequence-diagram-from-code.png)
 
 
-## 1.3. Generate Mermaid Class Diagram from Code - Feedback App
+## 1.3. Generate Mermaid - Class - Diagram from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -88,9 +88,9 @@ create a mermaid class diagram of the application
 ![mermaid class diagram from code](./screenshots/mermaid-class-diagram-from-code.png)
 
 
-# 2. Generate Drawio Diagrams from Code
+# 2. Generate Drawio Diagram from Code
 
-## 2.1. Generate Drawio Architecture Diagram from Code - Feedback App
+## 2.1. Generate Drawio Diagram from Code - Architecture - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 
@@ -108,7 +108,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 ![drawio architecture diagram from code](./screenshots/drawio-architecture-diagram-from-code.png)
 
 
-# 3. Generate Code From Mermaid Diagram
+# 3. Generate Code from Mermaid Diagram
 
 ## 3.1. Generate Code from Mermaid Diagram - Feedback App
 
@@ -146,7 +146,7 @@ end
 ![code from mermaid diagram](./screenshots/code-from-mermaid-diagram.png)
 
 
-# 4. Generate Code From Drawio Diagram
+# 4. Generate Code from Drawio Diagram
 
 ## 4.1. Generate Code from Drawio Diagram - Feedback App
 
@@ -244,9 +244,9 @@ generate application
 ![code from drawio diagram api gateway](./screenshots/code-from-drawio-diagram-api-gateway.png)
 
 
-# 5. Generate Code From Hand-Drawn Diagram
+# 5. Generate Code from Hand-Drawn Diagram
 
-## 5.1. Generate Code from HandDrawn Diagram - Landing Page
+## 5.1. Generate Code from HandDrawn Diagram - Lambda App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 

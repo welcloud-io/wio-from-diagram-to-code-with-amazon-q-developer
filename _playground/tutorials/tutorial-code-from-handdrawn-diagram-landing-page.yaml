@@ -1,6 +1,6 @@
 
 tutorial:
-  title: "Generate Code from HandDrawn Diagram - Landing Page"
+  title: "Generate Code from HandDrawn Diagram - Lambda App"
   starting_point:
   - "--with-starting-point-folder=lambda-app-hand-drawn-diagram"
   prompts:

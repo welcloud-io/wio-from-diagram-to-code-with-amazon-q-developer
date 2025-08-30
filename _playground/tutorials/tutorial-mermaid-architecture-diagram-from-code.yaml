@@ -1,5 +1,5 @@
 tutorial:
-  title: "Generate Mermaid Architecture Diagram from Code - Feedback App"
+  title: "Generate Mermaid - Architecture - Diagram from Code - Feedback App"
   starting_point:
   - "--with-starting-point-folder=feedback-app-code"
   prompts:
