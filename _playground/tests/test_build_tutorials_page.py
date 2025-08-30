@@ -8,7 +8,7 @@ from unittest.mock import patch, mock_open, MagicMock
 from build_tutorials_page import (
     tutorial_title, prerequisites, tutorial_starting_point, tutorial_prompts,
     tutorial_results, create_tutorial_section, empty_target_file, write_target_file,
-    get_tutorial_title, tutorials_index, tutorials_section, build_tutorials_page,
+    get_tutorial_title, tutorial_index, tutorials_section, build_tutorials_page,
     check_orphans, check_screenshot_dead_links
 )
 
@@ -110,7 +110,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
         self.assertEqual(result, 'Test Title')
 
     @patch('build_tutorials_page.get_tutorial_title')
-    def test_tutorials_index(self, mock_get_title):
+    def test_tutorial_index(self, mock_get_title):
         mock_get_title.side_effect = ['Title 1', 'Title 2']
         index_data = {
             'tutorial_index': [
@@ -119,7 +119,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
             ]
         }
         
-        result = tutorials_index(index_data)
+        result = tutorial_index(index_data)
         
         expected = [
         '# Tutorial Index',
@@ -157,7 +157,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
         self.assertIn('## 1.1. Test', result)
 
     @patch('build_tutorials_page.tutorials_section')
-    @patch('build_tutorials_page.tutorials_index')
+    @patch('build_tutorials_page.tutorial_index')
     @patch('build_tutorials_page.write_target_file')
     @patch('build_tutorials_page.empty_target_file')
     def test_build_tutorials_page(self, mock_empty, mock_write, mock_index, mock_section):
@@ -235,11 +235,11 @@ class TestBuildTutorialsPage(unittest.TestCase):
 
 1. [Section 1](#1-section-1)
 
-    - 1.1 [Generate Mermaid Architecture Diagram from Code - Feedback App](#11-generate-mermaid-architecture-diagram-from-code---feedback-app)
+    - 1.1 [Generate Mermaid - Architecture Diagram - from Code - Feedback App](#11-generate-mermaid---architecture-diagram---from-code---feedback-app)
 
 # 1. Section 1
 
-## 1.1. Generate Mermaid Architecture Diagram from Code - Feedback App
+## 1.1. Generate Mermaid - Architecture Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 

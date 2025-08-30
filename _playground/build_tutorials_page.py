@@ -95,7 +95,7 @@ def get_tutorial_title(tutorial_file):
         title = tutorial_data['tutorial']['title']
     return title
 
-def tutorials_index(index_data):
+def tutorial_index(index_data):
     content = []
     
     content.append("# Tutorial Index")
@@ -156,7 +156,7 @@ def build_tutorials_page(index_data, target_file='TUTORIALS.md'):
     empty_target_file(target_file)
 
     content = []
-    content += tutorials_index(index_data)
+    content += tutorial_index(index_data)
     content += tutorials_section(index_data)
     
     write_target_file(target_file, content)

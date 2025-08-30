@@ -2,11 +2,11 @@
 
 1. [Section 1](#1-section-1)
 
-    - 1.1 [Generate Mermaid Architecture Diagram from Code - Feedback App](#11-generate-mermaid-architecture-diagram-from-code---feedback-app)
+    - 1.1 [Generate Mermaid - Architecture Diagram - from Code - Feedback App](#11-generate-mermaid---architecture-diagram---from-code---feedback-app)
 
 # 1. Section 1
 
-## 1.1. Generate Mermaid Architecture Diagram from Code - Feedback App
+## 1.1. Generate Mermaid - Architecture Diagram - from Code - Feedback App
 
 ### [=> PREREQUISITES](../README.md#prerequisites)
 

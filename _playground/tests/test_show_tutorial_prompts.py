@@ -92,7 +92,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
         # Remove ANSI color codes for comparison
         output_clean = re.sub(r'\033\[[0-9;]*m', '', output)
         
-        expected_output = """## Generate Mermaid Architecture Diagram from Code - Feedback App
+        expected_output = """## Generate Mermaid - Architecture Diagram - from Code - Feedback App
 > create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)
 """
 
