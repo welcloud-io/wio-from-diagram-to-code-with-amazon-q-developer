@@ -247,5 +247,5 @@ if __name__ == "__main__":
     checker.check_orphans()
     checker.check_screenshot_dead_links()
     
-    tutorial_page_builder = TutorialPageBuilder('_playground/TUTORIALS.md')
-    update_readme_tutorial_index(tutorial_page_builder.tutorial_index.content)
+    tutorial_index = TutorialIndex('_playground/TUTORIALS.md')
+    update_readme_tutorial_index(tutorial_index.content)
