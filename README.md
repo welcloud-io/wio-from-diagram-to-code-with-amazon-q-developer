@@ -156,7 +156,19 @@ $> ./install-q-cli.sh
 
 # Start tutorials
 
-## Follow tutorial instructions in the tutorial readme
+## 1. Start tutorials playground ( i.e. a new VS Code Window)
+
+The command below will open a new VS Code window. 
+That means you will have a blank playground where you will import a tutorial starting point.
+
+```bash
+# From wio-from-diagram-to-code-with-amazon-q-developer/
+$> ./start-vscode-tutorial-window.sh
+```
+
+![new-tutorial-window](./_playground/screenshots/create-new-tutorial-window.png)
+
+## 2. Follow tutorial instructions in the tutorial readme
 
 [CLASSIC TUTORIALS INSTRUCTIONS](_playground/README.md)
 

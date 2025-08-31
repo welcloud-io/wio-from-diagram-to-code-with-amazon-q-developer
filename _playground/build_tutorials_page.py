@@ -91,7 +91,8 @@ class TutorialSection:
     def _prerequisites(self):
         content = []
 
-        content.append("### [=> PREREQUISITES](../README.md#prerequisites)")
+        content.append("### Install Prerequisites if not done yet")
+        content.append("#### [=> Install Prerequisites](../README.md#1-start-tutorials-playground-i-e-a-new-vs-code-window)")
         content.append("")
         
         return content
@@ -100,6 +101,9 @@ class TutorialSection:
         content = []
 
         content.append("### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
+
+        content.append("#### [=> Start tutorial playground](../README.md#starting-point)")
+
         content.append("```")
 
         command_to_execute = '../init-playground.sh'
