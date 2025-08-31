@@ -67,14 +67,15 @@ class TestBuildTutorialsPage(unittest.TestCase):
         self.assertEqual(result, expected)
         os.unlink(tmp_name)
 
-    @patch('builtins.open', new_callable=mock_open, read_data='tutorial:\n  title: Test Title')
-    def test_tutorial_index_get_title(self, mock_file):
-        index_data = {
-            'tutorial_index': [
-                {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}}
-            ]
-        }
-        index = TutorialIndex(index_data)
+    @patch('builtins.open', new_callable=mock_open)
+    @patch('yaml.safe_load')
+    def test_tutorial_index_get_title(self, mock_yaml, mock_file):
+        mock_yaml.side_effect = [
+            {'tutorial_index': [{'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}}]},
+            {'tutorial': {'title': 'File 1 Title'}},
+            {'tutorial': {'title': 'Test Title'}}
+        ]
+        index = TutorialIndex()
         result = index.get_tutorial_title('test.yaml')
         self.assertEqual(result, 'Test Title')
 
@@ -82,17 +83,17 @@ class TestBuildTutorialsPage(unittest.TestCase):
     @patch('yaml.safe_load')
     def test_tutorial_index(self, mock_yaml, mock_file):
         mock_yaml.side_effect = [
+            {
+                'tutorial_index': [
+                    {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}},
+                    {'index_section': {'index_section_name': 'Section 2', 'indexed_tutorials': ['file2.yaml']}}
+                ]
+            },
             {'tutorial': {'title': 'Title 1'}},
             {'tutorial': {'title': 'Title 2'}}
         ]
-        index_data = {
-            'tutorial_index': [
-                {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}},
-                {'index_section': {'index_section_name': 'Section 2', 'indexed_tutorials': ['file2.yaml']}}
-            ]
-        }
         
-        index = TutorialIndex(index_data)
+        index = TutorialIndex()
         
         expected = [
         '# Tutorial Index',
@@ -111,21 +112,12 @@ class TestBuildTutorialsPage(unittest.TestCase):
     @patch('builtins.open', new_callable=mock_open)
     @patch('yaml.safe_load')
     def test_tutorial_sections(self, mock_yaml, mock_file):
-        mock_yaml.return_value = {
-            'tutorial': {
-                'title': 'Test',
-                'starting_point': ['arg1'],
-                'prompts': ['prompt'],
-                'result_example': ['test.png']
-            }
-        }
+        mock_yaml.side_effect = [
+            {'tutorial_index': [{'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}}]},
+            {'tutorial': {'title': 'Test', 'starting_point': ['arg1'], 'prompts': ['prompt'], 'result_example': ['test.png']}}
+        ]
         
-        index_data = {
-            'tutorial_index': [
-                {'index_section': {'index_section_name': 'Section 1', 'indexed_tutorials': ['file1.yaml']}}
-            ]
-        }
-        sections = TutorialSections(index_data)
+        sections = TutorialSections()
         
         self.assertIn('## 1.1. Test', sections.content)
 
@@ -185,51 +177,23 @@ class TestBuildTutorialsPage(unittest.TestCase):
         checker.check_screenshot_dead_links()
 
 
-    @patch('builtins.open', new_callable=mock_open)
-    @patch('yaml.safe_load')
-    def test_generate_tutorials_md_output(self, mock_yaml, mock_file):
-        # Track calls to understand the pattern
-        call_count = 0
-        original_side_effect = [
-            {
-                'tutorial_index': [
-                    {
-                        'index_section': {
-                            'index_section_name': 'Section 1',
-                            'indexed_tutorials': [
-                                'tutorial-mermaid-architecture-diagram-from-code.yaml'
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                'tutorial': {
-                    'title': 'Generate Mermaid - Architecture Diagram - from Code - Feedback App',
-                    'starting_point': ['--with-starting-point-folder=feedback-app-code'],
-                    'prompts': ['create a mermaid architecture diagram of my application (data flow from up to bottom, use colors, keep formatting simple)'],
-                    'result_example': ['./screenshots/mermaid-architecture-diagram-from-code.png']
-                }
-            }
-        ]
+    @patch('build_tutorials_page.TutorialSections')
+    @patch('build_tutorials_page.TutorialIndex')
+    @patch('build_tutorials_page.empty_target_file')
+    @patch('build_tutorials_page.write_target_file')
+    def test_generate_tutorials_md_output(self, mock_write, mock_empty, mock_index_class, mock_sections_class):
+        mock_index = MagicMock()
+        mock_index.content = ['# Tutorial Index']
+        mock_index_class.return_value = mock_index
         
-        def mock_yaml_load(*args, **kwargs):
-            nonlocal call_count
-            if call_count < len(original_side_effect):
-                result = original_side_effect[call_count]
-                call_count += 1
-                return result
-            else:
-                # Return empty dict for any additional calls
-                return {}
-        
-        mock_yaml.side_effect = mock_yaml_load
+        mock_sections = MagicMock()
+        mock_sections.content = ['## 1.1. Test']
+        mock_sections_class.return_value = mock_sections
 
         target_file = 'TUTORIALS-TEST.md'
         builder = TutorialPageBuilder(target_file)
         builder.build()
         
-        # Verify the builder was created and build method was called
         self.assertEqual(builder.target_file, target_file)
         self.assertIsNotNone(builder.content)
 
