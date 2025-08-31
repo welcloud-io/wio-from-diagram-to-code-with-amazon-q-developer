@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 cd vscode-app-folder
 
 if [[ "$@" =~ "--help" ]]; then
-    echo "usage: $0 [--hard] [--no-clear] [--with-cdk-template] [--with-q-rules] [--with-result]"
+    echo "usage: $0 [--hard] [--no-clear] [--with-cdk-template] [--with-q-rules]"
     exit 0
 fi
 
@@ -14,14 +14,20 @@ fi
 
 if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
 
-    if ! [[ "$@" =~ "--hard" ]]; then
-    echo
-    echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
-    echo -e "\033[33m# Refreshing the @workspace index can help when you don't get the expected result\033[0m"
-    echo -e "\033[33m# If needed, use: '$0 --hard', then Ctrl+Shift+P => 'Developer: Reload Window'\033[0m"
-    echo -e "\033[33m-------------------------------------------------------------------------------\033[0m"
-    fi
-
+    # Map of tutorial choices to folder names
+    declare -A tutorial_map=(
+        [0]="empty"
+        [1]="feedback-app-code" 
+        [2]="feedback-app-diagram"
+        [3]="s3-notification-diagram"
+        [4]="data-pipeline-diagram"
+        [5]="deployment-pipeline"
+        [6]="api-gateway-diagram"
+        [7]="lambda-app-hand-drawn-diagram"
+        [8]="ecs-app-hand-drawn-diagram"
+        [9]="security-pillar-hand-drawn-diagram"
+        [10]="feedback-app-hand-drawn-diagram"
+    )
 
     if [[ "$1" =~ ^[0-9]$|^10$ ]]; then
         tutorial_choice=$1
@@ -52,6 +58,10 @@ if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
             exit 1
         fi
     fi
+
+    # Set starting point folder based on selection
+    set -- "$@" "--with-starting-point-folder=${tutorial_map[$tutorial_choice]}"
+
 fi
 
 # -----------------------------------------------------------------------------
@@ -95,13 +105,14 @@ esac
 # Create starting point configuration
 # -----------------------------------------------------------------------------
 
-WITH_RESULT=false
-
 for arg in "$@"; do
     case "$arg" in
         --with-starting-point-folder=*)
-            echo > /dev/null
-            ;;
+            folder="${arg#*=}"
+            if [[ "$folder" != "empty" ]]; then
+                cp -r ../../tutorials-starting-points/$folder/* . 
+            fi
+        ;;
         --with-cdk-template)
             cp -r ../../tutorials-starting-points/cdk-template/* .
             ;;
@@ -136,81 +147,6 @@ done
 # -----------------------------------------------------------------------------
 # Copy starting point files
 # -----------------------------------------------------------------------------
-
-if [ $tutorial_choice == '0' ]; then
-set -- "$@" "--with-starting-point-folder=empty"
-fi
-
-if [ $tutorial_choice == '1' ]; then
-set -- "$@" "--with-starting-point-folder=feedback-app-code"
-fi
-
-if [ $tutorial_choice == '1' -a "$WITH_RESULT" == "true" ]; then
-set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app"
-fi
-
-if [ $tutorial_choice == '2' ]; then
-set -- "$@" "--with-starting-point-folder=feedback-app-diagram"
-fi
-
-if [ $tutorial_choice == '2' -a "$WITH_RESULT" == "true" ]; then
-set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/feedback-app"
-set -- "$@" "--with-results=rewritten-diagrams"
-fi
-
-if [ $tutorial_choice == '3' ]; then
-set -- "$@" "--with-starting-point-folder=s3-notification-diagram"
-fi
-
-if [ $tutorial_choice == '3' -a "$WITH_RESULT" == "true" ]; then
-set -- "$@" "--with-results=code-generated-from-drawio-diagram/code-generated-from-q-desktop/data-pipeline"
-fi
-
-if [ $tutorial_choice == '4' ]; then
-set -- "$@" "--with-starting-point-folder=data-pipeline-diagram"
-fi
-
-if [ $tutorial_choice == '5' ]; then
-set -- "$@" "--with-starting-point-folder=deployment-pipeline"
-fi
-
-if [ $tutorial_choice == '6' ]; then
-set -- "$@" "--with-starting-point-folder=api-gateway-diagram"
-fi
-
-if [ $tutorial_choice == '7' ]; then
-set -- "$@" "--with-starting-point-folder=lambda-app-hand-drawn-diagram"
-fi
-
-if [ $tutorial_choice == '8' ]; then
-set -- "$@" "--with-starting-point-folder=ecs-app-hand-drawn-diagram"
-fi
-
-if [ $tutorial_choice == '9' ]; then
-set -- "$@" "--with-starting-point-folder=security-pillar-hand-drawn-diagram"
-fi
-
-if [ $tutorial_choice == '10' ]; then
-set -- "$@" "--with-starting-point-folder=feedback-app-hand-drawn-diagram"
-fi
-
-for arg in "$@"; do
-    case "$arg" in
-        --with-starting-point-folder=*)
-            folder="${arg#*=}"
-            if [[ "$folder" != "empty" ]]; then
-                cp -r ../../tutorials-starting-points/$folder/* . 
-            fi
-        ;;
-        --with-results=*)
-            folder="${arg#*=}"
-            cp -r ../../tutorials-generated-examples/$folder/* . 
-        ;;   
-        *)
-            echo
-            ;;
-    esac
-done
 
 clear
 ../show_tutorial_prompts.py "$@"
