@@ -45,7 +45,7 @@
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
@@ -65,7 +65,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
@@ -85,7 +85,7 @@ create a mermaid sequence diagram of the application
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
@@ -107,7 +107,7 @@ create a mermaid class diagram of the application
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code
 ```
@@ -129,7 +129,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=empty
 ```
@@ -169,7 +169,7 @@ end
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
 ```
@@ -189,7 +189,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=s3-notification-diagram
 ```
@@ -212,7 +212,7 @@ generate python cdk V2 template from diagram
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=data-pipeline-diagram
 ```
@@ -235,7 +235,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=deployment-pipeline
 ```
@@ -255,7 +255,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=api-gateway-diagram --with-q-rules
 ```
@@ -277,7 +277,7 @@ generate application
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=lambda-app-hand-drawn-diagram
 ```
@@ -303,7 +303,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=ecs-app-hand-drawn-diagram
 ```
@@ -332,7 +332,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-hand-drawn-diagram
 ```
@@ -360,7 +360,7 @@ in the drawio diagram add a user desktop and separate cloufront/s3 data flow fro
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-diagram
 ```
@@ -382,7 +382,7 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=empty --with-mcp-server=mcp-simplest.json
 ```
@@ -402,7 +402,7 @@ add 1 + 1
 #### [=> Install Prerequisites](../README.md#prerequisites)
 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
-#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
 ../init-playground.sh --with-starting-point-folder=feedback-app-code --with-mcp-server=mcp-python-diagrams.json
 ```

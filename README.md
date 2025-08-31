@@ -156,7 +156,7 @@ $> ./install-q-cli.sh
 
 # Start tutorials
 
-## 1. Start tutorials playground ( i.e. a new VS Code Window)
+## 1. Start Tutorial Window
 
 The command below will open a new VS Code window. 
 That means you will have a blank playground where you will import a tutorial starting point.

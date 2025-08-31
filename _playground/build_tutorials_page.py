@@ -102,7 +102,7 @@ class TutorialSection:
 
         content.append("### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
 
-        content.append("#### [=> Start tutorial playground](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)")
+        content.append("#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)")
 
         content.append("```")
 
