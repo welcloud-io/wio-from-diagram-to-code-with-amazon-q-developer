@@ -18,8 +18,11 @@ def write_target_file(target_file, content):
 # BUILD TUTORIAL INDEX
 # -----------------------------------------------------------------------------
 class TutorialIndex:
-    def __init__(self, index_data, tutorial_page_folder='_playground/TUTORIALS'):
+    def __init__(self, tutorial_page_folder=''):
         self.content = []
+
+        with open('tutorials/main-index.yaml', 'r') as f:
+            index_data = yaml.safe_load(f)
         
         self.content.append("# Tutorial Index")
         self.content.append("")
@@ -133,9 +136,12 @@ class TutorialSection:
         return content
         
 class TutorialSections:
-    def __init__(self, index_data):
+    def __init__(self):
         self.content = []
         section_counter = 1
+
+        with open('tutorials/main-index.yaml', 'r') as f:
+            index_data = yaml.safe_load(f)
 
         for section in index_data['tutorial_index']:
             section_info = section['index_section']
@@ -164,8 +170,8 @@ class TutorialPageBuilder:
         with open('tutorials/main-index.yaml', 'r') as f:
             self.index_data = yaml.safe_load(f)
         
-        self.tutorial_index = TutorialIndex(self.index_data)
-        self.tutorial_sections = TutorialSections(self.index_data)
+        self.tutorial_index = TutorialIndex()
+        self.tutorial_sections = TutorialSections()
             
     def build(self):
         empty_target_file(self.target_file)
@@ -241,4 +247,5 @@ if __name__ == "__main__":
     checker.check_orphans()
     checker.check_screenshot_dead_links()
     
+    tutorial_page_builder = TutorialPageBuilder('_playground/TUTORIALS.md')
     update_readme_tutorial_index(tutorial_page_builder.tutorial_index.content)

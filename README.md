@@ -17,42 +17,42 @@ This demonstrates how you can generate diagrams from an application code, but al
 
 # Tutorial Index
 
-1. [Generate Mermaid Diagram from Code](_playground/TUTORIALS#1-generate-mermaid-diagram-from-code)
+1. [Generate Mermaid Diagram from Code](#1-generate-mermaid-diagram-from-code)
 
-    - 1.1 [Generate Mermaid - Architecture Diagram - from Code - Feedback App](_playground/TUTORIALS#11-generate-mermaid---architecture-diagram---from-code---feedback-app)
-    - 1.2 [Generate Mermaid - Sequence Diagram - from Code - Feedback App](_playground/TUTORIALS#12-generate-mermaid---sequence-diagram---from-code---feedback-app)
-    - 1.3 [Generate Mermaid - Class Diagram - from Code - Feedback App](_playground/TUTORIALS#13-generate-mermaid---class-diagram---from-code---feedback-app)
+    - 1.1 [Generate Mermaid - Architecture Diagram - from Code - Feedback App](#11-generate-mermaid---architecture-diagram---from-code---feedback-app)
+    - 1.2 [Generate Mermaid - Sequence Diagram - from Code - Feedback App](#12-generate-mermaid---sequence-diagram---from-code---feedback-app)
+    - 1.3 [Generate Mermaid - Class Diagram - from Code - Feedback App](#13-generate-mermaid---class-diagram---from-code---feedback-app)
 
-2. [Generate Drawio Diagram from Code](_playground/TUTORIALS#2-generate-drawio-diagram-from-code)
+2. [Generate Drawio Diagram from Code](#2-generate-drawio-diagram-from-code)
 
-    - 2.1 [Generate Drawio - Architecture Diagram - from Code - Feedback App](_playground/TUTORIALS#21-generate-drawio---architecture-diagram---from-code---feedback-app)
+    - 2.1 [Generate Drawio - Architecture Diagram - from Code - Feedback App](#21-generate-drawio---architecture-diagram---from-code---feedback-app)
 
-3. [Generate Code from Mermaid Diagram](_playground/TUTORIALS#3-generate-code-from-mermaid-diagram)
+3. [Generate Code from Mermaid Diagram](#3-generate-code-from-mermaid-diagram)
 
-    - 3.1 [Generate Code from Mermaid Diagram - Feedback App](_playground/TUTORIALS#31-generate-code-from-mermaid-diagram---feedback-app)
+    - 3.1 [Generate Code from Mermaid Diagram - Feedback App](#31-generate-code-from-mermaid-diagram---feedback-app)
 
-4. [Generate Code from Drawio Diagram](_playground/TUTORIALS#4-generate-code-from-drawio-diagram)
+4. [Generate Code from Drawio Diagram](#4-generate-code-from-drawio-diagram)
 
-    - 4.1 [Generate Code from Drawio Diagram - Feedback App](_playground/TUTORIALS#41-generate-code-from-drawio-diagram---feedback-app)
-    - 4.2 [Generate Code from Drawio Diagram - S3 Notification](_playground/TUTORIALS#42-generate-code-from-drawio-diagram---s3-notification)
-    - 4.3 [Generate Code from Drawio Diagram - Step Functions](_playground/TUTORIALS#43-generate-code-from-drawio-diagram---step-functions)
-    - 4.4 [Generate Code from Drawio Diagram - Deployment Pipeline](_playground/TUTORIALS#44-generate-code-from-drawio-diagram---deployment-pipeline)
-    - 4.5 [Generate Code from Drawio Diagram - API Gateway](_playground/TUTORIALS#45-generate-code-from-drawio-diagram---api-gateway)
+    - 4.1 [Generate Code from Drawio Diagram - Feedback App](#41-generate-code-from-drawio-diagram---feedback-app)
+    - 4.2 [Generate Code from Drawio Diagram - S3 Notification](#42-generate-code-from-drawio-diagram---s3-notification)
+    - 4.3 [Generate Code from Drawio Diagram - Step Functions](#43-generate-code-from-drawio-diagram---step-functions)
+    - 4.4 [Generate Code from Drawio Diagram - Deployment Pipeline](#44-generate-code-from-drawio-diagram---deployment-pipeline)
+    - 4.5 [Generate Code from Drawio Diagram - API Gateway](#45-generate-code-from-drawio-diagram---api-gateway)
 
-5. [Generate Code from Hand-Drawn Diagram](_playground/TUTORIALS#5-generate-code-from-hand-drawn-diagram)
+5. [Generate Code from Hand-Drawn Diagram](#5-generate-code-from-hand-drawn-diagram)
 
-    - 5.1 [Generate Code from HandDrawn Diagram - Lambda App](_playground/TUTORIALS#51-generate-code-from-handdrawn-diagram---lambda-app)
-    - 5.2 [Generate Code from HandDrawn Diagram - ECS App](_playground/TUTORIALS#52-generate-code-from-handdrawn-diagram---ecs-app)
-    - 5.3 [Generate Code from HandDrawn Diagram - GUI](_playground/TUTORIALS#53-generate-code-from-handdrawn-diagram---gui)
+    - 5.1 [Generate Code from HandDrawn Diagram - Lambda App](#51-generate-code-from-handdrawn-diagram---lambda-app)
+    - 5.2 [Generate Code from HandDrawn Diagram - ECS App](#52-generate-code-from-handdrawn-diagram---ecs-app)
+    - 5.3 [Generate Code from HandDrawn Diagram - GUI](#53-generate-code-from-handdrawn-diagram---gui)
 
-6. [Transform Drawio Diagram](_playground/TUTORIALS#6-transform-drawio-diagram)
+6. [Transform Drawio Diagram](#6-transform-drawio-diagram)
 
-    - 6.1 [Split Drawio Diagram into CDK Constructs](_playground/TUTORIALS#61-split-drawio-diagram-into-cdk-constructs)
+    - 6.1 [Split Drawio Diagram into CDK Constructs](#61-split-drawio-diagram-into-cdk-constructs)
 
-7. [Understand MCP with Pyhon Diagrams](_playground/TUTORIALS#7-understand-mcp-with-pyhon-diagrams)
+7. [Understand MCP with Pyhon Diagrams](#7-understand-mcp-with-pyhon-diagrams)
 
-    - 7.1 [Create Simplest MCP](_playground/TUTORIALS#71-create-simplest-mcp)
-    - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](_playground/TUTORIALS#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
+    - 7.1 [Create Simplest MCP](#71-create-simplest-mcp)
+    - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
 
 
 # Prerequisites
