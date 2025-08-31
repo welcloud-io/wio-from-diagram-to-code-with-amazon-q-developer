@@ -92,7 +92,7 @@ class TutorialSection:
         content = []
 
         content.append("### Install Prerequisites if not done yet")
-        content.append("#### [=> Install Prerequisites](../README.md#1-start-tutorials-playground-i-e-a-new-vs-code-window)")
+        content.append("#### [=> Install Prerequisites](../README.md#1-start-tutorials-playground--ie-a-new-vs-code-window)")
         content.append("")
         
         return content
