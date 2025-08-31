@@ -1,0 +1,9 @@
+tutorial:
+  title: "Create Simplest MCP"
+  starting_point:
+  - "--with-starting-point-folder=empty"
+  - "--with-mcp-server=mcp-simplest.json"
+  prompts:
+  - "add 1 + 1"
+  result_example:
+  - "./screenshots/addition-with-mcp.png"

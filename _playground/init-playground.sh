@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/bash -e
 
 cd "$(dirname "$0")"
 cd vscode-app-folder
 
 if [[ "$@" =~ "--help" ]]; then
-    echo "usage: $0 [--hard] [--no-clear] [--with-cdk-template] [--with-q-rules]"
+    echo "usage: $0 [--hard] [--no-clear] [--with-starting-point-folder=<folder_name>] [--with-mcp-server=<mcp-json-file>] [--with-q-rules]"
     exit 0
 fi
 
@@ -113,22 +113,16 @@ for arg in "$@"; do
                 cp -r ../../tutorials-starting-points/$folder/* . 
             fi
         ;;
-        --with-cdk-template)
-            cp -r ../../tutorials-starting-points/cdk-template/* .
-            ;;
         --with-q-rules)
             cp -r ../../tutorials-starting-points/q-rules/.amazonq .
             ;;
-        --with-result)
-            WITH_RESULT=true
-            ;;
-        --with-simplest-mcp-server)
-            cp ../../tutorials-starting-points/mcp-servers/mcp-simplest.json ~/.aws/amazonq/mcp.json
-            cp ../../tutorials-starting-points/mcp-servers/simplest-mcp-server.py .
-            ;;
-        --with-diagram-mcp-server)
-            cp ../../tutorials-starting-points/mcp-servers/mcp-diagram.json ~/.aws/amazonq/mcp.json
-            ;;
+        --with-mcp-server=*)
+            mcp_json_file="${arg#*=}"
+            cp ../../tutorials-starting-points/mcp-servers/$mcp_json_file ~/.aws/amazonq/mcp.json
+            if [ -f "../../tutorials-starting-points/mcp-servers/${mcp_json_file%.json}.py" ]; then
+                cp ../../tutorials-starting-points/mcp-servers/${mcp_json_file%.json}.py .
+            fi                        
+        ;;
         --hard|--no-clear)
             # Skip validation for these known args handled elsewhere
             ;;
@@ -136,7 +130,7 @@ for arg in "$@"; do
             echo
             echo -e "\033[31m" #Red           
             echo -e "!Error: Invalid argument '$arg'"
-            echo -e "Valid arguments are: --with-cdk-template, --with-q-rules, --with-result, --with-simplest-mcp-server, --with-diagram-mcp-server, --hard, --no-clear"
+            echo -e "Valid arguments are: --hard, --no-clear, --with-q-rules, --with-starting-point-folder=<folder_name>, --with-starting-point-folder=<folder_name>, --with-mcp-server=<mcp-json-file>"
             echo -e "\033[0m"
             echo
             exit 1

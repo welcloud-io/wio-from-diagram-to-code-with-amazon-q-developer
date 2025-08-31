@@ -32,6 +32,11 @@
 
     - 6.1 [Split Drawio Diagram into CDK Constructs](#61-split-drawio-diagram-into-cdk-constructs)
 
+7. [Understand MCP with Pyhon Diagrams](#7-understand-mcp-with-pyhon-diagrams)
+
+    - 7.1 [Create Simplest MCP](#71-create-simplest-mcp)
+    - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
+
 # 1. Generate Mermaid Diagram from Code
 
 ## 1.1. Generate Mermaid - Architecture Diagram - from Code - Feedback App
@@ -339,4 +344,42 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 
 ### Result Example
 ![drawio split diagram into cdk constructs](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
+
+
+# 7. Understand MCP with Pyhon Diagrams
+
+## 7.1. Create Simplest MCP
+
+### [=> PREREQUISITES](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+```
+../init-playground.sh --with-starting-point-folder=empty --with-mcp-server=mcp-simplest.json
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+add 1 + 1
+```
+
+### Result Example
+![addition with mcp](./screenshots/addition-with-mcp.png)
+
+
+## 7.2. Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App
+
+### [=> PREREQUISITES](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+```
+../init-playground.sh --with-starting-point-folder=feedback-app-code --with-mcp-server=mcp-python-diagrams.json
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+create a diagram from the code in this folder
+```
+
+### Result Example
+![python diagrams from code with mcp](./screenshots/python-diagrams-from-code-with-mcp.png)
 

@@ -2,7 +2,7 @@
   "mcpServers": {
     "simplest-mcp-server": {
       "command": "python3",
-      "args": ["simplest-mcp-server.py"]
+      "args": ["mcp-simplest.py"]
     }
   }
 }

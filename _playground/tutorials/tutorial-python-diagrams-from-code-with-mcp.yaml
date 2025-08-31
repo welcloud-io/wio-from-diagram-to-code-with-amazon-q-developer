@@ -1,0 +1,9 @@
+tutorial:
+  title: "Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App"
+  starting_point:
+  - "--with-starting-point-folder=feedback-app-code"
+  - "--with-mcp-server=mcp-python-diagrams.json"
+  prompts:
+  - "create a diagram from the code in this folder"
+  result_example:
+  - "./screenshots/python-diagrams-from-code-with-mcp.png"
