@@ -18,7 +18,7 @@ def write_target_file(target_file, content):
 # BUILD TUTORIAL INDEX
 # -----------------------------------------------------------------------------
 class TutorialIndex:
-    def __init__(self, index_data):
+    def __init__(self, index_data, tutorial_page_folder='_playground/TUTORIALS'):
         self.content = []
         
         self.content.append("# Tutorial Index")
@@ -32,7 +32,7 @@ class TutorialIndex:
             section_name = section_info['index_section_name']
             section_anchor = f"{section_counter}-{section_name.lower().replace(' ', '-')}"
             
-            self.content.append(f"{section_counter}. [{section_name}](#{section_anchor})")
+            self.content.append(f"{section_counter}. [{section_name}]({tutorial_page_folder}#{section_anchor})")
             self.content.append("")
             
             sub_counter = 1
@@ -42,7 +42,7 @@ class TutorialIndex:
                 hierarchical_number = f"{section_counter}.{sub_counter}"
                 indexed_title = f"{hierarchical_number}. {title}"
                 anchor = indexed_title.lower().replace(' ', '-').replace('.', '')
-                self.content.append(f"    - {hierarchical_number} [{title}](#{anchor})")
+                self.content.append(f"    - {hierarchical_number} [{title}]({tutorial_page_folder}#{anchor})")
                 sub_counter += 1
             
             self.content.append("")
@@ -163,19 +163,21 @@ class TutorialPageBuilder:
         
         with open('tutorials/main-index.yaml', 'r') as f:
             self.index_data = yaml.safe_load(f)
+        
+        self.tutorial_index = TutorialIndex(self.index_data)
+        self.tutorial_sections = TutorialSections(self.index_data)
             
     def build(self):
         empty_target_file(self.target_file)
         
-        self.content += TutorialIndex(self.index_data).content
-        self.content += TutorialSections(self.index_data).content
+        self.content += self.tutorial_index.content
+        self.content += self.tutorial_sections.content
         
         write_target_file(self.target_file, self.content)
 
 # -----------------------------------------------------------------------------
 # HELPERS
 # -----------------------------------------------------------------------------
-
 class TutorialChecker:
 
     def __init__(self):
@@ -210,16 +212,33 @@ class TutorialChecker:
                         screenshot_dead_links.append((example, file))
 
         if screenshot_dead_links != []: print ('screenshot dead links', screenshot_dead_links)
-        
+
+# -----------------------------------------------------------------------------
+# UPDATE MAIN README INDEX
+# -----------------------------------------------------------------------------
+def update_readme_tutorial_index(tutorial_index_content):
+    # Replace section between '# Tutorial Index' and '# Prerequisites' in ../README.md
+    with open('../README.md', 'r') as f:
+        content = f.read()
+
+    start_marker = '# Tutorial Index'; end_marker = '# Prerequisites'
+    start_idx = content.find(start_marker); end_idx = content.find(end_marker)
+    if start_idx != -1 and end_idx != -1:
+        content = content[:start_idx] + '\n'.join(tutorial_index_content) + '\n\n' + content[end_idx:]
+
+    with open('../README.md', 'w') as f:
+        f.write(content)
+
 # -----------------------------------------------------------------------------
 # MAIN
 # -----------------------------------------------------------------------------
-        
 if __name__ == "__main__":
 
-    TutorialPageBuilder().build()
+    tutorial_page_builder = TutorialPageBuilder()
+    tutorial_page_builder.build()
 
     checker = TutorialChecker()
     checker.check_orphans()
     checker.check_screenshot_dead_links()
     
+    update_readme_tutorial_index(tutorial_page_builder.tutorial_index.content)
