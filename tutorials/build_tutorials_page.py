@@ -106,7 +106,7 @@ class TutorialSection:
 
         content.append("```")
 
-        command_to_execute = '../init-playground.sh'
+        command_to_execute = '../init-app-folder.sh'
         for starting_point in tutorial_properties['starting_point']:
             command_to_execute += f" {starting_point}"
         content.append(command_to_execute)

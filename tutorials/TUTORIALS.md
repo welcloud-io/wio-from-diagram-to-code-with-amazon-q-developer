@@ -47,7 +47,7 @@
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-code
+../init-app-folder.sh --with-starting-point-folder=feedback-app-code
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -67,7 +67,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-code
+../init-app-folder.sh --with-starting-point-folder=feedback-app-code
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -87,7 +87,7 @@ create a mermaid sequence diagram of the application
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-code
+../init-app-folder.sh --with-starting-point-folder=feedback-app-code
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -109,7 +109,7 @@ create a mermaid class diagram of the application
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-code
+../init-app-folder.sh --with-starting-point-folder=feedback-app-code
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -131,7 +131,7 @@ create a draw.io diagram in an xml format for this application (I want to use AW
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=empty
+../init-app-folder.sh --with-starting-point-folder=empty
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -171,7 +171,7 @@ end
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-diagram
+../init-app-folder.sh --with-starting-point-folder=feedback-app-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -191,7 +191,7 @@ generate application from the drawio diagram (I want the code of the lambdas to 
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=s3-notification-diagram
+../init-app-folder.sh --with-starting-point-folder=s3-notification-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -214,7 +214,7 @@ generate python cdk V2 template from diagram
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=data-pipeline-diagram
+../init-app-folder.sh --with-starting-point-folder=data-pipeline-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -237,7 +237,7 @@ generate infrastructure with CDK V2 (be aware that you have a step functions wor
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=deployment-pipeline
+../init-app-folder.sh --with-starting-point-folder=deployment-pipeline
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -257,7 +257,7 @@ can you generate the deployment pipeline with python cdk v2 from my diagram
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=api-gateway-diagram --with-q-rules
+../init-app-folder.sh --with-starting-point-folder=api-gateway-diagram --with-q-rules
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -279,7 +279,7 @@ generate application
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=lambda-app-hand-drawn-diagram
+../init-app-folder.sh --with-starting-point-folder=lambda-app-hand-drawn-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -305,7 +305,7 @@ can you generate application from the hand-drawn-architecture file (I want the c
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=ecs-app-hand-drawn-diagram
+../init-app-folder.sh --with-starting-point-folder=ecs-app-hand-drawn-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -334,7 +334,7 @@ can you generate application from the hand-drawn-architecture.jpg file (I want t
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-hand-drawn-diagram
+../init-app-folder.sh --with-starting-point-folder=feedback-app-hand-drawn-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -362,7 +362,7 @@ in the drawio diagram add a user desktop and separate cloufront/s3 data flow fro
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-diagram
+../init-app-folder.sh --with-starting-point-folder=feedback-app-diagram
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -384,7 +384,7 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=empty --with-mcp-server=mcp-simplest.json
+../init-app-folder.sh --with-starting-point-folder=empty --with-mcp-server=mcp-simplest.json
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
@@ -404,7 +404,7 @@ add 1 + 1
 ### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
 ```
-../init-playground.sh --with-starting-point-folder=feedback-app-code --with-mcp-server=mcp-python-diagrams.json
+../init-app-folder.sh --with-starting-point-folder=feedback-app-code --with-mcp-server=mcp-python-diagrams.json
 ```
 
 ### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
