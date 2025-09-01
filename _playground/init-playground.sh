@@ -110,17 +110,17 @@ for arg in "$@"; do
         --with-starting-point-folder=*)
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
-                cp -r ../tutorial-starting-points/$folder/* . 
+                cp -r ../tutorials/tutorial-starting-points/$folder/* . 
             fi
         ;;
         --with-q-rules)
-            cp -r ../tutorial-starting-points/q-rules/.amazonq .
+            cp -r ../tutorials/tutorial-starting-points/q-rules/.amazonq .
             ;;
         --with-mcp-server=*)
             mcp_json_file="${arg#*=}"
-            cp ../tutorial-starting-points/mcp-servers/$mcp_json_file ~/.aws/amazonq/mcp.json
-            if [ -f "../tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py" ]; then
-                cp ../tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py .
+            cp ../tutorials/tutorial-starting-points/mcp-servers/$mcp_json_file ~/.aws/amazonq/mcp.json
+            if [ -f "../tutorials/tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py" ]; then
+                cp ../tutorials/tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py .
             fi                        
         ;;
         --hard|--no-clear)
@@ -143,4 +143,4 @@ done
 # -----------------------------------------------------------------------------
 
 clear
-../show_tutorial_prompts.py "$@"
+../tutorials/show_tutorial_prompts.py "$@"
