@@ -168,8 +168,6 @@ $> ./start-vscode-tutorial-window.sh
 
 ![new-tutorial-window](./tutorials/screenshots/create-new-tutorial-window.png)
 
-## 2. Follow tutorial instructions in the tutorial readme
+## 2. Follow tutorial instructions in the tutorial page
 
-[CLASSIC TUTORIALS INSTRUCTIONS](_playground/README.md)
-
-[MORE TUTORIALS](_playground/README-More.md)
+[TUTORIAL PAGE](./tutorials/TUTORIALS.md)
