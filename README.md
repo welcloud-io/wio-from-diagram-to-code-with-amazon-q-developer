@@ -170,4 +170,4 @@ $> ./start-vscode-tutorial-window.sh
 
 ## 2. Follow tutorial instructions in the tutorial page
 
-[TUTORIAL PAGE](./tutorials/TUTORIALS.md)
+[ => TUTORIAL PAGE](./tutorials/TUTORIALS.md)
