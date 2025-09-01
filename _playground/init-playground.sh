@@ -110,17 +110,17 @@ for arg in "$@"; do
         --with-starting-point-folder=*)
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
-                cp -r ../../tutorials-starting-points/$folder/* . 
+                cp -r ../tutorial-starting-points/$folder/* . 
             fi
         ;;
         --with-q-rules)
-            cp -r ../../tutorials-starting-points/q-rules/.amazonq .
+            cp -r ../tutorial-starting-points/q-rules/.amazonq .
             ;;
         --with-mcp-server=*)
             mcp_json_file="${arg#*=}"
-            cp ../../tutorials-starting-points/mcp-servers/$mcp_json_file ~/.aws/amazonq/mcp.json
-            if [ -f "../../tutorials-starting-points/mcp-servers/${mcp_json_file%.json}.py" ]; then
-                cp ../../tutorials-starting-points/mcp-servers/${mcp_json_file%.json}.py .
+            cp ../tutorial-starting-points/mcp-servers/$mcp_json_file ~/.aws/amazonq/mcp.json
+            if [ -f "../tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py" ]; then
+                cp ../tutorial-starting-points/mcp-servers/${mcp_json_file%.json}.py .
             fi                        
         ;;
         --hard|--no-clear)
