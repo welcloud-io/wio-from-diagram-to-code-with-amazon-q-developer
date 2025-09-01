@@ -82,7 +82,7 @@ class TestShowTutorialPrompts(unittest.TestCase):
     def test_output_with_real_file(self):
 
         filtered_list_of_files = [
-            'tutorials/tutorial-mermaid-architecture-diagram-from-code.yaml'
+            'tutorial-descriptions/tutorial-mermaid-architecture-diagram-from-code.yaml'
         ]
         
         content = tutorial_prompts(filtered_list_of_files[0])

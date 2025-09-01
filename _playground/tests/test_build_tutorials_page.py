@@ -145,8 +145,8 @@ class TestBuildTutorialsPage(unittest.TestCase):
         checker = TutorialChecker()
         
         # Verify file2.yaml is identified as orphan
-        self.assertIn('tutorials/file1.yaml', checker.tutorial_files)
-        self.assertNotIn('tutorials/file2.yaml', checker.tutorial_files)
+        self.assertIn('tutorial-descriptions/file1.yaml', checker.tutorial_files)
+        self.assertNotIn('tutorial-descriptions/file2.yaml', checker.tutorial_files)
 
     @patch('os.path.exists')
     @patch('builtins.open', new_callable=mock_open)

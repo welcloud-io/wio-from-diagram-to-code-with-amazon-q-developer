@@ -21,7 +21,7 @@ class TutorialIndex:
     def __init__(self, tutorial_page_folder=''):
         self.content = []
 
-        with open('tutorials/main-index.yaml', 'r') as f:
+        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
             index_data = yaml.safe_load(f)
         
         self.content.append("# Tutorial Index")
@@ -40,7 +40,7 @@ class TutorialIndex:
             
             sub_counter = 1
             for tutorial_file in section_info['indexed_tutorials']:
-                full_path = f"tutorials/{tutorial_file}"
+                full_path = f"tutorial-descriptions/{tutorial_file}"
                 title = self.get_tutorial_title(full_path)
                 hierarchical_number = f"{section_counter}.{sub_counter}"
                 indexed_title = f"{hierarchical_number}. {title}"
@@ -63,7 +63,7 @@ class TutorialIndex:
 # -----------------------------------------------------------------------------
 class TutorialSection:
     def __init__(self, tutorial_file, index_number):
-        full_path = f"tutorials/{tutorial_file}"
+        full_path = f"tutorial-descriptions/{tutorial_file}"
         with open(full_path, 'r') as file:
             self.tutorial_data = yaml.safe_load(file)
         
@@ -144,7 +144,7 @@ class TutorialSections:
         self.content = []
         section_counter = 1
 
-        with open('tutorials/main-index.yaml', 'r') as f:
+        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
             index_data = yaml.safe_load(f)
 
         for section in index_data['tutorial_index']:
@@ -171,7 +171,7 @@ class TutorialPageBuilder:
         self.target_file = target_file
         self.content = []
         
-        with open('tutorials/main-index.yaml', 'r') as f:
+        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
             self.index_data = yaml.safe_load(f)
         
         self.tutorial_index = TutorialIndex()
@@ -191,21 +191,21 @@ class TutorialPageBuilder:
 class TutorialChecker:
 
     def __init__(self):
-        with open('tutorials/main-index.yaml', 'r') as f:
+        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
             index_data = yaml.safe_load(f)
 
         tutorial_files = []
         for section in index_data['tutorial_index']:
             for tutorial_file in section['index_section']['indexed_tutorials']:
-                tutorial_files.append(f"tutorials/{tutorial_file}")
+                tutorial_files.append(f"tutorial-descriptions/{tutorial_file}")
         
         self.tutorial_files = tutorial_files
 
     def check_orphans(self):
-        files = [f for f in os.listdir('tutorials') if f != 'main-index.yaml']    # find all files that are not in the index
+        files = [f for f in os.listdir('tutorial-descriptions') if f != 'main-index.yaml']    # find all files that are not in the index
         orphan_files = []
         for file in files:
-            if f"tutorials/{file}" not in self.tutorial_files:
+            if f"tutorial-descriptions/{file}" not in self.tutorial_files:
                 orphan_files.append(file)
 
         if orphan_files != []: print ('orphans tutorials', orphan_files)
