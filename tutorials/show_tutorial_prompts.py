@@ -58,5 +58,5 @@ def terminal_formated_prompts_related_to_tutorial_configuration(tutorials_folder
 
 if __name__ == '__main__':
     tutorial_configuration = sys.argv[1]
-    content = terminal_formated_prompts_related_to_tutorial_configuration('../tutorials/tutorial-descriptions', tutorial_configuration)
+    content = terminal_formated_prompts_related_to_tutorial_configuration('../../tutorials/tutorial-descriptions', tutorial_configuration)
     print('\n'.join(content))

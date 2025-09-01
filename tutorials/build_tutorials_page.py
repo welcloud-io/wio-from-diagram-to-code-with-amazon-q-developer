@@ -92,7 +92,7 @@ class TutorialSection:
         content = []
 
         content.append("### Install Prerequisites if not done yet")
-        content.append("#### [=> Install Prerequisites](../../README.md#prerequisites)")
+        content.append("#### [=> Install Prerequisites](../README.md#prerequisites)")
         content.append("")
         
         return content
@@ -102,7 +102,7 @@ class TutorialSection:
 
         content.append("### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
 
-        content.append("#### [=> Start tutorial playground](../../README.md#1-start-tutorial-window)")
+        content.append("#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)")
 
         content.append("```")
 
@@ -228,7 +228,7 @@ class TutorialChecker:
 # -----------------------------------------------------------------------------
 def update_readme_tutorial_index(tutorial_index_content):
     # Replace section between '# Tutorial Index' and '# Prerequisites' in ../README.md
-    with open('../../README.md', 'r') as f:
+    with open('../README.md', 'r') as f:
         content = f.read()
 
     start_marker = '# Tutorial Index'; end_marker = '# Prerequisites'
@@ -236,7 +236,7 @@ def update_readme_tutorial_index(tutorial_index_content):
     if start_idx != -1 and end_idx != -1:
         content = content[:start_idx] + '\n'.join(tutorial_index_content) + '\n\n' + content[end_idx:]
 
-    with open('../../README.md', 'w') as f:
+    with open('../README.md', 'w') as f:
         f.write(content)
 
 # -----------------------------------------------------------------------------
@@ -251,5 +251,5 @@ if __name__ == "__main__":
     checker.check_orphans()
     checker.check_screenshot_dead_links()
     
-    tutorial_index = TutorialIndex('_playground/tutorials/TUTORIALS.md')
+    tutorial_index = TutorialIndex('tutorials/TUTORIALS.md')
     update_readme_tutorial_index(tutorial_index.content)

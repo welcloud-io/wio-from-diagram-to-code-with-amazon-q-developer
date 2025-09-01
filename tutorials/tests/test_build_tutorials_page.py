@@ -21,7 +21,7 @@ class TestBuildTutorialsPage(unittest.TestCase):
     def test_tutorial_section_prerequisites(self):
         with patch('builtins.open', mock_open(read_data='tutorial:\n  title: Test\n  starting_point: [arg1]\n  prompts: [prompt1]\n  result_example: [test.png]')):
             section = TutorialSection('test.yaml', '1')
-            self.assertIn('#### [=> Install Prerequisites](../../README.md#prerequisites)', section.content)
+            self.assertIn('#### [=> Install Prerequisites](../README.md#prerequisites)', section.content)
 
     def test_tutorial_section_starting_point(self):
         with patch('builtins.open', mock_open(read_data='tutorial:\n  title: Test\n  starting_point: [arg1, arg2]\n  prompts: [prompt1]\n  result_example: [test.png]')):
