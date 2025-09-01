@@ -1,5 +1,9 @@
 # /bin/bash
 
+echo "-----------------"
+echo "INSTALLING DOCKER"
+echo "-----------------"
+
 # Update package index
 sudo apt update
 

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "------------------"
+echo "SETTING UP VS CODE"
+echo "------------------"
+
 # Install plugins
 code --install-extension bierner.markdown-mermaid
 code --install-extension amazonwebservices.amazon-q-vscode

@@ -116,7 +116,7 @@ Then:
 **Be aware that this may not work** if your environment has some settings already
 
 ```bash
-$> ./setup-vscode.sh
+$> ./setup/vs-code.sh
 ```
 
 Once done, connect to Amazon Q Developer using your Builder ID (folow the procedure in VS Code)
@@ -139,7 +139,7 @@ To test MCP servers tutorials you should install uv & fastmcp.
 You can use python pip or this script.
 
 ```
-$> ./install-mcp-utils.sh
+$> ./setup/mcp-utils.sh
 ```
 
 #### Install Q CLI
@@ -151,7 +151,7 @@ https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing
 OR you can attempt using this script in you terminal (n.b. it's only been tested on Linux Ubuntu 22-04):
 
 ```bash
-$> ./install-q-cli.sh
+$> ./setup/q-cli.sh
 ```
 
 # Start tutorials

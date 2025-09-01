@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "----------------"
+echo "INSTALLING Q CLI"
+echo "----------------"
+
 # Verify q cli is not installed or version is too old
 if [ $(which q) ]; then
     version=$(q --version | cut -d' ' -f2)
