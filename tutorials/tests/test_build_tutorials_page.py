@@ -7,8 +7,7 @@ import yaml
 from unittest.mock import patch, mock_open, MagicMock
 from build_tutorials_page import (
     empty_target_file, write_target_file, TutorialIndex, TutorialSection,
-    TutorialSections, TutorialPageBuilder, TutorialChecker,
-    update_readme_tutorial_index
+    TutorialSections, TutorialPageBuilder, TutorialChecker
 )
 
 

@@ -247,22 +247,6 @@ class TutorialChecker:
         if screenshot_dead_links != []: print ('screenshot dead links', screenshot_dead_links)
 
 # -----------------------------------------------------------------------------
-# UPDATE MAIN README INDEX
-# -----------------------------------------------------------------------------
-def update_readme_tutorial_index(tutorial_index_content, target_file):
-    # Replace section between '# Tutorial Index' and '# Prerequisites' in ../README.md
-    with open(target_file, 'r') as f:
-        content = f.read()
-
-    start_marker = '# Tutorial Index'; end_marker = '# Prerequisites'
-    start_idx = content.find(start_marker); end_idx = content.find(end_marker)
-    if start_idx != -1 and end_idx != -1:
-        content = content[:start_idx] + '\n'.join(tutorial_index_content) + '\n\n' + content[end_idx:]
-
-    with open(target_file, 'w') as f:
-        f.write(content)
-
-# -----------------------------------------------------------------------------
 # MAIN
 # -----------------------------------------------------------------------------
 if __name__ == "__main__":
