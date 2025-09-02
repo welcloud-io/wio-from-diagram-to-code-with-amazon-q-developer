@@ -1,0 +1,7 @@
+tutorial_index:
+  - index_section:
+      index_section_name: Generate Mermaid Diagram from Code
+      indexed_tutorials:
+      - 'tutorial-mermaid-architecture-diagram-from-code.yaml'
+      - 'tutorial-mermaid-sequence-diagram-from-code.yaml'
+      - 'tutorial-mermaid-class-diagram-from-code.yaml'

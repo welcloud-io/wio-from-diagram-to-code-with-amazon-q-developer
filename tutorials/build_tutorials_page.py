@@ -18,25 +18,26 @@ def write_target_file(target_file, content):
 # BUILD TUTORIAL INDEX
 # -----------------------------------------------------------------------------
 class TutorialIndex:
-    def __init__(self, tutorial_page_folder=''):
-        self.content = []
-
-        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
-            index_data = yaml.safe_load(f)
+    def __init__(self, index_file):
+        with open(index_file, 'r') as f:
+            self.index_data = yaml.safe_load(f)
         
-        self.content.append("# Tutorial Index")
-        self.content.append("")
+    def markdown(self, tutorial_page=''):
+        content = []
+        
+        content.append("# Tutorial Index")
+        content.append("")
         
         section_counter = 1
         tutorial_counter = 1
         
-        for section in index_data['tutorial_index']:
+        for section in self.index_data['tutorial_index']:
             section_info = section['index_section']
             section_name = section_info['index_section_name']
             section_anchor = f"{section_counter}-{section_name.lower().replace(' ', '-')}"
             
-            self.content.append(f"{section_counter}. [{section_name}]({tutorial_page_folder}#{section_anchor})")
-            self.content.append("")
+            content.append(f"{section_counter}. [{section_name}]({tutorial_page}#{section_anchor})")
+            content.append("")
             
             sub_counter = 1
             for tutorial_file in section_info['indexed_tutorials']:
@@ -45,11 +46,13 @@ class TutorialIndex:
                 hierarchical_number = f"{section_counter}.{sub_counter}"
                 indexed_title = f"{hierarchical_number}. {title}"
                 anchor = indexed_title.lower().replace(' ', '-').replace('.', '')
-                self.content.append(f"    - {hierarchical_number} [{title}]({tutorial_page_folder}#{anchor})")
+                content.append(f"    - {hierarchical_number} [{title}]({tutorial_page}#{anchor})")
                 sub_counter += 1
             
-            self.content.append("")
+            content.append("")
             section_counter += 1
+        
+        return content
 
     def get_tutorial_title(self, tutorial_file):
         title = ''
@@ -63,22 +66,24 @@ class TutorialIndex:
 # -----------------------------------------------------------------------------
 class TutorialSection:
     def __init__(self, tutorial_file, index_number):
-        full_path = f"tutorial-descriptions/{tutorial_file}"
-        with open(full_path, 'r') as file:
+        with open(f"tutorial-descriptions/{tutorial_file}", 'r') as file:
             self.tutorial_data = yaml.safe_load(file)
         
         self.index_number = index_number
 
-        self.content = []
+    def markdown(self):
+        content = []
             
         for tutorial_key, tutorial_properties in self.tutorial_data.items():
-            self.content += self._title(tutorial_properties, self.index_number)
-            self.content += self._prerequisites()
-            self.content += self._starting_point(tutorial_properties)
-            self.content += self._prompts(tutorial_properties)
-            self.content += self._results(tutorial_properties)
-            self.content.append("")
-        
+            content += self._title(tutorial_properties, self.index_number)
+            content += self._prerequisites()
+            content += self._starting_point(tutorial_properties)
+            content += self._prompts(tutorial_properties)
+            content += self._results(tutorial_properties)
+            content.append("")
+
+        return content
+
     def _title(self, tutorial_properties, index_number):
         content = []
         title = tutorial_properties.get('title', '')
@@ -140,50 +145,68 @@ class TutorialSection:
         return content
         
 class TutorialSections:
-    def __init__(self):
-        self.content = []
+    def __init__(self, index_file):
+        with open(index_file, 'r') as f:
+            self.index_data = yaml.safe_load(f)
+
+    def markdown(self):
+        content = []
         section_counter = 1
 
-        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
-            index_data = yaml.safe_load(f)
-
-        for section in index_data['tutorial_index']:
+        for section in self.index_data['tutorial_index']:
             section_info = section['index_section']
             section_name = section_info['index_section_name']
             
-            self.content.append(f"# {section_counter}. {section_name}")
-            self.content.append("")
+            content.append(f"# {section_counter}. {section_name}")
+            content.append("")
             
             sub_counter = 1
             for tutorial_file in section_info['indexed_tutorials']:
                 hierarchical_number = f"{section_counter}.{sub_counter}"
-                self.content += TutorialSection(tutorial_file, hierarchical_number).content
+                content += TutorialSection(tutorial_file, hierarchical_number).markdown()
                 sub_counter += 1
             
             section_counter += 1
+        
+        return content
             
 # -----------------------------------------------------------------------------
 # BUILD TUTORIAL PAGE
 # -----------------------------------------------------------------------------
 class TutorialPageBuilder:
     
-    def __init__(self, target_file='TUTORIALS.md'):
-        self.target_file = target_file
-        self.content = []
-        
-        with open('tutorial-descriptions/main-index.yaml', 'r') as f:
-            self.index_data = yaml.safe_load(f)
-        
-        self.tutorial_index = TutorialIndex()
-        self.tutorial_sections = TutorialSections()
+    def __init__(self, index_file):       
+        self.tutorial_index = TutorialIndex(index_file)
+        self.tutorial_sections = TutorialSections(index_file)
             
-    def build(self):
-        empty_target_file(self.target_file)
+    def build(self, target_file):
+        content = []
+
+        empty_target_file(target_file)
         
-        self.content += self.tutorial_index.content
-        self.content += self.tutorial_sections.content
+        content += self.tutorial_index.markdown()
+        content += self.tutorial_sections.markdown()
         
-        write_target_file(self.target_file, self.content)
+        write_target_file(target_file, content)
+
+    def update_readme_index(self, target_file, tutorial_page):
+        # Replace section between '# Tutorial Index' and '# Prerequisites' in ../README.md
+        with open(target_file, 'r') as f:
+            content = f.read()
+
+        tutorial_index_content = self.tutorial_index.markdown(tutorial_page)
+
+        start_marker = '# Tutorial Index'; end_marker = '# Prerequisites'
+        start_idx = content.find(start_marker); end_idx = content.find(end_marker)
+        if start_idx != -1 and end_idx != -1:
+            content = content[:start_idx] + '\n'.join(tutorial_index_content) + '\n\n' + content[end_idx:]
+
+        with open(target_file, 'w') as f:
+            f.write(content)
+
+    # def update_readme_index(self, target_file, tutorial_page):
+    #     tutorial_index_content = self.tutorial_index.markdown(tutorial_page)
+    #     self.update_readme_tutorial_index(tutorial_index_content, target_file)
 
 # -----------------------------------------------------------------------------
 # HELPERS
@@ -226,9 +249,9 @@ class TutorialChecker:
 # -----------------------------------------------------------------------------
 # UPDATE MAIN README INDEX
 # -----------------------------------------------------------------------------
-def update_readme_tutorial_index(tutorial_index_content):
+def update_readme_tutorial_index(tutorial_index_content, target_file):
     # Replace section between '# Tutorial Index' and '# Prerequisites' in ../README.md
-    with open('../README.md', 'r') as f:
+    with open(target_file, 'r') as f:
         content = f.read()
 
     start_marker = '# Tutorial Index'; end_marker = '# Prerequisites'
@@ -236,7 +259,7 @@ def update_readme_tutorial_index(tutorial_index_content):
     if start_idx != -1 and end_idx != -1:
         content = content[:start_idx] + '\n'.join(tutorial_index_content) + '\n\n' + content[end_idx:]
 
-    with open('../README.md', 'w') as f:
+    with open(target_file, 'w') as f:
         f.write(content)
 
 # -----------------------------------------------------------------------------
@@ -244,12 +267,10 @@ def update_readme_tutorial_index(tutorial_index_content):
 # -----------------------------------------------------------------------------
 if __name__ == "__main__":
 
-    tutorial_page_builder = TutorialPageBuilder()
-    tutorial_page_builder.build()
+    tutorial_page_builder = TutorialPageBuilder(index_file='tutorial-descriptions/main-index.yaml')
+    tutorial_page_builder.build(target_file='TUTORIALS.md')
+    tutorial_page_builder.update_readme_index(target_file='../README.md', tutorial_page='tutorials/TUTORIALS.md')
 
     checker = TutorialChecker()
     checker.check_orphans()
     checker.check_screenshot_dead_links()
-    
-    tutorial_index = TutorialIndex('tutorials/TUTORIALS.md')
-    update_readme_tutorial_index(tutorial_index.content)
