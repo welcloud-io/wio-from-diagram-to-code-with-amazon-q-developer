@@ -31,8 +31,9 @@
 6. [Transform Drawio Diagram](#6-transform-drawio-diagram)
 
     - 6.1 [Split Drawio Diagram into CDK Constructs](#61-split-drawio-diagram-into-cdk-constructs)
+    - 6.2 [Generate C4 Model from AWS Layered Architecture](#62-generate-c4-model-from-aws-layered-architecture)
 
-7. [Understand MCP with Pyhon Diagrams](#7-understand-mcp-with-pyhon-diagrams)
+7. [Understand MCP](#7-understand-mcp)
 
     - 7.1 [Create Simplest MCP](#71-create-simplest-mcp)
     - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
@@ -374,7 +375,27 @@ modify the drawio diagram to split the architecture diagram into well defined cd
 ![drawio split diagram into cdk constructs](./screenshots/drawio-split-diagram-into-cdk-constructs.png)
 
 
-# 7. Understand MCP with Pyhon Diagrams
+## 6.2. Generate C4 Model from AWS Layered Architecture
+
+### Install Prerequisites if not done yet
+#### [=> Install Prerequisites](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
+```
+../init-app-folder.sh --with-starting-point-folder=layered-architecture-diagram
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+@diagram.drawio.xml translate this diagram into c4 model diagrams using drawio
+```
+
+### Result Example
+![drawio c4 model from aws layered architeture](./screenshots/drawio-c4-model-from-aws-layered-architeture.png)
+
+
+# 7. Understand MCP
 
 ## 7.1. Create Simplest MCP
 

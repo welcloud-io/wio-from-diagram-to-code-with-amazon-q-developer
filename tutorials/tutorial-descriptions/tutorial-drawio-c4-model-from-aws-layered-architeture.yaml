@@ -1,0 +1,8 @@
+tutorial:
+  title: "Generate C4 Model from AWS Layered Architecture"
+  starting_point:
+  - "--with-starting-point-folder=layered-architecture-diagram"
+  prompts:
+  - "@diagram.drawio.xml translate this diagram into c4 model diagrams using drawio"
+  result_example:
+  - "./screenshots/drawio-c4-model-from-aws-layered-architeture.png"

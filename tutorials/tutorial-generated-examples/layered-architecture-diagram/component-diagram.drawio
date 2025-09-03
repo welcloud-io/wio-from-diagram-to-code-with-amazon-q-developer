@@ -1,0 +1,92 @@
+<mxfile host="65bd71144e">
+    <diagram id="ComponentDiagram" name="ECS Components">
+        <mxGraphModel dx="1609" dy="852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ecsServiceBoundary" value="ECS Service" style="fillColor=none;strokeColor=#326ce5;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#326ce5;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="364" width="400" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecsTask1" value="ECS Task 1&lt;br&gt;&lt;i&gt;[Component: Docker Container]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Application instance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#85BBF0;fontColor=#000000;align=center;arcSize=10;strokeColor=#78A8D8;metaEdit=1;resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="464" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecsTask2" value="ECS Task 2&lt;br&gt;&lt;i&gt;[Component: Docker Container]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Application instance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#85BBF0;fontColor=#000000;align=center;arcSize=10;strokeColor=#78A8D8;metaEdit=1;resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="464" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="loadBalancer" value="Application Load Balancer&lt;br&gt;&lt;i&gt;[Container: AWS ALB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Distributes traffic" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="234" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="database" value="Database&lt;br&gt;&lt;i&gt;[Container: AWS RDS MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Data storage" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="714" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="loadBalancer" target="ecsTask1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1_label" value="Distributes requests to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel1" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="loadBalancer" target="ecsTask2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2_label" value="Distributes requests to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel2" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="ecsTask1" target="database" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3_label" value="Reads from and writes to&lt;br&gt;&lt;i&gt;[MySQL Protocol]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel3" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="ecsTask2" target="database" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4_label" value="Reads from and writes to&lt;br&gt;&lt;i&gt;[MySQL Protocol]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel4" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="loadBalancer">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Users&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;End users of the application" style="html=1;fontSize=18;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="14" width="200" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="DatabaseComponents" name="Database Components">
+        <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <!-- Database Boundary -->
+                <mxCell id="databaseBoundary" value="Database" style="fillColor=none;strokeColor=#326ce5;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#326ce5;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="300" width="400" height="200" as="geometry"/>
+                </mxCell>
+                <!-- Primary DB -->
+                <mxCell id="primaryDb" value="Primary MySQL Instance&lt;br&gt;&lt;i&gt;[Component: MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Main database instance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#85BBF0;fontColor=#000000;align=center;arcSize=10;strokeColor=#78A8D8;metaEdit=1;resizable=0;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="360" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <!-- Replica DB -->
+                <mxCell id="replicaDb" value="Replica MySQL Instance&lt;br&gt;&lt;i&gt;[Component: MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Read replica database" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#85BBF0;fontColor=#000000;align=center;arcSize=10;strokeColor=#78A8D8;metaEdit=1;resizable=0;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="360" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <!-- ECS Service -->
+                <mxCell id="ecsService" value="ECS Service&lt;br&gt;&lt;i&gt;[Container: AWS ECS]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Application containers" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="120" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <!-- Relationships -->
+                <mxCell id="rel1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="ecsService" target="primaryDb">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1_label" value="Reads from and writes to&lt;br&gt;&lt;i&gt;[MySQL Protocol]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=10;" vertex="1" connectable="0" parent="rel1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="primaryDb" target="replicaDb">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2_label" value="Replicates to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=10;" vertex="1" connectable="0" parent="rel2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

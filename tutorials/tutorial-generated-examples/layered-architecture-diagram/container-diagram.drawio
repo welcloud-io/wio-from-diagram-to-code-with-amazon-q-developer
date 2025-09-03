@@ -1,0 +1,62 @@
+<mxfile host="65bd71144e">
+    <diagram id="ContainerDiagram" name="Container Diagram">
+        <mxGraphModel dx="1893" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="users" value="Users&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;End users of the application" style="html=1;fontSize=18;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="38" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="webAppBoundary" value="Web Application" style="fillColor=none;strokeColor=#326ce5;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#326ce5;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="248" width="960" height="572" as="geometry"/>
+                </mxCell>
+                <mxCell id="website" value="Website&lt;br&gt;&lt;i&gt;[Container: Web Browser]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Web application frontend" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                    <mxGeometry x="140" y="340" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="loadBalancer" value="Application Load Balancer&lt;br&gt;&lt;i&gt;[Container: AWS ALB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Distributes traffic across application instances" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                    <mxGeometry x="490" y="340" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecsService" value="ECS Service&lt;br&gt;&lt;i&gt;[Container: AWS ECS]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Container orchestration service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                    <mxGeometry x="500" y="508" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="database" value="Database&lt;br&gt;&lt;i&gt;[Container: AWS RDS MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Stores application data" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                    <mxGeometry x="500" y="690" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="users" target="website" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1_label" value="Uses&lt;br&gt;&lt;i&gt;[HTTPS]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=18;" parent="rel1" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-9" y="23" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="users" target="loadBalancer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2_label" value="Accesses via&lt;br&gt;&lt;i&gt;[HTTPS]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=18;" parent="rel2" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2" y="19" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="website" target="loadBalancer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3_label" value="Routes traffic through" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=18;" parent="rel3" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="loadBalancer" target="ecsService" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4_label" value="Distributes requests to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=18;" parent="rel4" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="ecsService" target="database" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel5_label" value="Reads from and writes to&lt;br&gt;&lt;i&gt;[MySQL Protocol]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=18;" parent="rel5" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

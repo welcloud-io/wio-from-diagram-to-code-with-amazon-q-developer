@@ -31,8 +31,9 @@ tutorial_index:
       index_section_name: "Transform Drawio Diagram"
       indexed_tutorials:        
       - 'tutorial-drawio-split-diagram-into-cdk-constructs.yaml'
+      - 'tutorial-drawio-c4-model-from-aws-layered-architeture.yaml'
   - index_section:
-      index_section_name: "Understand MCP with Pyhon Diagrams"
+      index_section_name: "Understand MCP"
       indexed_tutorials:        
       - 'tutorial-addition-with-mcp.yaml'
       - 'tutorial-python-diagrams-from-code-with-mcp.yaml'

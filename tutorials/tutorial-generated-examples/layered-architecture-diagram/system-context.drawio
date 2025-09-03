@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="SystemContext" name="System Context">
+        <mxGraphModel dx="1609" dy="852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="users" value="Users&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;End users of the application" style="html=1;fontSize=15;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="30" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <object label="Value focused Team 1&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Development team" id="team1">
+                    <mxCell style="html=1;fontSize=15;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+                        <mxGeometry x="60" y="530" width="200" height="180" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Value focused Team 2&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Development team" id="team2">
+                    <mxCell style="html=1;fontSize=15;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+                        <mxGeometry x="505" y="530" width="200" height="180" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Value Focused Team 3&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Development team" id="team3">
+                    <mxCell style="html=1;fontSize=15;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+                        <mxGeometry x="900" y="520" width="200" height="180" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="webApp" value="Web Application&lt;br&gt;&lt;i&gt;[Software System]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Main application system serving users" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#1061B0;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0D5091;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                    <mxGeometry x="485" y="300" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="users" target="webApp" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="685" y="220" as="sourcePoint"/>
+                        <mxPoint x="605" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel1_label" value="Uses&lt;br&gt;&lt;i&gt;[HTTPS]&lt;/i&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel1" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="team1" target="webApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2_label" value="Develops and maintains" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel2" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="team2" target="webApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3_label" value="Develops and maintains" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel3" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="team3" target="webApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4_label" value="Develops and maintains" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel4" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=none;endFill=0;dashed=1;" parent="1" source="team1" target="team2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel5_label" value="Communicates with" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel5" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=none;endFill=0;dashed=1;" parent="1" source="team2" target="team3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel6_label" value="Communicates with" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel6" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

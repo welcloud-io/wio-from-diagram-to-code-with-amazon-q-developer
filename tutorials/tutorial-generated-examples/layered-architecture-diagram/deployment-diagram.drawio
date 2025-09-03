@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="DeploymentDiagram" name="Deployment Diagram">
+        <mxGraphModel dx="1609" dy="852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="awsAccount" value="AWS Account" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_account;strokeColor=#CD2264;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#CD2264;dashed=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1320" height="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="vpc" value="VPC" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;strokeColor=#8C4FFF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="awsAccount" vertex="1">
+                    <mxGeometry x="40" y="40" width="1240" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="publicSubnet1" value="Public Subnet 1 - Availability Zone A" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=15;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#7AA116;fillColor=#F2F6E8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#248814;dashed=0;" parent="vpc" vertex="1">
+                    <mxGeometry x="40" y="40" width="280" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="website1" value="Website&lt;br&gt;&lt;i&gt;[Container: Web Browser]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Frontend instance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="publicSubnet1" vertex="1">
+                    <mxGeometry x="40" y="60" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="loadBalancer1" value="Load Balancer&lt;br&gt;&lt;i&gt;[Container: AWS ALB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Traffic distribution" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="publicSubnet1" vertex="1">
+                    <mxGeometry x="40" y="180" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="publicSubnet2" value="Public Subnet 2 - Availability Zone B" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=15;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#7AA116;fillColor=#F2F6E8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#248814;dashed=0;" parent="vpc" vertex="1">
+                    <mxGeometry x="360" y="40" width="280" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="website2" value="Website&lt;br&gt;&lt;i&gt;[Container: Web Browser]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Frontend instance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="publicSubnet2" vertex="1">
+                    <mxGeometry x="40" y="60" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="loadBalancer2" value="Load Balancer&lt;br&gt;&lt;i&gt;[Container: AWS ALB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Traffic distribution" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="publicSubnet2" vertex="1">
+                    <mxGeometry x="40" y="180" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="privateSubnet1" value="Private Subnet 1 - Availability Zone A" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=15;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="vpc" vertex="1">
+                    <mxGeometry x="40" y="400" width="280" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecsService1" value="ECS Service&lt;br&gt;&lt;i&gt;[Container: AWS ECS]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Container orchestration" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="privateSubnet1" vertex="1">
+                    <mxGeometry x="40" y="60" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="database1" value="Database&lt;br&gt;&lt;i&gt;[Container: AWS RDS MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Primary database" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="privateSubnet1" vertex="1">
+                    <mxGeometry x="40" y="180" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="privateSubnet2" value="Private Subnet 2 - Availability Zone B" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=15;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="vpc" vertex="1">
+                    <mxGeometry x="360" y="400" width="280" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecsService2" value="ECS Service&lt;br&gt;&lt;i&gt;[Container: AWS ECS]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Container orchestration" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="privateSubnet2" vertex="1">
+                    <mxGeometry x="40" y="60" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="database2" value="Database&lt;br&gt;&lt;i&gt;[Container: AWS RDS MySQL]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Replica database" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;labelBackgroundColor=none;fillColor=#438DD5;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#3C7FC0;metaEdit=1;resizable=0;" parent="privateSubnet2" vertex="1">
+                    <mxGeometry x="40" y="180" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="loadBalancer1" target="ecsService1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1_label" value="Routes to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel1" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="loadBalancer2" target="ecsService2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2_label" value="Routes to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel2" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#404040;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="database1" target="database2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3_label" value="Replicates to" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="rel3" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -48,8 +48,9 @@ This demonstrates how you can generate diagrams from an application code, but al
 6. [Transform Drawio Diagram](tutorials/TUTORIALS.md#6-transform-drawio-diagram)
 
     - 6.1 [Split Drawio Diagram into CDK Constructs](tutorials/TUTORIALS.md#61-split-drawio-diagram-into-cdk-constructs)
+    - 6.2 [Generate C4 Model from AWS Layered Architecture](tutorials/TUTORIALS.md#62-generate-c4-model-from-aws-layered-architecture)
 
-7. [Understand MCP with Pyhon Diagrams](tutorials/TUTORIALS.md#7-understand-mcp-with-pyhon-diagrams)
+7. [Understand MCP](tutorials/TUTORIALS.md#7-understand-mcp)
 
     - 7.1 [Create Simplest MCP](tutorials/TUTORIALS.md#71-create-simplest-mcp)
     - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](tutorials/TUTORIALS.md#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
