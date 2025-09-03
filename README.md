@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=QuAlzUVqi7I&t=4293s
 
 This demonstrates how you can generate diagrams from an application code, but also how to generate code from diagrams using Amazon Q Developer in the Visual Studio Code IDE.
 
-![test](./tutorials/screenshots/vscode-bigpicture.png)
+![test](./tutorials/tutorial-screenshots/vscode-bigpicture.png)
 
 ---
 
@@ -167,7 +167,7 @@ That means you will have a blank playground where you will import a tutorial sta
 $> ./start-vscode-tutorial-window.sh
 ```
 
-![new-tutorial-window](./tutorials/screenshots/create-new-tutorial-window.png)
+![new-tutorial-window](./tutorials/tutorial-screenshots/create-new-tutorial-window.png)
 
 ## 2. Follow tutorial instructions in the tutorial page
 
