@@ -5,4 +5,4 @@ tutorial:
   prompts:
   - "create a draw.io diagram in an xml format for this application (I want to use AWS 2024 Icons, lines should be orthogonal, dataflow from up to bottom)"
   result_example:
-  - "./screenshots/drawio-architecture-diagram-from-code.png"
+  - "./tutorial-screenshots/drawio-architecture-diagram-from-code.png"

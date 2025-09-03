@@ -6,4 +6,4 @@ tutorial:
   prompts:
   - "add 1 + 1"
   result_example:
-  - "./screenshots/addition-with-mcp.png"
+  - "./tutorial-screenshots/addition-with-mcp.png"

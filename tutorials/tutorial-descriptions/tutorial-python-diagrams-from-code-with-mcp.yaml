@@ -6,4 +6,4 @@ tutorial:
   prompts:
   - "create a diagram from the code in this folder"
   result_example:
-  - "./screenshots/python-diagrams-from-code-with-mcp.png"
+  - "./tutorial-screenshots/python-diagrams-from-code-with-mcp.png"

@@ -5,4 +5,4 @@ tutorial:
   prompts:
   - "create a mermaid class diagram of the application"
   result_example:
-  - "./screenshots/mermaid-class-diagram-from-code.png"
+  - "./tutorial-screenshots/mermaid-class-diagram-from-code.png"

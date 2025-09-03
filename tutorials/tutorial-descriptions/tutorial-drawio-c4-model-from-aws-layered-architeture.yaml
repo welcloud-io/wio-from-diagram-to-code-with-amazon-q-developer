@@ -5,4 +5,4 @@ tutorial:
   prompts:
   - "@diagram.drawio.xml translate this diagram into c4 model diagrams using drawio"
   result_example:
-  - "./screenshots/drawio-c4-model-from-aws-layered-architeture.png"
+  - "./tutorial-screenshots/drawio-c4-model-from-aws-layered-architeture.png"

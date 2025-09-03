@@ -6,4 +6,4 @@ tutorial:
   - generate lambda function code in python from diagram
   - generate python cdk V2 template from diagram
   result_example:
-  - "./screenshots/code-from-drawio-diagram-s3-notification.png"
+  - "./tutorial-screenshots/code-from-drawio-diagram-s3-notification.png"

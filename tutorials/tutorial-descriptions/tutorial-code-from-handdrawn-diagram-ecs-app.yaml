@@ -9,4 +9,4 @@ tutorial:
   - can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2).
   - can you generate application from the hand-drawn-architecture.jpg file (I want the code of the lambdas to be written in python and the infrastructure as code with the python cdk v2). Keep it simple, don't add more than necessary, stick to the diagram intent.
   result_example:
-  - "./screenshots/code-from-handdrawn-diagram-ecs-app.png"
+  - "./tutorial-screenshots/code-from-handdrawn-diagram-ecs-app.png"
