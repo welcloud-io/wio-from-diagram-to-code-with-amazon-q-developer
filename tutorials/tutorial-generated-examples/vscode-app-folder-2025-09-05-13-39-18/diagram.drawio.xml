@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram id="uiY3UtYS-LD8EjRslLut" name="Page-1">
+        <mxGraphModel dx="1376" dy="681" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Landing page function" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D45B07;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.lambda_function;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="420" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=default;fontStyle=1;fontSize=16;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Record and &lt;br style=&quot;font-size: 16px;&quot;&gt;Confirm feedback function" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D45B07;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.lambda_function;" parent="1" vertex="1">
+                    <mxGeometry x="367" y="420" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=default;fontStyle=1;fontSize=16;" parent="1" source="3" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Feedback Table" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#2E27AD;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.table;" parent="1" vertex="1">
+                    <mxGeometry x="367" y="580" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=default;fontStyle=1;fontSize=16;" parent="1" source="5" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="577" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="SNS Topic" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#B0084D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.topic;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="420" width="93.13" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=default;rounded=0;fontStyle=1;fontSize=16;startArrow=classic;startFill=1;" parent="1" source="6" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=default;fontStyle=1;fontSize=16;" parent="1" source="6" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Api Gateway Endpoint" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#B0084D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.endpoint;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="280" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;fontStyle=1;fontSize=16;" parent="1" source="7" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="desktop" style="sketch=0;outlineConnect=0;gradientColor=none;fontColor=#545B64;strokeColor=none;fillColor=#879196;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.illustration_desktop;pointerEvents=1" parent="1" vertex="1">
+                    <mxGeometry x="252" y="150" width="87.91" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;fontStyle=1;fontSize=16;startArrow=classic;startFill=1;" parent="1" source="8" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;" parent="1" vertex="1">
+                    <mxGeometry x="257" y="20" width="78" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Confirmation Email" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.email_2;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="240" width="78" height="49" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Submitted - Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thank You!</h1>
+        </header>
+
+        <main class="confirmation-page">
+            <div class="success-message">
+                <div class="checkmark">✓</div>
+                <h2>Feedback Submitted Successfully</h2>
+                <p>Thank you for taking the time to share your feedback with us.</p>
+                <p>We have received your message and will review it shortly.</p>
+                <p class="email-notice">A confirmation email has been sent to your email address.</p>
+            </div>
+
+            <div class="feedback-summary">
+                <h3>Your Feedback Summary:</h3>
+                <div id="summaryContent">
+                    <!-- Summary will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="actions">
+                <button onclick="window.location.href='index.html'" class="primary-btn">Submit Another Feedback</button>
+                <button onclick="window.close()" class="secondary-btn">Close</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Display feedback summary from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const summaryContent = document.getElementById('summaryContent');
+        
+        if (urlParams.get('name')) {
+            summaryContent.innerHTML = `
+                <p><strong>Name:</strong> ${decodeURIComponent(urlParams.get('name'))}</p>
+                <p><strong>Email:</strong> ${decodeURIComponent(urlParams.get('email'))}</p>
+                <p><strong>Category:</strong> ${decodeURIComponent(urlParams.get('category') || 'General')}</p>
+                <p><strong>Rating:</strong> ${urlParams.get('rating') ? '★'.repeat(urlParams.get('rating')) : 'Not provided'}</p>
+                <p><strong>Message:</strong> ${decodeURIComponent(urlParams.get('message'))}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
