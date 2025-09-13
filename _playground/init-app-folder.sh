@@ -28,6 +28,7 @@ if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
         [9]="security-pillar-hand-drawn-diagram"
         [10]="feedback-app-hand-drawn-diagram"
         [11]="layered-architecture-diagram"
+        [12]="strands-ai-agent-diagram-and-rules"
     )
 
     if [[ "$1" =~ ^[0-9]$|^10$ ]]; then
@@ -49,13 +50,14 @@ if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
         echo "9. Well Architected Pillar Hand Drawn Diagram (from HandDrawing to Code)"
         echo "10. Feedback App GUI Hand Drawn Diagram (from HandDrawing to Code)"
         echo "11. Layered Architecture (from AWS Diagram to C4 Model)"
+        echo "12. Strands AI Agent (From Drawio Diagram to code)"
         echo
 
         # Prompt user to select tutorial
         read -p "Where do you want to start from ?: " tutorial_choice
 
         # Validate input
-        if [[ ! $tutorial_choice =~ ^[0-9]$|^1[0-1]$ ]]; then    
+        if [[ ! $tutorial_choice =~ ^[0-9]$|^1[0-2]$ ]]; then    
             echo "Invalid selection. Please choose a number between 0 and 10."
             exit 1
         fi
@@ -117,6 +119,7 @@ for arg in "$@"; do
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
                 cp -r ../../tutorials/tutorial-starting-points/$folder/* . 
+                cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* . 
             fi
         ;;
         --with-result)

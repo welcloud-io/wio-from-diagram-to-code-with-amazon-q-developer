@@ -1,0 +1,4 @@
+- I use python 3.10
+- I use AWS CDK V2
+- I use AWS Strands SDK for AI Agents
+- I display api calls errors in the front end when it occurs
