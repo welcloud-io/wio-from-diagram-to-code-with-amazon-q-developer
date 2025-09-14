@@ -12,7 +12,7 @@ fi
 # Choose tutorial configurtaion 
 # -----------------------------------------------------------------------------
 
-if ! [[ "$@" =~ "--with-starting-point-folder=" ]]; then
+if ! [[ "$@" =~ "--with-starting-point-folder=" || "$@" =~ "--with-result-folder=" ]]; then
 
     # Map of tutorial choices to folder names
     declare -A tutorial_map=(
@@ -129,6 +129,7 @@ for arg in "$@"; do
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
                 cp -r ../../tutorials/tutorial-generated-examples/$folder/* . 
+                cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* .
             fi
         ;;
         --with-q-rules)
