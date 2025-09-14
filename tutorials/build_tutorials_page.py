@@ -151,18 +151,29 @@ class TutorialSection:
         content = []
 
         content.append("### Play with generated result)")
+        
+        content.append("#### Install Prerequisites if not done yet")
+        content.append("#### [=> Install Prerequisites](../README.md#prerequisites)")
+        
         content.append("#### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
-
         content.append("#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)")
+        
+        content.append("")
 
         content.append("```")
-
         command_to_execute = '../init-app-folder.sh'
-        for starting_point in tutorial_properties['result_init']:
-            command_to_execute += f" {starting_point}"
-            
+        for result_init in tutorial_properties['result_init']:
+            command_to_execute += f" {result_init}"
         content.append(command_to_execute)
         content.append("```")
+        
+        content.append("```")
+        command_to_execute = ''
+        for result_init in tutorial_properties['result_deploy']:
+            command_to_execute += f" {result_init}"
+        content.append(command_to_execute)
+        content.append("```")
+        
         content.append("")
 
         return content

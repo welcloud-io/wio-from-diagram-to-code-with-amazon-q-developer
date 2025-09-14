@@ -8,3 +8,5 @@ tutorial:
   - "./tutorial-screenshots/strands-ai-agent-from-drawio-diagram.png"
   result_init:
   - "--with-result-folder=strands-ai-agent-diagram-and-rules"
+  result_deploy:
+  - "./deploy.sh"

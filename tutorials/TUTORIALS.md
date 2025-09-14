@@ -463,9 +463,15 @@ create a diagram from the code in this folder
 ![strands ai agent from drawio diagram](./tutorial-screenshots/strands-ai-agent-from-drawio-diagram.png)
 
 ### Play with generated result)
+#### Install Prerequisites if not done yet
+#### [=> Install Prerequisites](../README.md#prerequisites)
 #### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
 #### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
+
 ```
 ../init-app-folder.sh --with-result-folder=strands-ai-agent-diagram-and-rules
+```
+```
+ ./deploy.sh
 ```
 
