@@ -462,7 +462,7 @@ create a diagram from the code in this folder
 ### Result Example
 ![strands ai agent from drawio diagram](./tutorial-screenshots/strands-ai-agent-from-drawio-diagram.png)
 
-### Play with generated result)
+### Play with generated result
 #### Install Prerequisites if not done yet
 #### [=> Install Prerequisites](../README.md#prerequisites)
 #### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')

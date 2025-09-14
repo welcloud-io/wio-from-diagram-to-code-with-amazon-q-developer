@@ -150,7 +150,7 @@ class TutorialSection:
             
         content = []
 
-        content.append("### Play with generated result)")
+        content.append("### Play with generated result")
         
         content.append("#### Install Prerequisites if not done yet")
         content.append("#### [=> Install Prerequisites](../README.md#prerequisites)")
