@@ -25,7 +25,7 @@ create a mermaid architecture diagram of my application (data flow from up to bo
 ```
 
 ### Result Example
-![mermaid architecture diagram from code](./screenshots/mermaid-architecture-diagram-from-code.png)
+![mermaid architecture diagram from code](./tutorial-screenshots/mermaid-architecture-diagram-from-code.png)
 
 
 ## 1.2. Generate Mermaid - Sequence Diagram - from Code - Feedback App
@@ -45,7 +45,7 @@ create a mermaid sequence diagram of the application
 ```
 
 ### Result Example
-![mermaid sequence diagram from code](./screenshots/mermaid-sequence-diagram-from-code.png)
+![mermaid sequence diagram from code](./tutorial-screenshots/mermaid-sequence-diagram-from-code.png)
 
 
 ## 1.3. Generate Mermaid - Class Diagram - from Code - Feedback App
@@ -65,5 +65,5 @@ create a mermaid class diagram of the application
 ```
 
 ### Result Example
-![mermaid class diagram from code](./screenshots/mermaid-class-diagram-from-code.png)
+![mermaid class diagram from code](./tutorial-screenshots/mermaid-class-diagram-from-code.png)
 
