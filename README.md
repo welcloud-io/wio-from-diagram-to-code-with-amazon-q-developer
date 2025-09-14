@@ -55,6 +55,10 @@ This demonstrates how you can generate diagrams from an application code, but al
     - 7.1 [Create Simplest MCP](tutorials/TUTORIALS.md#71-create-simplest-mcp)
     - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](tutorials/TUTORIALS.md#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
 
+8. [Understand AI Agents with Strands](tutorials/TUTORIALS.md#8-understand-ai-agents-with-strands)
+
+    - 8.1 [Generate Strands AI agent from Diagram](tutorials/TUTORIALS.md#81-generate-strands-ai-agent-from-diagram)
+
 
 # Prerequisites
 

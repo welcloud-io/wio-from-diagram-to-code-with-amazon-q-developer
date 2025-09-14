@@ -80,6 +80,7 @@ class TutorialSection:
             content += self._starting_point(tutorial_properties)
             content += self._prompts(tutorial_properties)
             content += self._results(tutorial_properties)
+            content += self._result_init(tutorial_properties)
             content.append("")
 
         return content
@@ -142,6 +143,28 @@ class TutorialSection:
             content.append(f"![{filename}]({example})")
         content.append("")
         
+        return content
+
+    def _result_init(self, tutorial_properties):
+        if 'result_init' not in tutorial_properties: return []
+            
+        content = []
+
+        content.append("### Play with generated result)")
+        content.append("#### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')")
+
+        content.append("#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)")
+
+        content.append("```")
+
+        command_to_execute = '../init-app-folder.sh'
+        for starting_point in tutorial_properties['result_init']:
+            command_to_execute += f" {starting_point}"
+            
+        content.append(command_to_execute)
+        content.append("```")
+        content.append("")
+
         return content
         
 class TutorialSections:

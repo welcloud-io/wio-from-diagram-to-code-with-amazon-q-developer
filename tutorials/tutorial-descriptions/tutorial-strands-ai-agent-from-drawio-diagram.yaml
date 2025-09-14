@@ -1,0 +1,10 @@
+tutorial:
+  title: "Generate Strands AI agent from Diagram"
+  starting_point:
+  - "--with-starting-point-folder=strands-ai-agent-diagram-and-rules"
+  prompts:
+  - "@diagram.drawio.xml generate application"
+  result_example:
+  - "./tutorial-screenshots/strands-ai-agent-from-drawio-diagram.png"
+  result_init:
+  - "--with-result-folder=strands-ai-agent-diagram-and-rules"

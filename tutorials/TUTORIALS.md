@@ -38,6 +38,10 @@
     - 7.1 [Create Simplest MCP](#71-create-simplest-mcp)
     - 7.2 [Generate Python Diagrams - Arhitecture Diagram - from Code - Feedback App](#72-generate-python-diagrams---arhitecture-diagram---from-code---feedback-app)
 
+8. [Understand AI Agents with Strands](#8-understand-ai-agents-with-strands)
+
+    - 8.1 [Generate Strands AI agent from Diagram](#81-generate-strands-ai-agent-from-diagram)
+
 # 1. Generate Mermaid Diagram from Code
 
 ## 1.1. Generate Mermaid - Architecture Diagram - from Code - Feedback App
@@ -435,4 +439,33 @@ create a diagram from the code in this folder
 
 ### Result Example
 ![python diagrams from code with mcp](./tutorial-screenshots/python-diagrams-from-code-with-mcp.png)
+
+
+# 8. Understand AI Agents with Strands
+
+## 8.1. Generate Strands AI agent from Diagram
+
+### Install Prerequisites if not done yet
+#### [=> Install Prerequisites](../README.md#prerequisites)
+
+### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
+```
+../init-app-folder.sh --with-starting-point-folder=strands-ai-agent-diagram-and-rules
+```
+
+### Prompts to execute In Q Desktop, Q CLI, Kiro, ...
+```
+@diagram.drawio.xml generate application
+```
+
+### Result Example
+![strands ai agent from drawio diagram](./tutorial-screenshots/strands-ai-agent-from-drawio-diagram.png)
+
+### Play with generated result)
+#### Script to execute In VS Code terminal ('_playground/vscode-app-folder/')
+#### [=> Start tutorial playground](../README.md#1-start-tutorial-window)
+```
+../init-app-folder.sh --with-result-folder=strands-ai-agent-diagram-and-rules
+```
 

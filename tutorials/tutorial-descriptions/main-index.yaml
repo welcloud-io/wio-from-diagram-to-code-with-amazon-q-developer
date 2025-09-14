@@ -37,3 +37,7 @@ tutorial_index:
       indexed_tutorials:        
       - 'tutorial-addition-with-mcp.yaml'
       - 'tutorial-python-diagrams-from-code-with-mcp.yaml'
+  - index_section:
+      index_section_name: "Understand AI Agents with Strands"
+      indexed_tutorials:        
+      - 'tutorial-strands-ai-agent-from-drawio-diagram.yaml'
