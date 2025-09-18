@@ -119,7 +119,9 @@ for arg in "$@"; do
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
                 cp -r ../../tutorials/tutorial-starting-points/$folder/* . 
-                cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* . 
+                if [ -d "../../tutorials/tutorial-starting-points/$folder/.amazonq" ]; then
+                    cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* .
+                fi             
             fi
         ;;
         --with-result)
