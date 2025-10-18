@@ -1,0 +1,16 @@
+generate first appllication
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sat Oct 18 21:19:45 2025 +0200
+#
+# On branch master
+# Changes to be committed:
+#	modified:   .gitignore
+#	new file:   .tutorial.metadata
+#	new file:   app.py
+#	new file:   lambda/login.py
+#	new file:   lambda/protected.py
+#	new file:   requirements.txt
+#
