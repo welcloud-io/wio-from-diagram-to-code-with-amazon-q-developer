@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f tutorial.metadata ]; then
-  . ./tutorial.metadata
+if [ -f .tutorial.metadata ]; then
+  . .tutorial.metadata
   echo "$tutorial_name"
 else
   if [ "$1" == "" ]; then
@@ -9,7 +9,7 @@ else
     exit
   else
     tutorial_name="$1"
-    echo "tutorial_name=$1" > tutorial.metadata
+    echo "tutorial_name=$1" > .tutorial.metadata
   fi
 fi
 
