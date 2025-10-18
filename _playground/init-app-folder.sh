@@ -131,6 +131,9 @@ for arg in "$@"; do
             folder="${arg#*=}"
             if [[ "$folder" != "empty" ]]; then
                 cp -r ../../tutorials/tutorial-generated-examples/$folder/* . 
+                # Copy all hidden files starting with '.' except '.' and '..'
+                find ../../tutorials/tutorial-generated-examples/$folder -name ".*" -not -name "." -not -name ".." -exec cp -r {} ./ \;
+                mv .git.save .git
                 cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* .
             fi
         ;;
