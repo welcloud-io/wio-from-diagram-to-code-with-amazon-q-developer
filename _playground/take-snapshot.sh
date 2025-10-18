@@ -20,5 +20,8 @@ mkdir -p $sample_folder
 if [ -d "$sample_folder" ]; then
   echo $sample_folder
   cp -r . "$sample_folder"
+  cd $sample_folder
+  mv .git .git.save
+  cd -
   echo "snapshot taken"
 fi
