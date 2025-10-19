@@ -12,7 +12,7 @@ fi
 # Choose tutorial configurtaion 
 # -----------------------------------------------------------------------------
 
-if ! [[ "$@" =~ "--with-starting-point-folder=" || "$@" =~ "--with-result-folder=" ]]; then
+if ! [[ "$@" =~ "--with-starting-point-folder=" || "$@" =~ "--with-result-folder=" || "$@" =~ "--with-project-folder=" || "$@" =~ "--with-project" ]]; then
 
     # Map of tutorial choices to folder names
     declare -A tutorial_map=(
@@ -70,6 +70,25 @@ if ! [[ "$@" =~ "--with-starting-point-folder=" || "$@" =~ "--with-result-folder
         set -- "$@" "--with-result-folder=${tutorial_map[$tutorial_choice]}"
     fi
 
+fi
+
+if [[ "$@" =~ "--with-project" && ! "$@" =~ "--with-project-folder=" ]];then
+    echo
+    echo "Available projects:"
+    echo
+    projects=($(ls -1 ../../tutorials/tutorial-projects))
+    for i in "${!projects[@]}"; do
+        echo "$i. ${projects[$i]}"
+    done
+    echo
+    read -p "Which project do you want to use? (0-$((${#projects[@]}-1))): " project_choice
+    
+    if [[ ! $project_choice =~ ^[0-9]+$ ]] || [ $project_choice -ge ${#projects[@]} ]; then
+        echo "Invalid selection. Please choose a number between 0 and $((${#projects[@]}-1))"
+        exit 1
+    fi
+    
+    set -- "$@" "--with-project-folder=${projects[$project_choice]}"
 fi
 
 # -----------------------------------------------------------------------------
@@ -135,6 +154,18 @@ for arg in "$@"; do
                 find ../../tutorials/tutorial-generated-examples/$folder -name ".*" -not -name "." -not -name ".." -exec cp -r {} ./ \;
                 mv .git.save .git
                 cp -r ../../tutorials/tutorial-starting-points/$folder/.amazonq* .
+            fi
+        ;;
+        --with-project)
+            # No action - a folder is assigned at project choice
+        ;;
+        --with-project-folder=*)
+            folder="${arg#*=}"
+            if [[ "$folder" != "empty" ]]; then
+                cp -r ../../tutorials/tutorial-projects/$folder/* . 
+                # Copy all hidden files starting with '.' except '.' and '..'
+                find ../../tutorials/tutorial-projects/$folder -name ".*" -not -name "." -not -name ".." -exec cp -r {} ./ \;
+                mv .git.save .git
             fi
         ;;
         --with-q-rules)
