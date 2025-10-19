@@ -78,17 +78,17 @@ if [[ "$@" =~ "--with-project" && ! "$@" =~ "--with-project-folder=" ]];then
     echo
     projects=($(ls -1 ../../tutorials/tutorial-projects))
     for i in "${!projects[@]}"; do
-        echo "$i. ${projects[$i]}"
+        echo "$((i+1)). ${projects[$i]}"
     done
     echo
-    read -p "Which project do you want to use? (0-$((${#projects[@]}-1))): " project_choice
+    read -p "Which project do you want to use? (1-${#projects[@]}): " project_choice
     
-    if [[ ! $project_choice =~ ^[0-9]+$ ]] || [ $project_choice -ge ${#projects[@]} ]; then
-        echo "Invalid selection. Please choose a number between 0 and $((${#projects[@]}-1))"
+    if [[ ! $project_choice =~ ^[0-9]+$ ]] || [ $project_choice -lt 1 ] || [ $project_choice -gt ${#projects[@]} ]; then
+        echo "Invalid selection. Please choose a number between 1 and ${#projects[@]}"
         exit 1
     fi
     
-    set -- "$@" "--with-project-folder=${projects[$project_choice]}"
+    set -- "$@" "--with-project-folder=${projects[$((project_choice-1))]}"
 fi
 
 # -----------------------------------------------------------------------------
