@@ -13,7 +13,7 @@ else
   fi
 fi
 
-sample_folder="../../tutorials/tutorial-generated-examples/$tutorial_name"
+sample_folder="../../tutorials/tutorial-projects/$tutorial_name"
 rm -rf $sample_folder
 mkdir -p $sample_folder
 
