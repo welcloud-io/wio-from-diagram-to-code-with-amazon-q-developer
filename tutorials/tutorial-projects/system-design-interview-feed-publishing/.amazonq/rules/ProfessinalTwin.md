@@ -1,0 +1,2 @@
+- I use python 3.10
+- I use AWS CDK V2
