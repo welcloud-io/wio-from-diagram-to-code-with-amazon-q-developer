@@ -2,3 +2,6 @@
 10496b61c6aa80b73bd1a90f00c0ceb3c1a71669 1aee6193fa6e7f287957e4489be3ff536767a4ef Olivier Lemaitre <o.lemaitre@welcloud.io> 1760815185 +0200	commit: generate first appllication
 1aee6193fa6e7f287957e4489be3ff536767a4ef fcc3a763e86413e4ec24c53fe2a977f4e261facd Olivier Lemaitre <o.lemaitre@welcloud.io> 1760815341 +0200	commit (amend): generate first appllication
 fcc3a763e86413e4ec24c53fe2a977f4e261facd 088ffb5fc29d2158742effd497e5b3f3246c9f5c Olivier Lemaitre <o.lemaitre@welcloud.io> 1762700308 +0100	commit: tutorial metadata
+088ffb5fc29d2158742effd497e5b3f3246c9f5c 19428b5668a220c4085346a418da6de69da7358e Olivier Lemaitre <o.lemaitre@welcloud.io> 1762771252 +0100	commit: update gitignore
+19428b5668a220c4085346a418da6de69da7358e bd3dc7715123fe9fd2fbe84f7fddfb96587b4773 Olivier Lemaitre <o.lemaitre@welcloud.io> 1762776118 +0100	commit: redirecet to protected page when logged in
+bd3dc7715123fe9fd2fbe84f7fddfb96587b4773 9e2a9042897cd84fec4568ff7cb827c97f8238ec Olivier Lemaitre <o.lemaitre@welcloud.io> 1762874219 +0100	commit: add playwright test

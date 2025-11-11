@@ -32,7 +32,7 @@ class WebAppStack(Stack):
         
         # Routes
         api.root.add_resource("login").add_method("GET", apigw.LambdaIntegration(login_function))
-        api.root.add_resource("protected").add_method("GET", apigw.LambdaIntegration(protected_function))
+        api.root.add_resource("protected").add_method("POST", apigw.LambdaIntegration(protected_function))
 
 app = cdk.App()
 WebAppStack(app, "WebAppStack")

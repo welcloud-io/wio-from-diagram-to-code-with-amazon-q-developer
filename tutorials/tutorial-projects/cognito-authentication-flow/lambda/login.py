@@ -8,9 +8,9 @@ def handler(event, context):
         <html>
         <body>
             <h1>Login Page</h1>
-            <form>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
+            <form action="protected" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
         </body>
